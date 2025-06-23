@@ -1,0 +1,5 @@
+- Comments
+- Take input via the terminal on which square the user wants to select
+- Use a vector the represent the matrix
+- Save the results of how many times you've won to a txt file
+- Implement the minimax algorithm to play against the computer
