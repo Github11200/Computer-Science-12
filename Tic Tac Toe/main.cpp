@@ -87,11 +87,11 @@ int intInputRange(string prompt, int min, int max)
   return input;
 }
 
-int countStaticEvaluation(vector<vector<int>> &arr, int &numberOfO, int &numberOfX)
+int countInEachRowColumnAndDiagonal(vector<vector<int>> &arr, int &numberOfO, int &numberOfX)
 {
+  // 0 means no winner, it's just neutral
   int winner = 0;
 
-  // Loop through all the rows
   for (int i = 0; i < arr.size(); ++i)
   {
     int tempOCount = 0;
@@ -132,9 +132,9 @@ int countStaticEvaluation(vector<vector<int>> &arr, int &numberOfO, int &numberO
       numberOfO += tempOCount;
       numberOfX += tempXCount;
       if (tempOCount == boardSize)
-        winner = 1;
+        winner = 1; // 1 means the user playing won
       else if (tempXCount == boardSize)
-        winner = 2;
+        winner = -1; // -1 means the computer won
     }
   }
 
@@ -150,10 +150,15 @@ int staticEvaluation(vector<vector<int>> currentBoard)
   // The computer is the MINIMIZER
   // The player is the MAXIMIZER
 
+  // Return 0 if it is neutral
+  // Return 1 if the user won
+  // Return -1 if the computer won
+
   int numberOfO = 0;
   int numberOfX = 0;
+  int winner = 0;
 
-  countStaticEvaluation(currentBoard, numberOfO, numberOfX);
+  winner = winner == 0 ? countInEachRowColumnAndDiagonal(currentBoard, numberOfO, numberOfX) : winner;
 
   vector<vector<int>> boardColumns;
   for (int i = 0; i < currentBoard.size(); ++i)
@@ -163,7 +168,7 @@ int staticEvaluation(vector<vector<int>> currentBoard)
       temp.push_back(currentBoard[j][i]);
     boardColumns.push_back(temp);
   }
-  countStaticEvaluation(boardColumns, numberOfO, numberOfX);
+  winner = winner == 0 ? countInEachRowColumnAndDiagonal(boardColumns, numberOfO, numberOfX) : winner;
 
   vector<vector<int>> boardDiagonals(2);
   for (int i = 0; i < currentBoard.size(); ++i)
@@ -171,43 +176,28 @@ int staticEvaluation(vector<vector<int>> currentBoard)
     boardDiagonals[0].push_back(currentBoard[i][i]);
     boardDiagonals[1].push_back(currentBoard[i][boardSize - i - 1]);
   }
-  countStaticEvaluation(boardDiagonals, numberOfO, numberOfX);
-
-  return numberOfO + (-numberOfX);
-}
-
-int isGameOver()
-{
-  int numberOfO = 0;
-  int numberOfX = 0;
-  int winner = 0;
-
-  winner = max(winner, countStaticEvaluation(board, numberOfO, numberOfX));
-
-  vector<vector<int>> boardColumns;
-  for (int i = 0; i < board.size(); ++i)
-  {
-    vector<int> temp;
-    for (int j = 0; j < board.size(); ++j)
-      temp.push_back(board[j][i]);
-    boardColumns.push_back(temp);
-  }
-  winner = max(winner, countStaticEvaluation(boardColumns, numberOfO, numberOfX));
-
-  vector<vector<int>> boardDiagonals(2);
-  for (int i = 0; i < board.size(); ++i)
-  {
-    boardDiagonals[0].push_back(board[i][i]);
-    boardDiagonals[1].push_back(board[i][boardSize - i - 1]);
-  }
-  winner = max(winner, countStaticEvaluation(boardDiagonals, numberOfO, numberOfX));
+  winner = winner == 0 ? countInEachRowColumnAndDiagonal(boardDiagonals, numberOfO, numberOfX) : winner;
 
   return winner;
 }
 
+int isGameOver(vector<vector<int>> currentBoard)
+{
+  if (staticEvaluation(currentBoard) != 0) // Someone won
+    return true;
+  else
+  {
+    for (int i = 0; i < currentBoard.size(); ++i)
+      for (int j = 0; j < currentBoard[i].size(); ++j)
+        if (currentBoard[i][j] == 0) // There is no winner and the board isn't completely full
+          return false;
+    return true; // The board is completely full but there isn't a winner
+  }
+}
+
 pair<int, pair<int, int>> minimax(vector<vector<int>> currentBoard, int depth, int alpha, int beta, bool maximizingPlayer)
 {
-  if (depth == 0 || isGameOver())
+  if (depth == 0 || isGameOver(currentBoard))
     return pair<int, pair<int, int>>(staticEvaluation(currentBoard), pair<int, int>(-1, -1));
   if (maximizingPlayer)
   {
@@ -216,7 +206,7 @@ pair<int, pair<int, int>> minimax(vector<vector<int>> currentBoard, int depth, i
     int evaluation = 0;
     for (int i = 0; i < currentBoard.size(); ++i)
     {
-      for (int j = 0; j < currentBoard[j].size(); ++j)
+      for (int j = 0; j < currentBoard[i].size(); ++j)
       {
         if (currentBoard[i][j] == 0)
         {
@@ -229,8 +219,8 @@ pair<int, pair<int, int>> minimax(vector<vector<int>> currentBoard, int depth, i
             maxEvaluationPosition = pair<int, int>(i, j);
           }
           alpha = max(alpha, evaluation);
-          if (beta <= alpha)
-            break;
+          // if (beta <= alpha)
+          //   break;
           currentBoard[i][j] = 0;
         }
       }
@@ -245,7 +235,7 @@ pair<int, pair<int, int>> minimax(vector<vector<int>> currentBoard, int depth, i
 
     for (int i = 0; i < currentBoard.size(); ++i)
     {
-      for (int j = 0; j < currentBoard[j].size(); ++j)
+      for (int j = 0; j < currentBoard[i].size(); ++j)
       {
         if (currentBoard[i][j] == 0)
         {
@@ -258,8 +248,8 @@ pair<int, pair<int, int>> minimax(vector<vector<int>> currentBoard, int depth, i
             minEvaluationPosition = pair<int, int>(i, j);
           }
           beta = max(beta, evaluation);
-          if (beta <= alpha)
-            break;
+          // if (beta <= alpha)
+          //   break;
           currentBoard[i][j] = 0;
         }
       }
@@ -285,8 +275,16 @@ int main()
 
     board[row - 1][column - 1] = 1;
     drawBoard();
-    pair<int, int> position = minimax(board, 3, INT32_MIN, INT32_MAX, false).second;
+
+    if (isGameOver(board))
+      break;
+
+    pair<int, int> position = minimax(board, 15, INT32_MIN, INT32_MAX, false).second;
     board[position.first][position.second] = 2;
+    drawBoard();
+
+    if (isGameOver(board))
+      break;
   }
 
   return 0;
