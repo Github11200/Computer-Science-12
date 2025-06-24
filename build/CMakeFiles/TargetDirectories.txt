@@ -1,3 +1,0 @@
-/home/user/code/Computer-Science-12/build/CMakeFiles/TicTacToe.dir
-/home/user/code/Computer-Science-12/build/CMakeFiles/edit_cache.dir
-/home/user/code/Computer-Science-12/build/CMakeFiles/rebuild_cache.dir

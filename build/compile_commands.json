@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/user/code/Computer-Science-12/build",
-  "command": "/usr/bin/c++   -g -o CMakeFiles/TicTacToe.dir/main.cpp.o -c /home/user/code/Computer-Science-12/main.cpp",
-  "file": "/home/user/code/Computer-Science-12/main.cpp"
-}
-]
