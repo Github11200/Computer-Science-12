@@ -2,11 +2,15 @@
 #include <iostream>
 #include <string>
 #include <limits>
+#include <fstream>
 
 using namespace std;
 
 // Global variables
 int boardSize = 0;
+int numberOfTimesHumanWon = 0;
+int numberOfTimesComputerWon = 0;
+string FILENAME = "score.txt";
 
 // 0 -> Empty
 // 1 -> Player - O
@@ -219,8 +223,8 @@ pair<int, pair<int, int>> minimax(vector<vector<int>> currentBoard, int depth, i
             maxEvaluationPosition = pair<int, int>(i, j);
           }
           alpha = max(alpha, evaluation);
-          // if (beta <= alpha)
-          //   break;
+          if (beta <= alpha)
+            break;
           currentBoard[i][j] = 0;
         }
       }
@@ -248,8 +252,8 @@ pair<int, pair<int, int>> minimax(vector<vector<int>> currentBoard, int depth, i
             minEvaluationPosition = pair<int, int>(i, j);
           }
           beta = max(beta, evaluation);
-          // if (beta <= alpha)
-          //   break;
+          if (beta <= alpha)
+            break;
           currentBoard[i][j] = 0;
         }
       }
@@ -258,9 +262,37 @@ pair<int, pair<int, int>> minimax(vector<vector<int>> currentBoard, int depth, i
   }
 }
 
-int main()
+void saveDataToFile()
 {
-  boardSize = intInputRange("Welcome! Please enter the board size you'd like (3 - 10): ", 3, 10);
+  ofstream output;
+
+  output.open(FILENAME);
+  output << numberOfTimesHumanWon << endl
+         << numberOfTimesComputerWon << endl;
+
+  output.close();
+}
+
+void openDataFromFile()
+{
+  ifstream input;
+
+  input.open(FILENAME);
+  if (input.fail())
+    cout << "Warning: Could not load the scores file." << endl;
+
+  string humanScoreString, computerScoreString;
+  getline(input, humanScoreString);
+  getline(input, computerScoreString);
+
+  numberOfTimesHumanWon = stoi(humanScoreString);
+  numberOfTimesComputerWon = stoi(computerScoreString);
+}
+
+void newGame()
+{
+  system("clear");
+  boardSize = intInputRange("Please enter the board size you'd like for your new game (3 - 6): ", 3, 6);
 
   board.resize(boardSize);
   for (int i = 0; i < board.size(); ++i)
@@ -270,8 +302,16 @@ int main()
   drawBoard();
   while (true)
   {
-    row = intInputRange("Please select a row (1 - " + to_string(boardSize) + "): ", 1, boardSize);
-    column = intInputRange("Please select a column (1 - " + to_string(boardSize) + "): ", 1, boardSize);
+    bool isValid = false;
+    while (!isValid)
+    {
+      row = intInputRange("Please select a row (1 - " + to_string(boardSize) + "): ", 1, boardSize);
+      column = intInputRange("Please select a column (1 - " + to_string(boardSize) + "): ", 1, boardSize);
+      if (board[row - 1][column - 1] != 0)
+        cout << "You cannot pick a square that isn't empty, please try again." << endl;
+      else
+        isValid = true;
+    }
 
     board[row - 1][column - 1] = 1;
     drawBoard();
@@ -279,12 +319,89 @@ int main()
     if (isGameOver(board))
       break;
 
-    pair<int, int> position = minimax(board, 15, INT32_MIN, INT32_MAX, false).second;
+    pair<int, int> position = minimax(board, boardSize == 3 ? 10 : 4, INT32_MIN, INT32_MAX, false).second;
     board[position.first][position.second] = 2;
     drawBoard();
 
     if (isGameOver(board))
       break;
+  }
+
+  int winner = staticEvaluation(board);
+  if (winner == 0)
+  {
+    cout << "It's a tie, womp womp. ";
+    ++numberOfTimesHumanWon;
+    ++numberOfTimesComputerWon;
+  }
+  else if (winner == 1)
+  {
+    cout << "Humanity is saved. ";
+    ++numberOfTimesHumanWon;
+  }
+  else
+  {
+    cout << "The robots are coming. ";
+    ++numberOfTimesComputerWon;
+  }
+
+  cout << "Press (1) to exit:" << endl;
+  int option = -1;
+  while (option != 1)
+    option = intInputRange("-> ", 1, 1);
+  board.clear();
+}
+
+void viewStats()
+{
+  system("clear");
+  cout << "Stats: " << endl;
+  cout << "# of times you won: " << numberOfTimesHumanWon << endl;
+  cout << "# of times the computer won: " << numberOfTimesComputerWon << endl;
+  cout << endl;
+
+  cout << "Press (1) to exit:" << endl;
+  int option = -1;
+  while (option != 1)
+    option = intInputRange("-> ", 1, 1);
+}
+
+int main()
+{
+  openDataFromFile();
+  int option = -1;
+
+  while (true)
+  {
+    system("clear");
+
+    cout << R"( _____ _      _        _           _____          _        _           _____               
+|_   _(_)    | |      | |         |_   _|        | |      | |         |_   _|              
+  | |  _  ___| | _____| |_ _   _    | | __ _  ___| | _____| |_ _   _    | | ___   ___  ___ 
+  | | | |/ __| |/ / _ \ __| | | |   | |/ _` |/ __| |/ / _ \ __| | | |   | |/ _ \ / _ \/ __|
+  | | | | (__|   <  __/ |_| |_| |   | | (_| | (__|   <  __/ |_| |_| |   | | (_) |  __/\__ \
+  \_/ |_|\___|_|\_\___|\__|\__, |   \_/\__,_|\___|_|\_\___|\__|\__, |   \_/\___/ \___||___/
+                            __/ |                               __/ |                      
+                           |___/                               |___/                       )"
+         << endl;
+
+    cout << "Welcome! Please select from one of the options below:" << endl;
+    cout << "\t(1) Play a new game" << endl;
+    cout << "\t(2) View stats" << endl;
+    cout << "\t(3) Exit the game" << "\n\n";
+    option = intInputRange("\t-> ", 1, 3);
+
+    if (option == 3)
+    {
+      saveDataToFile();
+      cout << "Goodbye! :)\n"
+           << endl;
+      break;
+    }
+    else if (option == 2)
+      viewStats();
+    else
+      newGame();
   }
 
   return 0;
