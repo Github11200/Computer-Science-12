@@ -3,6 +3,8 @@
     "iostream": "cpp",
     "ostream": "cpp",
     "limits": "cpp",
-    "fstream": "cpp"
+    "fstream": "cpp",
+    "vector": "cpp",
+    "queue": "cpp"
   }
 }
