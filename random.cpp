@@ -6,13 +6,29 @@
 
 using namespace std;
 
+void mystery(int num)
+{
+  if (num <= 2)
+  {
+    cout << num;
+  }
+  else
+  {
+    if (num % 2 == 0)
+    {
+      mystery(num / 2);
+    }
+    else
+    {
+      mystery((num + 1) / 2);
+      mystery((num - 1) / 2);
+    }
+  }
+}
+
 int main()
 {
-  map<string, int> age{{"Karel", 9}, {"Tracy", 5}};
-
-  age.insert(pair<string, double>("Karel", 10));
-
-  cout << age["Karel"] << endl;
+  mystery(9);
 
   return 0;
 }

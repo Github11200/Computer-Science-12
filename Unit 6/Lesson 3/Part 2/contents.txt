@@ -1,0 +1,14 @@
+Treadmill 375 46
+Watch 50 1
+Weights 75 40
+Television 150 30
+Dishes 35 22
+ExtraShoes 60 3
+ExtraClothes 95 12
+Xbox 250 8
+Kindle 85 1
+Bike 150 23
+Pictures 50 10
+Plants 15 20
+Computer 250 26
+Camera 75 3
