@@ -83,13 +83,11 @@ bool towerNeeded(vector<vector<char>> grid, int testRow, int testCol)
   {
     for (int j = 0; j < grid[i].size(); ++j)
     {
-      if ((i == testRow && j == testCol) || grid[i][j] == '.')
-        continue;
-      if (distance(j, i, testCol, testRow) < TOWER_DISTANCE)
-        return true;
+      if (grid[i][j] != '.' && distance(j, i, testCol, testRow) < TOWER_DISTANCE)
+        return false;
     }
   }
-  return false;
+  return true;
 }
 
 // Helper function to find the next valid frequency
@@ -117,20 +115,27 @@ char validFreq(vector<vector<char>> grid, int testRow, int testCol, int numFreq)
 // Solver recursive function.
 bool cellSolver(vector<vector<char>> &grid, int row, int col, int numFreq)
 {
-  if (col == grid.size() || row == grid.size())
+  if (row == grid.size())
     return true;
+  else if (col == grid.size())
+    return cellSolver(grid, row + 1, 0, numFreq);
+  else if (grid[row][col] != '.')
+    return cellSolver(grid, row, col + 1, numFreq);
 
-  for (int columnToTry = col; columnToTry < grid.size(); ++columnToTry)
+  for (int rowToTry = 0; rowToTry < grid.size(); ++rowToTry)
   {
-    if (towerNeeded(grid, row, columnToTry))
+    for (int columnToTry = 0; columnToTry < grid.size(); ++columnToTry)
     {
-      char frequency = validFreq(grid, row, columnToTry, numFreq);
-      if (frequency == '.')
-        return false;
-      grid[row][columnToTry] = frequency;
-      if (cellSolver(grid, row + 1, 0, numFreq) || cellSolver(grid, row, columnToTry + 1, numFreq))
-        return true;
-      grid[row][columnToTry] = '.';
+      if (towerNeeded(grid, rowToTry, columnToTry))
+      {
+        char frequency = validFreq(grid, rowToTry, columnToTry, numFreq);
+        if (frequency == '.')
+          return false;
+        grid[rowToTry][columnToTry] = frequency;
+        if (cellSolver(grid, rowToTry, columnToTry + 1, numFreq))
+          return true;
+        grid[rowToTry][columnToTry] = '.';
+      }
     }
   }
 
@@ -140,7 +145,7 @@ bool cellSolver(vector<vector<char>> &grid, int row, int col, int numFreq)
 // Helper function to kick off problem
 bool cellProblem(vector<vector<char>> &grid, int numFreq)
 {
-  return cellSolver(grid, 0, 1, numFreq);
+  return cellSolver(grid, 0, 0, numFreq);
 }
 
 int main()
@@ -156,7 +161,7 @@ int main()
     grid.push_back(temp);
   }
 
-  grid[0][0] = 'a';
+  // grid[0][0] = 'a';
 
   // Prompt the user for the number of frequecies
   int numberOfFrequencies = readInt("Please select the number of frequencies to test (1 - 10): ", "");
