@@ -83,7 +83,7 @@ bool towerNeeded(vector<vector<char>> grid, int testRow, int testCol)
   {
     for (int j = 0; j < grid[i].size(); ++j)
     {
-      if (grid[i][j] != '.' && distance(j, i, testCol, testRow) < TOWER_DISTANCE)
+      if (grid[i][j] != '.' && distance(j, i, testCol, testRow) <= TOWER_DISTANCE)
         return false;
     }
   }
@@ -103,7 +103,7 @@ char validFreq(vector<vector<char>> grid, int testRow, int testCol, int numFreq)
     {
       if ((i == testRow && j == testCol) || grid[i][j] == '.')
         continue;
-      if (distance(j, i, testCol, testRow) < FREQ_DISTANCE)
+      if (distance(j, i, testCol, testRow) <= FREQ_DISTANCE)
         frequencies.erase(grid[i][j]);
     }
   }
@@ -119,25 +119,21 @@ bool cellSolver(vector<vector<char>> &grid, int row, int col, int numFreq)
     return true;
   else if (col == grid.size())
     return cellSolver(grid, row + 1, 0, numFreq);
-  else if (grid[row][col] != '.')
-    return cellSolver(grid, row, col + 1, numFreq);
 
-  for (int rowToTry = 0; rowToTry < grid.size(); ++rowToTry)
-  {
-    for (int columnToTry = 0; columnToTry < grid.size(); ++columnToTry)
-    {
-      if (towerNeeded(grid, rowToTry, columnToTry))
-      {
-        char frequency = validFreq(grid, rowToTry, columnToTry, numFreq);
-        if (frequency == '.')
-          return false;
-        grid[rowToTry][columnToTry] = frequency;
-        if (cellSolver(grid, rowToTry, columnToTry + 1, numFreq))
-          return true;
-        grid[rowToTry][columnToTry] = '.';
-      }
-    }
-  }
+  if (!towerNeeded(grid, row, col))
+    if (cellSolver(grid, row, col + 1, numFreq))
+      return true;
+
+  // If the program wasn't able to find a solution then that means you do need a tower here in order
+  // to solve the problem, even if the distances are met
+  char frequency = validFreq(grid, row, col, numFreq);
+  if (frequency == '.')
+    return false;
+  grid[row][col] = frequency;
+
+  if (cellSolver(grid, row, col + 1, numFreq))
+    return true;
+  grid[row][col] = '.';
 
   return false;
 }
