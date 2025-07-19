@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/server.dir/src/server.cpp.o -o server  /home/user/vcpkg/installed/x64-linux/debug/lib/libspdlogd.a /home/user/vcpkg/installed/x64-linux/debug/lib/libfmtd.a 
