@@ -3,3 +3,4 @@ project(TERMICORD VERSION 0.1.0 LANGUAGES C CXX)
 
 add_subdirectory(server)
 add_subdirectory(client)
+add_subdirectory(http)

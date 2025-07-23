@@ -142,6 +142,19 @@ client/fast:
 	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/build
 .PHONY : client/fast
 
+#=============================================================================
+# Target rules for targets named http
+
+# Build rule for target.
+http: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 http
+.PHONY : http
+
+# fast build rule for target.
+http/fast:
+	$(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/build
+.PHONY : http/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -151,6 +164,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... client"
+	@echo "... http"
 	@echo "... server"
 .PHONY : help
 

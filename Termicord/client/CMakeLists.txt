@@ -7,5 +7,5 @@ add_executable(client
 target_link_libraries(client PRIVATE spdlog::spdlog)
 
 target_include_directories(client
-  PRIVATE ${CMAKE_CURRENT_SOURCE_DIRECTORY}/include
+  PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include
 )

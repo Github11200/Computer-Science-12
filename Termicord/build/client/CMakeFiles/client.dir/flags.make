@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL
 
-CXX_INCLUDES = -I/include -isystem /home/user/vcpkg/installed/x64-linux/include
+CXX_INCLUDES = -I/home/user/code/Computer-Science-12/Termicord/client/include -isystem /home/user/vcpkg/installed/x64-linux/include
 
 CXX_FLAGS = 
 

@@ -46,6 +46,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/user/code/Computer-Science-12/Termicord/build/server/cmake_install.cmake")
   include("/home/user/code/Computer-Science-12/Termicord/build/client/cmake_install.cmake")
+  include("/home/user/code/Computer-Science-12/Termicord/build/http/cmake_install.cmake")
 
 endif()
 

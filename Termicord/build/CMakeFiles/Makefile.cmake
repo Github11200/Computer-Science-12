@@ -12,6 +12,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
   "../client/CMakeLists.txt"
+  "../http/CMakeLists.txt"
   "../server/CMakeLists.txt"
   "/home/user/vcpkg/installed/x64-linux/share/fmt/fmt-config-version.cmake"
   "/home/user/vcpkg/installed/x64-linux/share/fmt/fmt-config.cmake"
@@ -63,10 +64,12 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "server/CMakeFiles/CMakeDirectoryInformation.cmake"
   "client/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "http/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "server/CMakeFiles/server.dir/DependInfo.cmake"
   "client/CMakeFiles/client.dir/DependInfo.cmake"
+  "http/CMakeFiles/http.dir/DependInfo.cmake"
   )

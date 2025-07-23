@@ -9,6 +9,7 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
+  system("clear");
   spdlog::info("Client shenanigans");
   int PORT = atoi(argv[1]);
 

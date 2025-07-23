@@ -6,3 +6,6 @@
 /home/user/code/Computer-Science-12/Termicord/build/client/CMakeFiles/client.dir
 /home/user/code/Computer-Science-12/Termicord/build/client/CMakeFiles/edit_cache.dir
 /home/user/code/Computer-Science-12/Termicord/build/client/CMakeFiles/rebuild_cache.dir
+/home/user/code/Computer-Science-12/Termicord/build/http/CMakeFiles/http.dir
+/home/user/code/Computer-Science-12/Termicord/build/http/CMakeFiles/edit_cache.dir
+/home/user/code/Computer-Science-12/Termicord/build/http/CMakeFiles/rebuild_cache.dir
