@@ -2,8 +2,7 @@
 
 using namespace std;
 
-Routing::Routing() {
-}
+Routing::Routing() {}
 
 void Routing::addRoute(Route route) {
   this->routes[route.route] = route;

@@ -328,7 +328,95 @@ http/CMakeFiles/http.dir/src/http.cpp.o: ../http/src/http.cpp \
   /usr/include/c++/11/any \
   ../http/include/routing.h \
   /usr/include/c++/11/sstream \
-  /usr/include/c++/11/bits/sstream.tcc
+  /usr/include/c++/11/bits/sstream.tcc \
+  ../http/include/database/database.h \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/json.hpp \
+  /usr/include/c++/11/algorithm \
+  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/11/iterator \
+  /usr/include/c++/11/bits/stream_iterator.h \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/adl_serializer.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/abi_macros.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/conversions/from_json.hpp \
+  /usr/include/c++/11/forward_list \
+  /usr/include/c++/11/bits/forward_list.h \
+  /usr/include/c++/11/bits/forward_list.tcc \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/valarray \
+  /usr/include/c++/11/bits/valarray_array.h \
+  /usr/include/c++/11/bits/valarray_array.tcc \
+  /usr/include/c++/11/bits/valarray_before.h \
+  /usr/include/c++/11/bits/slice_array.h \
+  /usr/include/c++/11/bits/valarray_after.h \
+  /usr/include/c++/11/bits/gslice.h \
+  /usr/include/c++/11/bits/gslice_array.h \
+  /usr/include/c++/11/bits/mask_array.h \
+  /usr/include/c++/11/bits/indirect_array.h \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/exceptions.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/value_t.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/macro_scope.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/detected.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/void_t.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/thirdparty/hedley/hedley.hpp \
+  /usr/include/c++/11/version \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/string_escape.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/position_t.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/cpp_future.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/type_traits.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/iterator_traits.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/call_std/begin.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/call_std/end.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/json_fwd.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/string_concat.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/identity_tag.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/std_fs.hpp \
+  /usr/include/c++/11/filesystem \
+  /usr/include/c++/11/bits/fs_fwd.h \
+  /usr/include/c++/11/bits/fs_path.h \
+  /usr/include/c++/11/locale \
+  /usr/include/c++/11/bits/locale_facets_nonio.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/11/bits/locale_conv.h \
+  /usr/include/c++/11/iomanip \
+  /usr/include/c++/11/bits/quoted_string.h \
+  /usr/include/c++/11/codecvt \
+  /usr/include/c++/11/bits/fs_dir.h \
+  /usr/include/c++/11/bits/fs_ops.h \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/conversions/to_json.hpp \
+  /usr/include/c++/11/optional \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/string_utils.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/byte_container_with_subtype.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/hash.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/binary_reader.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/input_adapters.hpp \
+  /usr/include/c++/11/numeric \
+  /usr/include/c++/11/bits/stl_numeric.h \
+  /usr/include/c++/11/pstl/glue_numeric_defs.h \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/json_sax.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/lexer.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/is_sax.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/parser.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/internal_iterator.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/iter_impl.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/json_custom_base_class.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/json_pointer.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/json_ref.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/output/binary_writer.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/output/output_adapters.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/output/serializer.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/conversions/to_chars.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/ordered_map.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/macro_unscope.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
 
 http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
   /usr/include/stdc-predef.h \
@@ -545,6 +633,114 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 
 ../http/src/routing.cpp:
 
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/macro_unscope.hpp:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/ordered_map.hpp:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/output/serializer.hpp:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/output/output_adapters.hpp:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/json_custom_base_class.hpp:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/internal_iterator.hpp:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/parser.hpp:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/json_sax.hpp:
+
+/usr/include/c++/11/numeric:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/binary_reader.hpp:
+
+/usr/include/c++/11/bits/stl_numeric.h:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/hash.hpp:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/byte_container_with_subtype.hpp:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/iteration_proxy.hpp:
+
+/usr/include/c++/11/optional:
+
+/usr/include/c++/11/bits/fs_ops.h:
+
+/usr/include/c++/11/bits/fs_dir.h:
+
+/usr/include/c++/11/bits/quoted_string.h:
+
+/usr/include/c++/11/bits/locale_conv.h:
+
+/usr/include/c++/11/bits/locale_facets_nonio.tcc:
+
+/usr/include/libintl.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h:
+
+/usr/include/c++/11/bits/locale_facets_nonio.h:
+
+/usr/include/c++/11/filesystem:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/std_fs.hpp:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/identity_tag.hpp:
+
+/usr/include/c++/11/version:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/detected.hpp:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/value_t.hpp:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/exceptions.hpp:
+
+/usr/include/c++/11/bits/indirect_array.h:
+
+/usr/include/c++/11/bits/mask_array.h:
+
+/usr/include/c++/11/bits/gslice_array.h:
+
+/usr/include/c++/11/bits/gslice.h:
+
+/usr/include/c++/11/bits/valarray_after.h:
+
+/usr/include/c++/11/bits/slice_array.h:
+
+/usr/include/c++/11/bits/valarray_array.h:
+
+/usr/include/c++/11/valarray:
+
+/usr/include/c++/11/bits/stl_multimap.h:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/call_std/end.hpp:
+
+/usr/include/c++/11/bits/stl_map.h:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/json_ref.hpp:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/json_pointer.hpp:
+
+/usr/include/c++/11/bits/stl_tree.h:
+
+/usr/include/c++/11/map:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/output/binary_writer.hpp:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/conversions/from_json.hpp:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/abi_macros.hpp:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/json_reverse_iterator.hpp:
+
+/usr/include/c++/11/bits/stream_iterator.h:
+
+/usr/include/c++/11/algorithm:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/json.hpp:
+
+../http/include/database/database.h:
+
 /usr/include/c++/11/sstream:
 
 /usr/include/arpa/inet.h:
@@ -623,6 +819,8 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 
 /usr/include/c++/11/cstdlib:
 
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/thirdparty/hedley/hedley_undef.hpp:
+
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
 
 /usr/include/c++/11/bit:
@@ -647,6 +845,8 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 
 /usr/include/c++/11/unordered_map:
 
+/usr/include/c++/11/iomanip:
+
 /usr/include/c++/11/cctype:
 
 /usr/include/linux/stddef.h:
@@ -654,6 +854,8 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 /usr/include/c++/11/bits/refwrap.h:
 
 /usr/include/c++/11/bits/functional_hash.h:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/is_sax.hpp:
 
 /usr/include/asm-generic/socket.h:
 
@@ -681,6 +883,8 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 
 /usr/include/c++/11/bits/string_view.tcc:
 
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/type_traits.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 /usr/include/c++/11/typeinfo:
@@ -691,11 +895,15 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 
 /usr/include/c++/11/vector:
 
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/iterator_traits.hpp:
+
 /usr/include/c++/11/bits/align.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/position_t.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
@@ -718,6 +926,12 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 /usr/include/c++/11/bits/stl_algo.h:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/lexer.hpp:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/input_adapters.hpp:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/cpp_future.hpp:
 
 /usr/include/c++/11/tuple:
 
@@ -749,6 +963,8 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
+/usr/include/c++/11/bits/valarray_array.tcc:
+
 /usr/include/c++/11/bits/atomic_lockfree_defines.h:
 
 /usr/include/c++/11/tr1/bessel_function.tcc:
@@ -759,13 +975,19 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 
 /usr/include/c++/11/ext/type_traits.h:
 
+/usr/include/c++/11/forward_list:
+
 /usr/include/c++/11/pstl/glue_memory_defs.h:
 
 /usr/include/c++/11/bits/std_function.h:
 
 /usr/include/c++/11/bits/stl_tempbuf.h:
 
+/usr/include/c++/11/bits/forward_list.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/macro_scope.hpp:
 
 /usr/include/unistd.h:
 
@@ -778,6 +1000,8 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 /usr/include/x86_64-linux-gnu/asm/socket.h:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/include/c++/11/iterator:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
@@ -797,6 +1021,8 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 
 /usr/include/c++/11/bits/cpp_type_traits.h:
 
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/primitive_iterator.hpp:
+
 /usr/include/pthread.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
@@ -813,6 +1039,8 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 
 /usr/include/c++/11/bits/stl_function.h:
 
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/iter_impl.hpp:
+
 /usr/include/c++/11/bits/stl_pair.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
@@ -827,11 +1055,19 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 
 /home/user/vcpkg/installed/x64-linux/include/spdlog/common.h:
 
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/conversions/to_json.hpp:
+
+/usr/include/c++/11/bits/forward_list.tcc:
+
 /usr/include/c++/11/chrono:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/thirdparty/hedley/hedley.hpp:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/void_t.hpp:
 
 /usr/include/c++/11/bits/codecvt.h:
 
@@ -864,6 +1100,8 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 /usr/include/c++/11/bits/locale_classes.tcc:
 
 /home/user/vcpkg/installed/x64-linux/include/spdlog/details/null_mutex.h:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/string_concat.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
@@ -945,6 +1183,8 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
 
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/conversions/to_chars.hpp:
+
 /usr/include/c++/11/thread:
 
 /usr/include/c++/11/ratio:
@@ -986,6 +1226,8 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/c++/11/bits/fs_path.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
@@ -1055,6 +1297,8 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
+/usr/include/c++/11/bits/fs_fwd.h:
+
 /usr/include/c++/11/bits/stl_bvector.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
@@ -1062,6 +1306,8 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
 /usr/include/c++/11/mutex:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/string_utils.hpp:
 
 /usr/include/c++/11/functional:
 
@@ -1081,13 +1327,23 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 
 /usr/include/c++/11/clocale:
 
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/adl_serializer.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /home/user/vcpkg/installed/x64-linux/include/fmt/format.h:
 
+/usr/include/c++/11/pstl/glue_numeric_defs.h:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/json_fwd.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
+/usr/include/c++/11/locale:
+
 /usr/include/ctype.h:
+
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/call_std/begin.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
@@ -1127,6 +1383,8 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 
 /usr/include/math.h:
 
+/usr/include/c++/11/bits/valarray_before.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
 
 /usr/include/c++/11/bits/stl_relops.h:
@@ -1138,6 +1396,8 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 /usr/include/c++/11/string:
 
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+
+/usr/include/c++/11/codecvt:
 
 /usr/include/c++/11/bits/streambuf.tcc:
 
@@ -1165,6 +1425,8 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
+/home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/string_escape.hpp:
+
 /usr/include/c++/11/bits/specfun.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
@@ -1188,6 +1450,8 @@ http/CMakeFiles/http.dir/src/routing.cpp.o: ../http/src/routing.cpp \
 /usr/include/c++/11/tr1/poly_hermite.tcc:
 
 /usr/include/c++/11/tr1/riemann_zeta.tcc:
+
+/usr/include/c++/11/pstl/glue_algorithm_defs.h:
 
 /usr/include/c++/11/stdexcept:
 

@@ -282,11 +282,23 @@ Z_VCPKG_CL:FILEPATH=Z_VCPKG_CL-NOTFOUND
 // triplet
 _VCPKG_INSTALLED_DIR:PATH=/home/user/vcpkg/installed
 
+//The directory containing a CMake configuration file for boost-uuid.
+boost-uuid_DIR:PATH=boost-uuid_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for fmt.
 fmt_DIR:PATH=/home/user/vcpkg/installed/x64-linux/share/fmt
 
+//The directory containing a CMake configuration file for libuuid.
+libuuid_DIR:PATH=libuuid_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for nlohmann_json.
+nlohmann_json_DIR:PATH=/home/user/vcpkg/installed/x64-linux/share/nlohmann_json
+
 //The directory containing a CMake configuration file for spdlog.
 spdlog_DIR:PATH=/home/user/vcpkg/installed/x64-linux/share/spdlog
+
+//The directory containing a CMake configuration file for stduuid.
+stduuid_DIR:PATH=/home/user/vcpkg/installed/x64-linux/share/stduuid
 
 
 ########################
@@ -444,6 +456,8 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//Details about finding nlohmann_json
+FIND_PACKAGE_MESSAGE_DETAILS_nlohmann_json:INTERNAL=[/home/user/vcpkg/installed/x64-linux/share/nlohmann_json/nlohmann_jsonConfig.cmake][v3.12.0()]
 //Install the dependencies listed in your manifest:
 //\n    If this is off, you will have to manually install your dependencies.
 //\n    See https://github.com/microsoft/vcpkg/tree/master/docs/specifications/manifests.md
