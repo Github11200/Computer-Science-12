@@ -5,12 +5,15 @@
 #include <unistd.h>
 #include <cstring>
 #include <arpa/inet.h>
+#include "restclient-cpp/restclient.h"
 
 using namespace std;
 
-int main(int argc, char* argv[]) {
-  system("clear");
-  spdlog::info("Client shenanigans");
+int main(int argc, char* argv[]) { 
+  RestClient::Response r = RestClient::get("http://localhost:8000/getAllUsers");
+  spdlog::info("Code: {}", r.code);
+  spdlog::info("Body: {}", r.body);
+  // spdlog::info("Headers: {}", r.headers);
   int PORT = atoi(argv[1]);
 
   int clientSocket = socket(AF_INET, SOCK_STREAM, 0);

@@ -13,6 +13,6 @@ done
 # cmake --build build > /dev/null 2>&1
 
 cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE=/home/user/vcpkg/scripts/buildsystems/vcpkg.cmake 
-cmake --build build 
+cmake --build build --target http
 
 ./build/http/http $port

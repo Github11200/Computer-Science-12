@@ -93,7 +93,12 @@ client_EXTERNAL_OBJECTS =
 client/client: client/CMakeFiles/client.dir/src/client.cpp.o
 client/client: client/CMakeFiles/client.dir/build.make
 client/client: /home/user/vcpkg/installed/x64-linux/debug/lib/libspdlogd.a
+client/client: /home/user/vcpkg/installed/x64-linux/debug/lib/librestclient-cppd.a
 client/client: /home/user/vcpkg/installed/x64-linux/debug/lib/libfmtd.a
+client/client: /home/user/vcpkg/installed/x64-linux/debug/lib/libcurl-d.a
+client/client: /home/user/vcpkg/installed/x64-linux/debug/lib/libssl.a
+client/client: /home/user/vcpkg/installed/x64-linux/debug/lib/libcrypto.a
+client/client: /home/user/vcpkg/installed/x64-linux/lib/libz.a
 client/client: client/CMakeFiles/client.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/code/Computer-Science-12/Termicord/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable client"
 	cd /home/user/code/Computer-Science-12/Termicord/build/client && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)

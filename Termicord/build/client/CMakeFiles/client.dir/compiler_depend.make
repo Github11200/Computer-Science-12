@@ -319,8 +319,24 @@ client/CMakeFiles/client.dir/src/client.cpp.o: ../client/src/client.cpp \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/linux/close_range.h \
-  /usr/include/arpa/inet.h
+  /usr/include/arpa/inet.h \
+  /home/user/vcpkg/installed/x64-linux/include/restclient-cpp/restclient.h \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /home/user/vcpkg/installed/x64-linux/include/restclient-cpp/version.h
 
+
+/usr/include/c++/11/bits/stl_multimap.h:
+
+/usr/include/c++/11/bits/stl_map.h:
+
+/usr/include/c++/11/bits/stl_tree.h:
+
+/usr/include/c++/11/map:
+
+/home/user/vcpkg/installed/x64-linux/include/restclient-cpp/restclient.h:
 
 /usr/include/arpa/inet.h:
 
@@ -393,6 +409,8 @@ client/CMakeFiles/client.dir/src/client.cpp.o: ../client/src/client.cpp \
 /usr/include/c++/11/bit:
 
 /usr/include/c++/11/bits/hashtable_policy.h:
+
+/home/user/vcpkg/installed/x64-linux/include/restclient-cpp/version.h:
 
 /usr/include/c++/11/bits/hashtable.h:
 

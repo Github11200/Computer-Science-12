@@ -9,7 +9,7 @@ while [[ $# -gt 0 ]]; do
   break 
 done
 
-cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE=/home/user/vcpkg/scripts/buildsystems/vcpkg.cmake > /dev/null 2>&1 
-cmake --build build > /dev/null 2>&1
+cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE=/home/user/vcpkg/scripts/buildsystems/vcpkg.cmake 
+cmake --build build --target client
 
 ./build/client/client $port
