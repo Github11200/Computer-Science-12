@@ -3,41 +3,51 @@
 using namespace std;
 using json = nlohmann::json;
 
-Database::Database(std::string databasesPath) {
-  this->databasesPath = databasesPath;
-}
-
 void Database::createDatabase(string name) {
-  ifstream database(databasesPath + name);
+  fstream database(this->PATH + name + ".json", ios::out | ios::trunc);
 
-  if (database.fail()) {
+  if (!database.is_open()) {
     spdlog::error("Could not create a new database");
     return;
   }
 
-  database << "({})";
+  database << "{}";
   
-  this->currentJsonData = json::parse("({})");
-  this->currentDatabase = database;
+  this->currentJsonData = json::parse("{}"); 
+  database.close();
 
-  spdlog::info("Successfully created a new database");
+  spdlog::info("Successfully created the database \"{}\"", name); 
 }
 
 void Database::openDatabase(string name) {
-  ifstream database(databasesPath + name);
+  fstream database(this->PATH + name + ".json");
 
-  if (database.fail()) {
+  if (!database.is_open()) {
     spdlog::error("Could not open the database");
     return;
   }
 
+  database >> this->currentJsonData;
   spdlog::info("Successfully opened and loaded the database");
 }
 
-void Database::searchDatabase() {}
+bool Database::databaseExists(string name) {
+  ifstream file(this->PATH + name + ".json");
+  if (file) return true;
+  else return false;
+}
+
+optional<string> Database::searchDatabase(string key) {
+  if (this->currentJsonData.contains(key))
+    return this->currentJsonData[key].dump();
+  return nullopt;
+}
+
+string Database::getAllJsonData() {
+  return this->currentJsonData.dump();
+}
 
 void Database::closeDatabase() {
-  this->currentDatabase.close();
   this->currentJsonData = json::parse("");
   spdlog::info("Successfully closed the database");
 }

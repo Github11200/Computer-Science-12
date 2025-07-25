@@ -1,19 +1,26 @@
+#ifndef DATABASE_H
+#define DATABASE_H
+
 #include <nlohmann/json.hpp>
 #include <spdlog/spdlog.h>
 #include <iostream>
 #include <fstream>
+#include <optional>
 
 class Database {
 private:
-  std::ifstream currentDatabase;
   nlohmann::json currentJsonData;
-  std::string databasesPath;
+  std::string PATH = "databases/";
 
 public:
-  Database(std::string databasesPath);
+  Database() = default;
 
   void createDatabase(std::string name);
   void openDatabase(std::string name);
-  void searchDatabase();
+  bool databaseExists(std::string name);
+  std::optional<std::string> searchDatabase(std::string key);
+  std::string getAllJsonData();
   void closeDatabase();
 };
+
+#endif

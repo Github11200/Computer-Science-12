@@ -8,13 +8,14 @@
 #include <sstream>
 #include <any>
 #include <functional>
+#include "types.h"
 
 struct Route {
   std::string route;
-  std::function<std::any()> callback;
+  std::function<Result(const std::string& rawJson)> callback;
 
   Route() = default;
-  Route(std::string route, std::function<std::any()> callback) : route(route),
+  Route(std::string route, std::function<Result(const std::string& rawJson)> callback) : route(route),
                                                                  callback(callback) {} 
 };
 

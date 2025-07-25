@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/user/code/Computer-Science-12/Termicord/http/src/database/database.cpp" "http/CMakeFiles/http.dir/src/database/database.cpp.o" "gcc" "http/CMakeFiles/http.dir/src/database/database.cpp.o.d"
   "/home/user/code/Computer-Science-12/Termicord/http/src/http.cpp" "http/CMakeFiles/http.dir/src/http.cpp.o" "gcc" "http/CMakeFiles/http.dir/src/http.cpp.o.d"
+  "/home/user/code/Computer-Science-12/Termicord/http/src/routes/getUser.cpp" "http/CMakeFiles/http.dir/src/routes/getUser.cpp.o" "gcc" "http/CMakeFiles/http.dir/src/routes/getUser.cpp.o.d"
   "/home/user/code/Computer-Science-12/Termicord/http/src/routing.cpp" "http/CMakeFiles/http.dir/src/routing.cpp.o" "gcc" "http/CMakeFiles/http.dir/src/routing.cpp.o.d"
   )
 

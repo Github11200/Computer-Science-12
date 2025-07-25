@@ -97,21 +97,54 @@ http/CMakeFiles/http.dir/src/routing.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/http.dir/src/routing.cpp.s"
 	cd /home/user/code/Computer-Science-12/Termicord/build/http && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/code/Computer-Science-12/Termicord/http/src/routing.cpp -o CMakeFiles/http.dir/src/routing.cpp.s
 
+http/CMakeFiles/http.dir/src/database/database.cpp.o: http/CMakeFiles/http.dir/flags.make
+http/CMakeFiles/http.dir/src/database/database.cpp.o: ../http/src/database/database.cpp
+http/CMakeFiles/http.dir/src/database/database.cpp.o: http/CMakeFiles/http.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/code/Computer-Science-12/Termicord/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object http/CMakeFiles/http.dir/src/database/database.cpp.o"
+	cd /home/user/code/Computer-Science-12/Termicord/build/http && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT http/CMakeFiles/http.dir/src/database/database.cpp.o -MF CMakeFiles/http.dir/src/database/database.cpp.o.d -o CMakeFiles/http.dir/src/database/database.cpp.o -c /home/user/code/Computer-Science-12/Termicord/http/src/database/database.cpp
+
+http/CMakeFiles/http.dir/src/database/database.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/http.dir/src/database/database.cpp.i"
+	cd /home/user/code/Computer-Science-12/Termicord/build/http && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/code/Computer-Science-12/Termicord/http/src/database/database.cpp > CMakeFiles/http.dir/src/database/database.cpp.i
+
+http/CMakeFiles/http.dir/src/database/database.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/http.dir/src/database/database.cpp.s"
+	cd /home/user/code/Computer-Science-12/Termicord/build/http && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/code/Computer-Science-12/Termicord/http/src/database/database.cpp -o CMakeFiles/http.dir/src/database/database.cpp.s
+
+http/CMakeFiles/http.dir/src/routes/getUser.cpp.o: http/CMakeFiles/http.dir/flags.make
+http/CMakeFiles/http.dir/src/routes/getUser.cpp.o: ../http/src/routes/getUser.cpp
+http/CMakeFiles/http.dir/src/routes/getUser.cpp.o: http/CMakeFiles/http.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/code/Computer-Science-12/Termicord/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object http/CMakeFiles/http.dir/src/routes/getUser.cpp.o"
+	cd /home/user/code/Computer-Science-12/Termicord/build/http && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT http/CMakeFiles/http.dir/src/routes/getUser.cpp.o -MF CMakeFiles/http.dir/src/routes/getUser.cpp.o.d -o CMakeFiles/http.dir/src/routes/getUser.cpp.o -c /home/user/code/Computer-Science-12/Termicord/http/src/routes/getUser.cpp
+
+http/CMakeFiles/http.dir/src/routes/getUser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/http.dir/src/routes/getUser.cpp.i"
+	cd /home/user/code/Computer-Science-12/Termicord/build/http && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/code/Computer-Science-12/Termicord/http/src/routes/getUser.cpp > CMakeFiles/http.dir/src/routes/getUser.cpp.i
+
+http/CMakeFiles/http.dir/src/routes/getUser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/http.dir/src/routes/getUser.cpp.s"
+	cd /home/user/code/Computer-Science-12/Termicord/build/http && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/code/Computer-Science-12/Termicord/http/src/routes/getUser.cpp -o CMakeFiles/http.dir/src/routes/getUser.cpp.s
+
 # Object files for target http
 http_OBJECTS = \
 "CMakeFiles/http.dir/src/http.cpp.o" \
-"CMakeFiles/http.dir/src/routing.cpp.o"
+"CMakeFiles/http.dir/src/routing.cpp.o" \
+"CMakeFiles/http.dir/src/database/database.cpp.o" \
+"CMakeFiles/http.dir/src/routes/getUser.cpp.o"
 
 # External object files for target http
 http_EXTERNAL_OBJECTS =
 
 http/http: http/CMakeFiles/http.dir/src/http.cpp.o
 http/http: http/CMakeFiles/http.dir/src/routing.cpp.o
+http/http: http/CMakeFiles/http.dir/src/database/database.cpp.o
+http/http: http/CMakeFiles/http.dir/src/routes/getUser.cpp.o
 http/http: http/CMakeFiles/http.dir/build.make
 http/http: /home/user/vcpkg/installed/x64-linux/debug/lib/libspdlogd.a
+http/http: /home/user/vcpkg/installed/x64-linux/debug/lib/libuuid.a
 http/http: /home/user/vcpkg/installed/x64-linux/debug/lib/libfmtd.a
 http/http: http/CMakeFiles/http.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/code/Computer-Science-12/Termicord/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable http"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/code/Computer-Science-12/Termicord/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable http"
 	cd /home/user/code/Computer-Science-12/Termicord/build/http && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/http.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

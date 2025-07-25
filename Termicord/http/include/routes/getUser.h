@@ -1,13 +1,18 @@
+#ifndef GET_USER_H
+#define GET_USER_H
+
 #include <iostream>
 #include <vector>
 #include <string>
-#include <stduuid/uuid.h>
+#include <uuid/uuid.h>
+#include <any>
+#include <spdlog/spdlog.h>
+#include <optional>
+#include <nlohmann/json.hpp>
+#include "database/database.h"
+#include "types.h"
 
-struct User {
-  std::string username;
-  vector<string> servers;
-  vector<string> friends;
-}
+Result getUser(std::string rawJson);
+Result getAllUsers(std::string rawJson);
 
-void getUser();
-void getUsers();
+#endif

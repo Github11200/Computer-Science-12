@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/http.dir/src/http.cpp.o CMakeFiles/http.dir/src/routing.cpp.o -o http  /home/user/vcpkg/installed/x64-linux/debug/lib/libspdlogd.a /home/user/vcpkg/installed/x64-linux/debug/lib/libfmtd.a 
+/usr/bin/c++ CMakeFiles/http.dir/src/http.cpp.o CMakeFiles/http.dir/src/routing.cpp.o CMakeFiles/http.dir/src/database/database.cpp.o CMakeFiles/http.dir/src/routes/getUser.cpp.o -o http  /home/user/vcpkg/installed/x64-linux/debug/lib/libspdlogd.a /home/user/vcpkg/installed/x64-linux/debug/lib/libuuid.a /home/user/vcpkg/installed/x64-linux/debug/lib/libfmtd.a 

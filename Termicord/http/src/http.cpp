@@ -1,9 +1,5 @@
 #include <spdlog/spdlog.h>
-#include <uuid>
-#include <boost/uuid/uuid.hpp>
-#include <boost/uuid/uuid_generators.hpp>
-#include <boost/uuid/uuid_io.hpp>
-
+#include <uuid/uuid.h>
 #include <iostream>
 #include <string>
 #include <cstring>
@@ -15,15 +11,12 @@
 #include <any>
 #include "routing.h"
 #include "database/database.h"
+#include "routes/getUser.h"
+#include "types.h"
 
 using namespace std;
-using uuids = boost::uuids;
 
-int startServerSocket(int PORT) {
-  uuids::random_generator generator;
-  uuids::uuid uuid = generator();
-  cout << uuid << endl;
-
+int startServerSocket(int PORT) { 
   int serverSocket = socket(AF_INET, SOCK_STREAM, 0);
   if (serverSocket == -1) {
     spdlog::error("Failed to create the socket.");
@@ -75,6 +68,8 @@ int main(int argc, char* argv[]) {
   int PORT = atoi(argv[1]);
 
   Routing routing;
+  routing.addRoute(Route("/getUser", getUser));
+  routing.addRoute(Route("/getAllUsers", getAllUsers)); 
 
   int serverSocket = startServerSocket(PORT);  
 
@@ -93,14 +88,23 @@ int main(int argc, char* argv[]) {
     string clientMessage = readFromSocket(clientSocket);
     string header = clientMessage.substr(0, clientMessage.find('\n'));
     string method = clientMessage.substr(0, clientMessage.find(' '));
-    spdlog::info("Method: {}", method);
-    spdlog::info("Route: {}", routing.getRouteNameFromHeader(header));
+    string json = clientMessage.substr(clientMessage.find('{') - 1, clientMessage.size()); 
+    // spdlog::info("Method: {}", method);
+    // spdlog::info("Route: {}", routing.getRouteNameFromHeader(header));
+    // spdlog::info("JSON: {}", json);
 
-    spdlog::info("Accepted the connection from {} : {}.", inet_ntoa(clientAddress.sin_addr), ntohs(clientAddress.sin_port));
-    
-    string httpHeader = "HTTP/1.1 200 OK\r\n\r\n";
-    string message = "funny as message";
-
+    // spdlog::info("Accepted the connection from {} : {}.", inet_ntoa(clientAddress.sin_addr), ntohs(clientAddress.sin_port));
+   
+    Result callbackResult = routing.getRoute(routing.getRouteNameFromHeader(header)).callback(json);
+    string httpHeader = "";
+    string message = "";
+    if (callbackResult.responseCode == 200) {
+      httpHeader = "HTTP/1.1 200 OK\r\n\r\n";
+      message = callbackResult.json;
+    } else if (callbackResult.responseCode == 500) {
+      httpHeader = "HTTP/1.1 500 Interal Server Error\r\n\r\n";
+      message = callbackResult.json;
+    }
     httpHeader += message; 
 
     send(clientSocket, httpHeader.c_str(), httpHeader.size(), 0);

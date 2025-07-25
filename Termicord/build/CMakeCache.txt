@@ -282,14 +282,8 @@ Z_VCPKG_CL:FILEPATH=Z_VCPKG_CL-NOTFOUND
 // triplet
 _VCPKG_INSTALLED_DIR:PATH=/home/user/vcpkg/installed
 
-//The directory containing a CMake configuration file for boost-uuid.
-boost-uuid_DIR:PATH=boost-uuid_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for fmt.
 fmt_DIR:PATH=/home/user/vcpkg/installed/x64-linux/share/fmt
-
-//The directory containing a CMake configuration file for libuuid.
-libuuid_DIR:PATH=libuuid_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for nlohmann_json.
 nlohmann_json_DIR:PATH=/home/user/vcpkg/installed/x64-linux/share/nlohmann_json
@@ -297,8 +291,8 @@ nlohmann_json_DIR:PATH=/home/user/vcpkg/installed/x64-linux/share/nlohmann_json
 //The directory containing a CMake configuration file for spdlog.
 spdlog_DIR:PATH=/home/user/vcpkg/installed/x64-linux/share/spdlog
 
-//The directory containing a CMake configuration file for stduuid.
-stduuid_DIR:PATH=/home/user/vcpkg/installed/x64-linux/share/stduuid
+//The directory containing a CMake configuration file for unofficial-libuuid.
+unofficial-libuuid_DIR:PATH=/home/user/vcpkg/installed/x64-linux/share/unofficial-libuuid
 
 
 ########################

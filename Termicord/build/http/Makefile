@@ -130,6 +130,30 @@ http/fast:
 	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/build
 .PHONY : http/fast
 
+src/database/database.o: src/database/database.cpp.o
+.PHONY : src/database/database.o
+
+# target to build an object file
+src/database/database.cpp.o:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/database/database.cpp.o
+.PHONY : src/database/database.cpp.o
+
+src/database/database.i: src/database/database.cpp.i
+.PHONY : src/database/database.i
+
+# target to preprocess a source file
+src/database/database.cpp.i:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/database/database.cpp.i
+.PHONY : src/database/database.cpp.i
+
+src/database/database.s: src/database/database.cpp.s
+.PHONY : src/database/database.s
+
+# target to generate assembly for a file
+src/database/database.cpp.s:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/database/database.cpp.s
+.PHONY : src/database/database.cpp.s
+
 src/http.o: src/http.cpp.o
 .PHONY : src/http.o
 
@@ -153,6 +177,30 @@ src/http.s: src/http.cpp.s
 src/http.cpp.s:
 	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/http.cpp.s
 .PHONY : src/http.cpp.s
+
+src/routes/getUser.o: src/routes/getUser.cpp.o
+.PHONY : src/routes/getUser.o
+
+# target to build an object file
+src/routes/getUser.cpp.o:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/routes/getUser.cpp.o
+.PHONY : src/routes/getUser.cpp.o
+
+src/routes/getUser.i: src/routes/getUser.cpp.i
+.PHONY : src/routes/getUser.i
+
+# target to preprocess a source file
+src/routes/getUser.cpp.i:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/routes/getUser.cpp.i
+.PHONY : src/routes/getUser.cpp.i
+
+src/routes/getUser.s: src/routes/getUser.cpp.s
+.PHONY : src/routes/getUser.s
+
+# target to generate assembly for a file
+src/routes/getUser.cpp.s:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/routes/getUser.cpp.s
+.PHONY : src/routes/getUser.cpp.s
 
 src/routing.o: src/routing.cpp.o
 .PHONY : src/routing.o
@@ -187,9 +235,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... http"
+	@echo "... src/database/database.o"
+	@echo "... src/database/database.i"
+	@echo "... src/database/database.s"
 	@echo "... src/http.o"
 	@echo "... src/http.i"
 	@echo "... src/http.s"
+	@echo "... src/routes/getUser.o"
+	@echo "... src/routes/getUser.i"
+	@echo "... src/routes/getUser.s"
 	@echo "... src/routing.o"
 	@echo "... src/routing.i"
 	@echo "... src/routing.s"
