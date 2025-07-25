@@ -5,8 +5,10 @@ find_package(unofficial-libuuid CONFIG REQUIRED)
 add_executable(http
   src/http.cpp
   src/routing.cpp
+  src/utils.cpp
   src/database/database.cpp
-  src/routes/getUser.cpp
+  src/routes/users.cpp
+  src/routes/servers.cpp
 )
 target_link_libraries(http PRIVATE spdlog::spdlog unofficial::UUID::uuid)
 target_include_directories(http

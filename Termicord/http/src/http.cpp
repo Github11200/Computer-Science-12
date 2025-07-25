@@ -11,7 +11,8 @@
 #include <any>
 #include "routing.h"
 #include "database/database.h"
-#include "routes/getUser.h"
+#include "routes/users.h"
+#include "routes/servers.h"
 #include "types.h"
 
 using namespace std;
@@ -69,7 +70,12 @@ int main(int argc, char* argv[]) {
 
   Routing routing;
   routing.addRoute(Route("/getUser", getUser));
-  routing.addRoute(Route("/getAllUsers", getAllUsers)); 
+  routing.addRoute(Route("/getAllUsers", getAllUsers));
+  routing.addRoute(Route("/addUser", addUser));
+
+  routing.addRoute(Route("/getServer", getServer));
+  routing.addRoute(Route("/getAllServers", getAllServers));
+  routing.addRoute(Route("/addServer", addServer));
 
   int serverSocket = startServerSocket(PORT);  
 

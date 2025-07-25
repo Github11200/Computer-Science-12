@@ -345,5 +345,7 @@ http/CMakeFiles/http.dir/src/http.cpp.o: \
  /home/user/vcpkg/installed/x64-linux/include/nlohmann/ordered_map.hpp \
  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/macro_unscope.hpp \
  /home/user/vcpkg/installed/x64-linux/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
- /home/user/code/Computer-Science-12/Termicord/http/include/routes/getUser.h \
- /home/user/code/Computer-Science-12/Termicord/http/include/types.h
+ /home/user/code/Computer-Science-12/Termicord/http/include/routes/users.h \
+ /home/user/code/Computer-Science-12/Termicord/http/include/types.h \
+ /home/user/code/Computer-Science-12/Termicord/http/include/utils.h \
+ /home/user/code/Computer-Science-12/Termicord/http/include/routes/servers.h

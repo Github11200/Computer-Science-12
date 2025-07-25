@@ -178,29 +178,53 @@ src/http.cpp.s:
 	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/http.cpp.s
 .PHONY : src/http.cpp.s
 
-src/routes/getUser.o: src/routes/getUser.cpp.o
-.PHONY : src/routes/getUser.o
+src/routes/servers.o: src/routes/servers.cpp.o
+.PHONY : src/routes/servers.o
 
 # target to build an object file
-src/routes/getUser.cpp.o:
-	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/routes/getUser.cpp.o
-.PHONY : src/routes/getUser.cpp.o
+src/routes/servers.cpp.o:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/routes/servers.cpp.o
+.PHONY : src/routes/servers.cpp.o
 
-src/routes/getUser.i: src/routes/getUser.cpp.i
-.PHONY : src/routes/getUser.i
+src/routes/servers.i: src/routes/servers.cpp.i
+.PHONY : src/routes/servers.i
 
 # target to preprocess a source file
-src/routes/getUser.cpp.i:
-	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/routes/getUser.cpp.i
-.PHONY : src/routes/getUser.cpp.i
+src/routes/servers.cpp.i:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/routes/servers.cpp.i
+.PHONY : src/routes/servers.cpp.i
 
-src/routes/getUser.s: src/routes/getUser.cpp.s
-.PHONY : src/routes/getUser.s
+src/routes/servers.s: src/routes/servers.cpp.s
+.PHONY : src/routes/servers.s
 
 # target to generate assembly for a file
-src/routes/getUser.cpp.s:
-	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/routes/getUser.cpp.s
-.PHONY : src/routes/getUser.cpp.s
+src/routes/servers.cpp.s:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/routes/servers.cpp.s
+.PHONY : src/routes/servers.cpp.s
+
+src/routes/users.o: src/routes/users.cpp.o
+.PHONY : src/routes/users.o
+
+# target to build an object file
+src/routes/users.cpp.o:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/routes/users.cpp.o
+.PHONY : src/routes/users.cpp.o
+
+src/routes/users.i: src/routes/users.cpp.i
+.PHONY : src/routes/users.i
+
+# target to preprocess a source file
+src/routes/users.cpp.i:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/routes/users.cpp.i
+.PHONY : src/routes/users.cpp.i
+
+src/routes/users.s: src/routes/users.cpp.s
+.PHONY : src/routes/users.s
+
+# target to generate assembly for a file
+src/routes/users.cpp.s:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/routes/users.cpp.s
+.PHONY : src/routes/users.cpp.s
 
 src/routing.o: src/routing.cpp.o
 .PHONY : src/routing.o
@@ -226,6 +250,30 @@ src/routing.cpp.s:
 	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/routing.cpp.s
 .PHONY : src/routing.cpp.s
 
+src/utils.o: src/utils.cpp.o
+.PHONY : src/utils.o
+
+# target to build an object file
+src/utils.cpp.o:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/utils.cpp.o
+.PHONY : src/utils.cpp.o
+
+src/utils.i: src/utils.cpp.i
+.PHONY : src/utils.i
+
+# target to preprocess a source file
+src/utils.cpp.i:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/utils.cpp.i
+.PHONY : src/utils.cpp.i
+
+src/utils.s: src/utils.cpp.s
+.PHONY : src/utils.s
+
+# target to generate assembly for a file
+src/utils.cpp.s:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f http/CMakeFiles/http.dir/build.make http/CMakeFiles/http.dir/src/utils.cpp.s
+.PHONY : src/utils.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -241,12 +289,18 @@ help:
 	@echo "... src/http.o"
 	@echo "... src/http.i"
 	@echo "... src/http.s"
-	@echo "... src/routes/getUser.o"
-	@echo "... src/routes/getUser.i"
-	@echo "... src/routes/getUser.s"
+	@echo "... src/routes/servers.o"
+	@echo "... src/routes/servers.i"
+	@echo "... src/routes/servers.s"
+	@echo "... src/routes/users.o"
+	@echo "... src/routes/users.i"
+	@echo "... src/routes/users.s"
 	@echo "... src/routing.o"
 	@echo "... src/routing.i"
 	@echo "... src/routing.s"
+	@echo "... src/utils.o"
+	@echo "... src/utils.i"
+	@echo "... src/utils.s"
 .PHONY : help
 
 

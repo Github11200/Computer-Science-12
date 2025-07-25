@@ -6,21 +6,24 @@
 #include <iostream>
 #include <fstream>
 #include <optional>
+#include <filesystem>
 
 class Database {
 private:
   nlohmann::json currentJsonData;
   std::string PATH = "databases/";
+  std::string NAME;
 
 public:
-  Database() = default;
+  Database(std::string name);
+  ~Database();
 
-  void createDatabase(std::string name);
-  void openDatabase(std::string name);
-  bool databaseExists(std::string name);
+  void createDatabase();
+  bool openDatabase();
+  bool databaseExists();
   std::optional<std::string> searchDatabase(std::string key);
   std::string getAllJsonData();
-  void closeDatabase();
+  bool addEntry(std::string key, nlohmann::json jsonData);
 };
 
 #endif
