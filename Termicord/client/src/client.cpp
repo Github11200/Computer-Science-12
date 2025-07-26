@@ -7,9 +7,10 @@
 #include <arpa/inet.h>
 #include <nlohmann/json.hpp>
 #include <string>
-#include "input.h"
-#include "auth.h"
-#include "requests.h"
+#include "utils/input.h"
+#include "utils/requests.h"
+#include "windows/auth.h"
+#include "windows/home.h"
 
 using namespace std;
 using json = nlohmann::json;
@@ -17,7 +18,10 @@ using json = nlohmann::json;
 int main(int argc, char* argv[]) {
   int PORT = atoi(argv[1]);
   Requests::defaultUrl = "http://localhost:" + to_string(PORT);
-  Auth::authInit();
+
+  Auth::init();
+
+
   return 0;
 }
 

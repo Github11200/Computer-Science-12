@@ -178,6 +178,30 @@ src/client.cpp.s:
 	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/client.cpp.s
 .PHONY : src/client.cpp.s
 
+src/input.o: src/input.cpp.o
+.PHONY : src/input.o
+
+# target to build an object file
+src/input.cpp.o:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/input.cpp.o
+.PHONY : src/input.cpp.o
+
+src/input.i: src/input.cpp.i
+.PHONY : src/input.i
+
+# target to preprocess a source file
+src/input.cpp.i:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/input.cpp.i
+.PHONY : src/input.cpp.i
+
+src/input.s: src/input.cpp.s
+.PHONY : src/input.s
+
+# target to generate assembly for a file
+src/input.cpp.s:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/input.cpp.s
+.PHONY : src/input.cpp.s
+
 src/requests.o: src/requests.cpp.o
 .PHONY : src/requests.o
 
@@ -217,6 +241,9 @@ help:
 	@echo "... src/client.o"
 	@echo "... src/client.i"
 	@echo "... src/client.s"
+	@echo "... src/input.o"
+	@echo "... src/input.i"
+	@echo "... src/input.s"
 	@echo "... src/requests.o"
 	@echo "... src/requests.i"
 	@echo "... src/requests.s"

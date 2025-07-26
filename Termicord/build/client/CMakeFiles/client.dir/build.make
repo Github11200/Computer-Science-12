@@ -83,10 +83,24 @@ client/CMakeFiles/client.dir/src/client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/client.cpp.s"
 	cd /home/user/code/Computer-Science-12/Termicord/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/code/Computer-Science-12/Termicord/client/src/client.cpp -o CMakeFiles/client.dir/src/client.cpp.s
 
+client/CMakeFiles/client.dir/src/input.cpp.o: client/CMakeFiles/client.dir/flags.make
+client/CMakeFiles/client.dir/src/input.cpp.o: ../client/src/input.cpp
+client/CMakeFiles/client.dir/src/input.cpp.o: client/CMakeFiles/client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/code/Computer-Science-12/Termicord/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object client/CMakeFiles/client.dir/src/input.cpp.o"
+	cd /home/user/code/Computer-Science-12/Termicord/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/client.dir/src/input.cpp.o -MF CMakeFiles/client.dir/src/input.cpp.o.d -o CMakeFiles/client.dir/src/input.cpp.o -c /home/user/code/Computer-Science-12/Termicord/client/src/input.cpp
+
+client/CMakeFiles/client.dir/src/input.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/input.cpp.i"
+	cd /home/user/code/Computer-Science-12/Termicord/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/code/Computer-Science-12/Termicord/client/src/input.cpp > CMakeFiles/client.dir/src/input.cpp.i
+
+client/CMakeFiles/client.dir/src/input.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/input.cpp.s"
+	cd /home/user/code/Computer-Science-12/Termicord/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/code/Computer-Science-12/Termicord/client/src/input.cpp -o CMakeFiles/client.dir/src/input.cpp.s
+
 client/CMakeFiles/client.dir/src/auth.cpp.o: client/CMakeFiles/client.dir/flags.make
 client/CMakeFiles/client.dir/src/auth.cpp.o: ../client/src/auth.cpp
 client/CMakeFiles/client.dir/src/auth.cpp.o: client/CMakeFiles/client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/code/Computer-Science-12/Termicord/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object client/CMakeFiles/client.dir/src/auth.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/code/Computer-Science-12/Termicord/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object client/CMakeFiles/client.dir/src/auth.cpp.o"
 	cd /home/user/code/Computer-Science-12/Termicord/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/client.dir/src/auth.cpp.o -MF CMakeFiles/client.dir/src/auth.cpp.o.d -o CMakeFiles/client.dir/src/auth.cpp.o -c /home/user/code/Computer-Science-12/Termicord/client/src/auth.cpp
 
 client/CMakeFiles/client.dir/src/auth.cpp.i: cmake_force
@@ -100,7 +114,7 @@ client/CMakeFiles/client.dir/src/auth.cpp.s: cmake_force
 client/CMakeFiles/client.dir/src/requests.cpp.o: client/CMakeFiles/client.dir/flags.make
 client/CMakeFiles/client.dir/src/requests.cpp.o: ../client/src/requests.cpp
 client/CMakeFiles/client.dir/src/requests.cpp.o: client/CMakeFiles/client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/code/Computer-Science-12/Termicord/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object client/CMakeFiles/client.dir/src/requests.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/code/Computer-Science-12/Termicord/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object client/CMakeFiles/client.dir/src/requests.cpp.o"
 	cd /home/user/code/Computer-Science-12/Termicord/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/client.dir/src/requests.cpp.o -MF CMakeFiles/client.dir/src/requests.cpp.o.d -o CMakeFiles/client.dir/src/requests.cpp.o -c /home/user/code/Computer-Science-12/Termicord/client/src/requests.cpp
 
 client/CMakeFiles/client.dir/src/requests.cpp.i: cmake_force
@@ -114,6 +128,7 @@ client/CMakeFiles/client.dir/src/requests.cpp.s: cmake_force
 # Object files for target client
 client_OBJECTS = \
 "CMakeFiles/client.dir/src/client.cpp.o" \
+"CMakeFiles/client.dir/src/input.cpp.o" \
 "CMakeFiles/client.dir/src/auth.cpp.o" \
 "CMakeFiles/client.dir/src/requests.cpp.o"
 
@@ -121,6 +136,7 @@ client_OBJECTS = \
 client_EXTERNAL_OBJECTS =
 
 client/client: client/CMakeFiles/client.dir/src/client.cpp.o
+client/client: client/CMakeFiles/client.dir/src/input.cpp.o
 client/client: client/CMakeFiles/client.dir/src/auth.cpp.o
 client/client: client/CMakeFiles/client.dir/src/requests.cpp.o
 client/client: client/CMakeFiles/client.dir/build.make
@@ -132,7 +148,7 @@ client/client: /home/user/vcpkg/installed/x64-linux/lib/libz.a
 client/client: /home/user/vcpkg/installed/x64-linux/debug/lib/libssl.a
 client/client: /home/user/vcpkg/installed/x64-linux/debug/lib/libcrypto.a
 client/client: client/CMakeFiles/client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/code/Computer-Science-12/Termicord/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/code/Computer-Science-12/Termicord/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable client"
 	cd /home/user/code/Computer-Science-12/Termicord/build/client && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

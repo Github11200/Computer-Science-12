@@ -10,48 +10,9 @@
       "server2"
     ]
   },
-  "nimifish1": {
-    "friends": [
-      "friend1",
-      "friend2"
-    ],
-    "password": "password123",
-    "servers": [
-      "server1",
-      "server2"
-    ]
-  },
-  "nimifish121212": {
-    "friends": [
-      "friend1",
-      "friend2"
-    ],
-    "password": "password123",
-    "servers": [
-      "server1",
-      "server2"
-    ]
-  },
-  "nimifish21344333": {
-    "friends": [
-      "friend1",
-      "friend2"
-    ],
-    "password": "password123",
-    "servers": [
-      "server1",
-      "server2"
-    ]
-  },
-  "nimifish213444333": {
-    "friends": [
-      "friend1",
-      "friend2"
-    ],
-    "password": "password123",
-    "servers": [
-      "server1",
-      "server2"
-    ]
+  "nimifishasdfasdfasdf": {
+    "friends": [],
+    "password": "woah",
+    "servers": []
   }
 }
