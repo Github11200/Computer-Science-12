@@ -5,6 +5,8 @@ using json = nlohmann::json;
 
 namespace Auth {
 
+string username;
+
 void init() {
   int authTypeInput = 0;
   Input::getOption<AuthType>("Would you like to login or sign up?", vector<string>({"Login", "Sign Up"}), authTypeInput);
@@ -20,14 +22,16 @@ void login() {
     Input::getStringInput("Username: ", username);
     Input::getStringInput("Password: ", password);
     
-    Requests::Request request("/getUser", json::parse("{ \"username\": \"" + username + "\" }"));      
+    Requests::Request request("/getUser", json::parse("{ \"username\": \"" + username + "\" }"));
     Requests::APIResult result = Requests::sendRequest(request);
 
     if (result.code == Requests::ResponseCode::SUCCESS) {
       User user = result.data.get<User>();
 
-      if (user.password == password)
+      if (user.password == password) {
+        Auth::username = username; 
         return;
+      }
       int nextStepInput = 0;
       Input::getOption<NextStep>("Password is incorrect. Would you like to try again or exit?", vector<string>({"Try again", "Exit"}), nextStepInput);
       
@@ -66,8 +70,10 @@ void signUp() {
     Requests::Request request("/addUser", jsonUser);
     Requests::APIResult result = Requests::sendRequest(request);
 
-    if (result.code == Requests::ResponseCode::SUCCESS) 
+    if (result.code == Requests::ResponseCode::SUCCESS) {
+      Auth::username = username;
       return;
+    }
     else if (result.code == Requests::ResponseCode::INTERNAL_SERVER_ERROR) {
       int nextStepInput = 0;
       Input::getOption<NextStep>("There was an internal server error. Would you like to try again or exit?", vector<string>({"Try again", "Exit"}), nextStepInput);

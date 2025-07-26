@@ -130,30 +130,6 @@ client/fast:
 	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/build
 .PHONY : client/fast
 
-src/auth.o: src/auth.cpp.o
-.PHONY : src/auth.o
-
-# target to build an object file
-src/auth.cpp.o:
-	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/auth.cpp.o
-.PHONY : src/auth.cpp.o
-
-src/auth.i: src/auth.cpp.i
-.PHONY : src/auth.i
-
-# target to preprocess a source file
-src/auth.cpp.i:
-	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/auth.cpp.i
-.PHONY : src/auth.cpp.i
-
-src/auth.s: src/auth.cpp.s
-.PHONY : src/auth.s
-
-# target to generate assembly for a file
-src/auth.cpp.s:
-	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/auth.cpp.s
-.PHONY : src/auth.cpp.s
-
 src/client.o: src/client.cpp.o
 .PHONY : src/client.o
 
@@ -178,53 +154,101 @@ src/client.cpp.s:
 	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/client.cpp.s
 .PHONY : src/client.cpp.s
 
-src/input.o: src/input.cpp.o
-.PHONY : src/input.o
+src/utils/input.o: src/utils/input.cpp.o
+.PHONY : src/utils/input.o
 
 # target to build an object file
-src/input.cpp.o:
-	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/input.cpp.o
-.PHONY : src/input.cpp.o
+src/utils/input.cpp.o:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/utils/input.cpp.o
+.PHONY : src/utils/input.cpp.o
 
-src/input.i: src/input.cpp.i
-.PHONY : src/input.i
+src/utils/input.i: src/utils/input.cpp.i
+.PHONY : src/utils/input.i
 
 # target to preprocess a source file
-src/input.cpp.i:
-	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/input.cpp.i
-.PHONY : src/input.cpp.i
+src/utils/input.cpp.i:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/utils/input.cpp.i
+.PHONY : src/utils/input.cpp.i
 
-src/input.s: src/input.cpp.s
-.PHONY : src/input.s
+src/utils/input.s: src/utils/input.cpp.s
+.PHONY : src/utils/input.s
 
 # target to generate assembly for a file
-src/input.cpp.s:
-	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/input.cpp.s
-.PHONY : src/input.cpp.s
+src/utils/input.cpp.s:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/utils/input.cpp.s
+.PHONY : src/utils/input.cpp.s
 
-src/requests.o: src/requests.cpp.o
-.PHONY : src/requests.o
+src/utils/requests.o: src/utils/requests.cpp.o
+.PHONY : src/utils/requests.o
 
 # target to build an object file
-src/requests.cpp.o:
-	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/requests.cpp.o
-.PHONY : src/requests.cpp.o
+src/utils/requests.cpp.o:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/utils/requests.cpp.o
+.PHONY : src/utils/requests.cpp.o
 
-src/requests.i: src/requests.cpp.i
-.PHONY : src/requests.i
+src/utils/requests.i: src/utils/requests.cpp.i
+.PHONY : src/utils/requests.i
 
 # target to preprocess a source file
-src/requests.cpp.i:
-	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/requests.cpp.i
-.PHONY : src/requests.cpp.i
+src/utils/requests.cpp.i:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/utils/requests.cpp.i
+.PHONY : src/utils/requests.cpp.i
 
-src/requests.s: src/requests.cpp.s
-.PHONY : src/requests.s
+src/utils/requests.s: src/utils/requests.cpp.s
+.PHONY : src/utils/requests.s
 
 # target to generate assembly for a file
-src/requests.cpp.s:
-	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/requests.cpp.s
-.PHONY : src/requests.cpp.s
+src/utils/requests.cpp.s:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/utils/requests.cpp.s
+.PHONY : src/utils/requests.cpp.s
+
+src/windows/auth.o: src/windows/auth.cpp.o
+.PHONY : src/windows/auth.o
+
+# target to build an object file
+src/windows/auth.cpp.o:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/windows/auth.cpp.o
+.PHONY : src/windows/auth.cpp.o
+
+src/windows/auth.i: src/windows/auth.cpp.i
+.PHONY : src/windows/auth.i
+
+# target to preprocess a source file
+src/windows/auth.cpp.i:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/windows/auth.cpp.i
+.PHONY : src/windows/auth.cpp.i
+
+src/windows/auth.s: src/windows/auth.cpp.s
+.PHONY : src/windows/auth.s
+
+# target to generate assembly for a file
+src/windows/auth.cpp.s:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/windows/auth.cpp.s
+.PHONY : src/windows/auth.cpp.s
+
+src/windows/home.o: src/windows/home.cpp.o
+.PHONY : src/windows/home.o
+
+# target to build an object file
+src/windows/home.cpp.o:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/windows/home.cpp.o
+.PHONY : src/windows/home.cpp.o
+
+src/windows/home.i: src/windows/home.cpp.i
+.PHONY : src/windows/home.i
+
+# target to preprocess a source file
+src/windows/home.cpp.i:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/windows/home.cpp.i
+.PHONY : src/windows/home.cpp.i
+
+src/windows/home.s: src/windows/home.cpp.s
+.PHONY : src/windows/home.s
+
+# target to generate assembly for a file
+src/windows/home.cpp.s:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/windows/home.cpp.s
+.PHONY : src/windows/home.cpp.s
 
 # Help Target
 help:
@@ -235,18 +259,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... client"
-	@echo "... src/auth.o"
-	@echo "... src/auth.i"
-	@echo "... src/auth.s"
 	@echo "... src/client.o"
 	@echo "... src/client.i"
 	@echo "... src/client.s"
-	@echo "... src/input.o"
-	@echo "... src/input.i"
-	@echo "... src/input.s"
-	@echo "... src/requests.o"
-	@echo "... src/requests.i"
-	@echo "... src/requests.s"
+	@echo "... src/utils/input.o"
+	@echo "... src/utils/input.i"
+	@echo "... src/utils/input.s"
+	@echo "... src/utils/requests.o"
+	@echo "... src/utils/requests.i"
+	@echo "... src/utils/requests.s"
+	@echo "... src/windows/auth.o"
+	@echo "... src/windows/auth.i"
+	@echo "... src/windows/auth.s"
+	@echo "... src/windows/home.o"
+	@echo "... src/windows/home.i"
+	@echo "... src/windows/home.s"
 .PHONY : help
 
 

@@ -20,7 +20,7 @@ int main(int argc, char* argv[]) {
   Requests::defaultUrl = "http://localhost:" + to_string(PORT);
 
   Auth::init();
-
+  Home::init();
 
   return 0;
 }

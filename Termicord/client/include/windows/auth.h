@@ -12,6 +12,8 @@
 
 namespace Auth {
 
+extern std::string username;
+
 enum AuthType {
   LOGIN = 1,
   SIGN_UP = 2
@@ -22,7 +24,7 @@ enum NextStep {
   EXIT = 2
 };
 
-void authInit();
+void init();
 void login();
 void signUp();
 

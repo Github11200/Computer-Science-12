@@ -337,11 +337,9 @@ client/CMakeFiles/client.dir/src/client.cpp.o: \
  /usr/include/c++/11/any \
  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/macro_unscope.hpp \
  /home/user/vcpkg/installed/x64-linux/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
- /home/user/code/Computer-Science-12/Termicord/client/include/input.h \
+ /home/user/code/Computer-Science-12/Termicord/client/include/utils/input.h \
  /home/user/vcpkg/installed/x64-linux/include/magic_enum/magic_enum.hpp \
- /home/user/code/Computer-Science-12/Termicord/client/include/auth.h \
- /home/user/code/Computer-Science-12/Termicord/client/include/input.h \
- /home/user/code/Computer-Science-12/Termicord/client/include/requests.h \
+ /home/user/code/Computer-Science-12/Termicord/client/include/utils/requests.h \
  /home/user/vcpkg/installed/x64-linux/include/cpr/cpr.h \
  /home/user/vcpkg/installed/x64-linux/include/cpr/api.h \
  /usr/include/c++/11/fstream \
@@ -427,5 +425,6 @@ client/CMakeFiles/client.dir/src/client.cpp.o: \
  /home/user/vcpkg/installed/x64-linux/include/cpr/interceptor.h \
  /home/user/vcpkg/installed/x64-linux/include/cpr/ssl_ctx.h \
  /home/user/vcpkg/installed/x64-linux/include/cpr/status_codes.h \
+ /home/user/code/Computer-Science-12/Termicord/client/include/windows/auth.h \
  /home/user/code/Computer-Science-12/Termicord/client/include/types.h \
- /home/user/code/Computer-Science-12/Termicord/client/include/requests.h
+ /home/user/code/Computer-Science-12/Termicord/client/include/windows/home.h
