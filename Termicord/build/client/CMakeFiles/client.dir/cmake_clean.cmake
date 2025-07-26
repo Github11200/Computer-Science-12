@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/client.dir/src/auth.cpp.o"
+  "CMakeFiles/client.dir/src/auth.cpp.o.d"
   "CMakeFiles/client.dir/src/client.cpp.o"
   "CMakeFiles/client.dir/src/client.cpp.o.d"
+  "CMakeFiles/client.dir/src/requests.cpp.o"
+  "CMakeFiles/client.dir/src/requests.cpp.o.d"
   "client"
   "client.pdb"
 )

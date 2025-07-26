@@ -218,8 +218,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Path to a program.
 CMAKE_STRIP:FILEPATH=/usr/bin/strip
 
-//No help, variable specified on the command line.
-CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=/home/user/vcpkg/scripts/buildsystems/vcpkg.cmake
+//The CMake toolchain file
+CMAKE_TOOLCHAIN_FILE:FILEPATH=/home/user/vcpkg/scripts/buildsystems/vcpkg.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -312,8 +312,14 @@ Z_VCPKG_CL:FILEPATH=Z_VCPKG_CL-NOTFOUND
 // triplet
 _VCPKG_INSTALLED_DIR:PATH=/home/user/vcpkg/installed
 
+//The directory containing a CMake configuration file for cpr.
+cpr_DIR:PATH=/home/user/vcpkg/installed/x64-linux/share/cpr
+
 //The directory containing a CMake configuration file for fmt.
 fmt_DIR:PATH=/home/user/vcpkg/installed/x64-linux/share/fmt
+
+//The directory containing a CMake configuration file for magic_enum.
+magic_enum_DIR:PATH=/home/user/vcpkg/installed/x64-linux/share/magic_enum
 
 //The directory containing a CMake configuration file for nlohmann_json.
 nlohmann_json_DIR:PATH=/home/user/vcpkg/installed/x64-linux/share/nlohmann_json
@@ -326,9 +332,6 @@ pkgcfg_lib__OPENSSL_dl:FILEPATH=/usr/lib/x86_64-linux-gnu/libdl.a
 
 //Path to a library.
 pkgcfg_lib__OPENSSL_ssl:FILEPATH=/home/user/vcpkg/installed/x64-linux/debug/lib/libssl.a
-
-//The directory containing a CMake configuration file for restclient-cpp.
-restclient-cpp_DIR:PATH=/home/user/vcpkg/installed/x64-linux/share/restclient-cpp
 
 //The directory containing a CMake configuration file for spdlog.
 spdlog_DIR:PATH=/home/user/vcpkg/installed/x64-linux/share/spdlog

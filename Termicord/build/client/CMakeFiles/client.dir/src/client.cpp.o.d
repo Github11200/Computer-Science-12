@@ -259,8 +259,173 @@ client/CMakeFiles/client.dir/src/client.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h /usr/include/arpa/inet.h \
- /home/user/vcpkg/installed/x64-linux/include/restclient-cpp/restclient.h \
- /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
- /usr/include/c++/11/bits/stl_map.h \
- /usr/include/c++/11/bits/stl_multimap.h \
- /home/user/vcpkg/installed/x64-linux/include/restclient-cpp/version.h
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/json.hpp \
+ /usr/include/c++/11/algorithm \
+ /usr/include/c++/11/pstl/glue_algorithm_defs.h \
+ /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/adl_serializer.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/abi_macros.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/conversions/from_json.hpp \
+ /usr/include/c++/11/forward_list /usr/include/c++/11/bits/forward_list.h \
+ /usr/include/c++/11/bits/forward_list.tcc /usr/include/c++/11/map \
+ /usr/include/c++/11/bits/stl_tree.h /usr/include/c++/11/bits/stl_map.h \
+ /usr/include/c++/11/bits/stl_multimap.h /usr/include/c++/11/valarray \
+ /usr/include/c++/11/bits/valarray_array.h \
+ /usr/include/c++/11/bits/valarray_array.tcc \
+ /usr/include/c++/11/bits/valarray_before.h \
+ /usr/include/c++/11/bits/slice_array.h \
+ /usr/include/c++/11/bits/valarray_after.h \
+ /usr/include/c++/11/bits/gslice.h \
+ /usr/include/c++/11/bits/gslice_array.h \
+ /usr/include/c++/11/bits/mask_array.h \
+ /usr/include/c++/11/bits/indirect_array.h \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/exceptions.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/value_t.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/macro_scope.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/detected.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/void_t.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/thirdparty/hedley/hedley.hpp \
+ /usr/include/c++/11/version \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/string_escape.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/position_t.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/cpp_future.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/type_traits.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/iterator_traits.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/call_std/begin.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/call_std/end.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/json_fwd.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/string_concat.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/identity_tag.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/std_fs.hpp \
+ /usr/include/c++/11/filesystem /usr/include/c++/11/bits/fs_fwd.h \
+ /usr/include/c++/11/bits/fs_path.h /usr/include/c++/11/locale \
+ /usr/include/c++/11/bits/locale_facets_nonio.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/11/bits/locale_conv.h /usr/include/c++/11/iomanip \
+ /usr/include/c++/11/bits/quoted_string.h /usr/include/c++/11/sstream \
+ /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/codecvt \
+ /usr/include/c++/11/bits/fs_dir.h /usr/include/c++/11/bits/fs_ops.h \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/conversions/to_json.hpp \
+ /usr/include/c++/11/optional \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/string_utils.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/byte_container_with_subtype.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/hash.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/binary_reader.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/input_adapters.hpp \
+ /usr/include/c++/11/numeric /usr/include/c++/11/bits/stl_numeric.h \
+ /usr/include/c++/11/pstl/glue_numeric_defs.h \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/json_sax.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/lexer.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/is_sax.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/parser.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/internal_iterator.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/iter_impl.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/json_custom_base_class.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/json_pointer.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/json_ref.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/output/binary_writer.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/output/output_adapters.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/output/serializer.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/conversions/to_chars.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/ordered_map.hpp \
+ /usr/include/c++/11/any \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/macro_unscope.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+ /home/user/code/Computer-Science-12/Termicord/client/include/input.h \
+ /home/user/vcpkg/installed/x64-linux/include/magic_enum/magic_enum.hpp \
+ /home/user/code/Computer-Science-12/Termicord/client/include/auth.h \
+ /home/user/code/Computer-Science-12/Termicord/client/include/input.h \
+ /home/user/code/Computer-Science-12/Termicord/client/include/requests.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/cpr.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/api.h \
+ /usr/include/c++/11/fstream \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+ /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/future \
+ /usr/include/c++/11/bits/atomic_futex.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/async.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/async_wrapper.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/singleton.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/threadpool.h \
+ /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \
+ /usr/include/c++/11/bits/list.tcc /usr/include/c++/11/queue \
+ /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
+ /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/bits/stl_queue.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/async_wrapper.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/auth.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/util.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/callback.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/cprtypes.h \
+ /home/user/vcpkg/installed/x64-linux/include/curl/curl.h \
+ /home/user/vcpkg/installed/x64-linux/include/curl/curlver.h \
+ /home/user/vcpkg/installed/x64-linux/include/curl/system.h \
+ /usr/include/x86_64-linux-gnu/sys/time.h \
+ /home/user/vcpkg/installed/x64-linux/include/curl/easy.h \
+ /home/user/vcpkg/installed/x64-linux/include/curl/multi.h \
+ /home/user/vcpkg/installed/x64-linux/include/curl/curl.h \
+ /home/user/vcpkg/installed/x64-linux/include/curl/urlapi.h \
+ /home/user/vcpkg/installed/x64-linux/include/curl/options.h \
+ /home/user/vcpkg/installed/x64-linux/include/curl/header.h \
+ /home/user/vcpkg/installed/x64-linux/include/curl/websockets.h \
+ /home/user/vcpkg/installed/x64-linux/include/curl/mprintf.h \
+ /home/user/vcpkg/installed/x64-linux/include/curl/system.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/cookies.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/curlholder.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/secure_string.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/cprtypes.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/bearer.h \
+ /home/user/vcpkg/installed/x64-linux/include/curl/curlver.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/filesystem.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/multipart.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/buffer.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/file.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/multiperform.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/curlmultiholder.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/response.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/cert_info.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/error.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/ssl_options.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/util.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/session.h \
+ /usr/include/c++/11/variant \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/accept_encoding.h \
+ /usr/include/c++/11/unordered_set \
+ /usr/include/c++/11/bits/unordered_set.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/body.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/buffer.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/file.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/body_view.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/connect_timeout.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/timeout.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/http_version.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/interface.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/limit_rate.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/local_port.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/local_port_range.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/low_speed.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/parameters.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/curl_container.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/payload.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/proxies.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/proxyauth.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/range.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/redirect.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/reserve_size.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/resolve.h \
+ /usr/include/c++/11/set /usr/include/c++/11/bits/stl_set.h \
+ /usr/include/c++/11/bits/stl_multiset.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/unix_socket.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/user_agent.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/verbose.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/cprver.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/interceptor.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/ssl_ctx.h \
+ /home/user/vcpkg/installed/x64-linux/include/cpr/status_codes.h \
+ /home/user/code/Computer-Science-12/Termicord/client/include/types.h \
+ /home/user/code/Computer-Science-12/Termicord/client/include/requests.h
