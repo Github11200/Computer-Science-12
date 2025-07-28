@@ -83,19 +83,56 @@ server/CMakeFiles/server.dir/src/server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/src/server.cpp.s"
 	cd /home/user/code/Computer-Science-12/Termicord/build/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/code/Computer-Science-12/Termicord/server/src/server.cpp -o CMakeFiles/server.dir/src/server.cpp.s
 
+server/CMakeFiles/server.dir/src/servers.cpp.o: server/CMakeFiles/server.dir/flags.make
+server/CMakeFiles/server.dir/src/servers.cpp.o: ../server/src/servers.cpp
+server/CMakeFiles/server.dir/src/servers.cpp.o: server/CMakeFiles/server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/code/Computer-Science-12/Termicord/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object server/CMakeFiles/server.dir/src/servers.cpp.o"
+	cd /home/user/code/Computer-Science-12/Termicord/build/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT server/CMakeFiles/server.dir/src/servers.cpp.o -MF CMakeFiles/server.dir/src/servers.cpp.o.d -o CMakeFiles/server.dir/src/servers.cpp.o -c /home/user/code/Computer-Science-12/Termicord/server/src/servers.cpp
+
+server/CMakeFiles/server.dir/src/servers.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/src/servers.cpp.i"
+	cd /home/user/code/Computer-Science-12/Termicord/build/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/code/Computer-Science-12/Termicord/server/src/servers.cpp > CMakeFiles/server.dir/src/servers.cpp.i
+
+server/CMakeFiles/server.dir/src/servers.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/src/servers.cpp.s"
+	cd /home/user/code/Computer-Science-12/Termicord/build/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/code/Computer-Science-12/Termicord/server/src/servers.cpp -o CMakeFiles/server.dir/src/servers.cpp.s
+
+server/CMakeFiles/server.dir/src/utils/requests.cpp.o: server/CMakeFiles/server.dir/flags.make
+server/CMakeFiles/server.dir/src/utils/requests.cpp.o: ../server/src/utils/requests.cpp
+server/CMakeFiles/server.dir/src/utils/requests.cpp.o: server/CMakeFiles/server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/code/Computer-Science-12/Termicord/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object server/CMakeFiles/server.dir/src/utils/requests.cpp.o"
+	cd /home/user/code/Computer-Science-12/Termicord/build/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT server/CMakeFiles/server.dir/src/utils/requests.cpp.o -MF CMakeFiles/server.dir/src/utils/requests.cpp.o.d -o CMakeFiles/server.dir/src/utils/requests.cpp.o -c /home/user/code/Computer-Science-12/Termicord/server/src/utils/requests.cpp
+
+server/CMakeFiles/server.dir/src/utils/requests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/src/utils/requests.cpp.i"
+	cd /home/user/code/Computer-Science-12/Termicord/build/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/code/Computer-Science-12/Termicord/server/src/utils/requests.cpp > CMakeFiles/server.dir/src/utils/requests.cpp.i
+
+server/CMakeFiles/server.dir/src/utils/requests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/src/utils/requests.cpp.s"
+	cd /home/user/code/Computer-Science-12/Termicord/build/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/code/Computer-Science-12/Termicord/server/src/utils/requests.cpp -o CMakeFiles/server.dir/src/utils/requests.cpp.s
+
 # Object files for target server
 server_OBJECTS = \
-"CMakeFiles/server.dir/src/server.cpp.o"
+"CMakeFiles/server.dir/src/server.cpp.o" \
+"CMakeFiles/server.dir/src/servers.cpp.o" \
+"CMakeFiles/server.dir/src/utils/requests.cpp.o"
 
 # External object files for target server
 server_EXTERNAL_OBJECTS =
 
 server/server: server/CMakeFiles/server.dir/src/server.cpp.o
+server/server: server/CMakeFiles/server.dir/src/servers.cpp.o
+server/server: server/CMakeFiles/server.dir/src/utils/requests.cpp.o
 server/server: server/CMakeFiles/server.dir/build.make
 server/server: /home/user/vcpkg/installed/x64-linux/debug/lib/libspdlogd.a
+server/server: /home/user/vcpkg/installed/x64-linux/debug/lib/libcpr.a
 server/server: /home/user/vcpkg/installed/x64-linux/debug/lib/libfmtd.a
+server/server: /home/user/vcpkg/installed/x64-linux/debug/lib/libcurl-d.a
+server/server: /home/user/vcpkg/installed/x64-linux/lib/libz.a
+server/server: /home/user/vcpkg/installed/x64-linux/debug/lib/libssl.a
+server/server: /home/user/vcpkg/installed/x64-linux/debug/lib/libcrypto.a
 server/server: server/CMakeFiles/server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/code/Computer-Science-12/Termicord/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/code/Computer-Science-12/Termicord/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable server"
 	cd /home/user/code/Computer-Science-12/Termicord/build/server && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

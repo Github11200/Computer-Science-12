@@ -132,12 +132,12 @@ server/clean: server/CMakeFiles/server.dir/clean
 server/CMakeFiles/server.dir/all:
 	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/depend
 	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/code/Computer-Science-12/Termicord/build/CMakeFiles --progress-num=14,15 "Built target server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/code/Computer-Science-12/Termicord/build/CMakeFiles --progress-num=14,15,16,17 "Built target server"
 .PHONY : server/CMakeFiles/server.dir/all
 
 # Build rule for subdir invocation for target.
 server/CMakeFiles/server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/code/Computer-Science-12/Termicord/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/code/Computer-Science-12/Termicord/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/CMakeFiles/server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/code/Computer-Science-12/Termicord/build/CMakeFiles 0
 .PHONY : server/CMakeFiles/server.dir/rule

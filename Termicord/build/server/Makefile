@@ -154,6 +154,54 @@ src/server.cpp.s:
 	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/src/server.cpp.s
 .PHONY : src/server.cpp.s
 
+src/servers.o: src/servers.cpp.o
+.PHONY : src/servers.o
+
+# target to build an object file
+src/servers.cpp.o:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/src/servers.cpp.o
+.PHONY : src/servers.cpp.o
+
+src/servers.i: src/servers.cpp.i
+.PHONY : src/servers.i
+
+# target to preprocess a source file
+src/servers.cpp.i:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/src/servers.cpp.i
+.PHONY : src/servers.cpp.i
+
+src/servers.s: src/servers.cpp.s
+.PHONY : src/servers.s
+
+# target to generate assembly for a file
+src/servers.cpp.s:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/src/servers.cpp.s
+.PHONY : src/servers.cpp.s
+
+src/utils/requests.o: src/utils/requests.cpp.o
+.PHONY : src/utils/requests.o
+
+# target to build an object file
+src/utils/requests.cpp.o:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/src/utils/requests.cpp.o
+.PHONY : src/utils/requests.cpp.o
+
+src/utils/requests.i: src/utils/requests.cpp.i
+.PHONY : src/utils/requests.i
+
+# target to preprocess a source file
+src/utils/requests.cpp.i:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/src/utils/requests.cpp.i
+.PHONY : src/utils/requests.cpp.i
+
+src/utils/requests.s: src/utils/requests.cpp.s
+.PHONY : src/utils/requests.s
+
+# target to generate assembly for a file
+src/utils/requests.cpp.s:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/src/utils/requests.cpp.s
+.PHONY : src/utils/requests.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -166,6 +214,12 @@ help:
 	@echo "... src/server.o"
 	@echo "... src/server.i"
 	@echo "... src/server.s"
+	@echo "... src/servers.o"
+	@echo "... src/servers.i"
+	@echo "... src/servers.s"
+	@echo "... src/utils/requests.o"
+	@echo "... src/utils/requests.i"
+	@echo "... src/utils/requests.s"
 .PHONY : help
 
 

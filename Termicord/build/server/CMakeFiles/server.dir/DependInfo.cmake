@@ -9,6 +9,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/user/code/Computer-Science-12/Termicord/server/src/server.cpp" "server/CMakeFiles/server.dir/src/server.cpp.o" "gcc" "server/CMakeFiles/server.dir/src/server.cpp.o.d"
+  "/home/user/code/Computer-Science-12/Termicord/server/src/servers.cpp" "server/CMakeFiles/server.dir/src/servers.cpp.o" "gcc" "server/CMakeFiles/server.dir/src/servers.cpp.o.d"
+  "/home/user/code/Computer-Science-12/Termicord/server/src/utils/requests.cpp" "server/CMakeFiles/server.dir/src/utils/requests.cpp.o" "gcc" "server/CMakeFiles/server.dir/src/utils/requests.cpp.o.d"
   )
 
 # Targets to which this target links.
