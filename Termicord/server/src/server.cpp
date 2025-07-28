@@ -4,20 +4,14 @@
 #include <chrono>
 #include "servers.h"
 #include "proxy.h"
+#include "types.h"
 #include "utils/requests.h"
 #include <nlohmann/json.hpp>
 #include <cpr/cpr.h>
+#include <utility>
 
 using namespace std;
 using json = nlohmann::json;
-
-struct Server {
-  std::string owner;
-  std::vector<std::string> users;
-  std::string serverName;
-};
-
-NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(Server, owner, users);
 
 int main(int argc, char* argv[]) {
   int PORT = atoi(argv[1]);
@@ -26,21 +20,18 @@ int main(int argc, char* argv[]) {
   Requests::Request request("/getAllServers", json::parse("{}"));
   Requests::APIResult result = Requests::sendRequest(request);
 
-  vector<Server> servers;
+  vector<pair<string, Server>> servers;
   for (auto& [key, value] : result.data.items()) {
-    Server server = value.get<Server>();
-    server.serverName = key;
+    pair<string, Server> server;
+    server.first = key;
+    server.second = value.get<Server>(); 
     servers.push_back(server);
   }
 
-  Proxy::create();
-  Proxy::stop();
-  return 0;
-  for (Server server : servers)
-    Servers::create(server.serverName); 
+  for (auto server : servers)
+    Servers::create(server.first, server.second.port); 
 
-  Servers::stop(); // don't forget this!!!
-  Proxy::stop(); // or this!!!
+  Servers::stop(); // don't forget this!!! 
 
   return 0;
 }

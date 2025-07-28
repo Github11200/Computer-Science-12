@@ -6,7 +6,7 @@ namespace Servers {
 
 std::unordered_map<string, thread*> runningServers;
 
-void serverSocket() {
+void serverSocket(int PORT) {
   int serverSocket = socket(AF_INET, SOCK_STREAM, 0);
   if (serverSocket == -1) {
     spdlog::error("Failed to create the socket.");
@@ -20,7 +20,11 @@ void serverSocket() {
   memset(&serverAddress, 0, sizeof(serverAddress));
   serverAddress.sin_family = AF_INET;
   serverAddress.sin_addr.s_addr = INADDR_ANY;
-  serverAddress.sin_port = 0;
+  serverAddress.sin_port = htons(PORT);
+
+  // Make the port reusable so you don't have to change it every time you run the server
+  int yes = 1;
+  setsockopt(serverSocket, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(yes));
 
   // Bind the socket to this address
   if (bind(serverSocket, (sockaddr*)&serverAddress, sizeof(serverAddress)) == -1) {
@@ -73,8 +77,8 @@ void serverSocket() {
   close(serverSocket);
 }
 
-void create(string threadName) {
-  thread* serverSocketThread = new thread(serverSocket);
+void create(string threadName, int PORT) {
+  thread* serverSocketThread = new thread(serverSocket, PORT);
   runningServers[threadName] =  serverSocketThread;
 }
 

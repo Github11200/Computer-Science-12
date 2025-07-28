@@ -5,7 +5,6 @@ find_package(cpr CONFIG REQUIRED)
 add_executable(server
   src/server.cpp
   src/servers.cpp
-  src/proxy.cpp
   src/utils/requests.cpp
 )
 target_link_libraries(server PRIVATE spdlog::spdlog nlohmann_json::nlohmann_json cpr::cpr)

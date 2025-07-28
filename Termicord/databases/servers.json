@@ -1,14 +1,16 @@
 {
   "Robotics": {
     "owner": "nimifish",
+    "port": 7000,
     "users": [
       "nimifish"
     ]
   },
   "Swimming": {
     "owner": "nimifish",
+    "port": 9000,
     "users": [
       "nimifish"
     ]
   }
-}
+}}

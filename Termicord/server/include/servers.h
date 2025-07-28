@@ -12,13 +12,14 @@
 #include <arpa/inet.h>
 #include <thread>
 #include <unordered_map>
+#include "types.h"
 
 namespace Servers {
 
 extern std::unordered_map<std::string, std::thread*> runningServers;
 
-void serverSocket();
-void create(std::string threadName);
+void serverSocket(int PORT);
+void create(std::string threadName, int PORT);
 void stop();
 
 }

@@ -35,6 +35,10 @@ int startServerSocket(int PORT)
   serverAddress.sin_addr.s_addr = INADDR_ANY;
   serverAddress.sin_port = htons(PORT);
 
+  // Make the port reusable so you don't have to change it every time you run the server
+  int yes = 1;
+  setsockopt(serverSocket, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(yes));
+
   // Bind the socket to this address
   if (bind(serverSocket, (sockaddr *)&serverAddress, sizeof(serverAddress)) == -1)
   {
