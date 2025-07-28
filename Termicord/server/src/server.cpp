@@ -3,6 +3,7 @@
 #include <thread>
 #include <chrono>
 #include "servers.h"
+#include "proxy.h"
 #include "utils/requests.h"
 #include <nlohmann/json.hpp>
 #include <cpr/cpr.h>
@@ -32,10 +33,14 @@ int main(int argc, char* argv[]) {
     servers.push_back(server);
   }
 
-  for (Server server : servers) {
-    Servers::create(server.serverName);
-  }
-  Servers::stop(); // don't forget this!!! 
+  Proxy::create();
+  Proxy::stop();
+  return 0;
+  for (Server server : servers)
+    Servers::create(server.serverName); 
+
+  Servers::stop(); // don't forget this!!!
+  Proxy::stop(); // or this!!!
 
   return 0;
 }

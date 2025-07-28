@@ -264,7 +264,7 @@ server/CMakeFiles/server.dir/src/server.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc /usr/include/arpa/inet.h \
- /home/user/code/Computer-Science-12/Termicord/server/include/utils/requests.h \
+ /home/user/code/Computer-Science-12/Termicord/server/include/proxy.h \
  /home/user/vcpkg/installed/x64-linux/include/nlohmann/json.hpp \
  /usr/include/c++/11/algorithm \
  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
@@ -342,6 +342,7 @@ server/CMakeFiles/server.dir/src/server.cpp.o: \
  /usr/include/c++/11/any \
  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/macro_unscope.hpp \
  /home/user/vcpkg/installed/x64-linux/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+ /home/user/code/Computer-Science-12/Termicord/server/include/utils/requests.h \
  /home/user/vcpkg/installed/x64-linux/include/cpr/cpr.h \
  /home/user/vcpkg/installed/x64-linux/include/cpr/api.h \
  /usr/include/c++/11/future /usr/include/c++/11/bits/atomic_futex.h \

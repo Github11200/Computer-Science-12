@@ -130,6 +130,30 @@ server/fast:
 	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/build
 .PHONY : server/fast
 
+src/proxy.o: src/proxy.cpp.o
+.PHONY : src/proxy.o
+
+# target to build an object file
+src/proxy.cpp.o:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/src/proxy.cpp.o
+.PHONY : src/proxy.cpp.o
+
+src/proxy.i: src/proxy.cpp.i
+.PHONY : src/proxy.i
+
+# target to preprocess a source file
+src/proxy.cpp.i:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/src/proxy.cpp.i
+.PHONY : src/proxy.cpp.i
+
+src/proxy.s: src/proxy.cpp.s
+.PHONY : src/proxy.s
+
+# target to generate assembly for a file
+src/proxy.cpp.s:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/src/proxy.cpp.s
+.PHONY : src/proxy.cpp.s
+
 src/server.o: src/server.cpp.o
 .PHONY : src/server.o
 
@@ -211,6 +235,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... server"
+	@echo "... src/proxy.o"
+	@echo "... src/proxy.i"
+	@echo "... src/proxy.s"
 	@echo "... src/server.o"
 	@echo "... src/server.i"
 	@echo "... src/server.s"
