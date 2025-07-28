@@ -1,9 +1,8 @@
 {
-  "woa2h": {
-    "name": "funny",
-    "random": [
-      "stuff1",
-      "stuff2"
+  "Robotics": {
+    "owner": "nimifish",
+    "users": [
+      "nimifish"
     ]
   }
 }

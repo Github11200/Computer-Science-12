@@ -19,9 +19,15 @@ enum InitOptions {
   EXIT = 3
 };
 
+enum ServerOperation {
+  JOIN_SERVER = 1,
+  ADD_USER = 2,
+  CANCEL = 3
+};
+
 void init();
 void listServers();
-void selectServer();
+void selectedServer(std::string serverName);
 void addFriend(); 
 
 }

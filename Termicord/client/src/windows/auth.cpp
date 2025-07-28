@@ -6,8 +6,10 @@ using json = nlohmann::json;
 namespace Auth {
 
 string username;
+User currentUser;
 
 void init() {
+  system("clear");
   int authTypeInput = 0;
   Input::getOption<AuthType>("Would you like to login or sign up?", vector<string>({"Login", "Sign Up"}), authTypeInput);
   if (authTypeInput == AuthType::LOGIN)
@@ -17,6 +19,7 @@ void init() {
 }
 
 void login() {
+  system("clear");
   while (true) {
     string username, password;
     Input::getStringInput("Username: ", username);
@@ -30,6 +33,7 @@ void login() {
 
       if (user.password == password) {
         Auth::username = username; 
+        Auth::currentUser = user;
         return;
       }
       int nextStepInput = 0;

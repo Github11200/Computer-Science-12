@@ -1,18 +1,13 @@
 {
   "nimifish": {
     "friends": [
-      "friend1",
-      "friend2"
+      "aperson"
     ],
+    "name": "nimifish",
     "password": "password123",
     "servers": [
-      "server1",
-      "server2"
+      "Robotics",
+      "Swimming"
     ]
-  },
-  "nimifishasdfasdfasdf": {
-    "friends": [],
-    "password": "woah",
-    "servers": []
   }
-}
+}}

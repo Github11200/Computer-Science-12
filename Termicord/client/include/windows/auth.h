@@ -13,6 +13,7 @@
 namespace Auth {
 
 extern std::string username;
+extern User currentUser;
 
 enum AuthType {
   LOGIN = 1,
