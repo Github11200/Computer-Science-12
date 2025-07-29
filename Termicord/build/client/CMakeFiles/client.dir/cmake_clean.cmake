@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/client.dir/src/utils/requests.cpp.o.d"
   "CMakeFiles/client.dir/src/windows/auth.cpp.o"
   "CMakeFiles/client.dir/src/windows/auth.cpp.o.d"
+  "CMakeFiles/client.dir/src/windows/chat.cpp.o"
+  "CMakeFiles/client.dir/src/windows/chat.cpp.o.d"
   "CMakeFiles/client.dir/src/windows/home.cpp.o"
   "CMakeFiles/client.dir/src/windows/home.cpp.o.d"
   "client"

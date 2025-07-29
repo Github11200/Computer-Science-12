@@ -10,7 +10,7 @@ User currentUser;
 
 void init() {
   system("clear");
-  int authTypeInput = 0;
+  AuthType authTypeInput;
   Input::getOption<AuthType>("Would you like to login or sign up?", vector<string>({"Login", "Sign Up"}), authTypeInput);
   if (authTypeInput == AuthType::LOGIN)
     login();
@@ -24,27 +24,30 @@ void login() {
     string username, password;
     Input::getStringInput("Username: ", username);
     Input::getStringInput("Password: ", password);
-    
-    Requests::Request request("/getUser", json::parse("{ \"username\": \"" + username + "\" }"));
+   
+    json jsonObject = {
+      {"username", username}
+    };
+    Requests::Request request("/getUser", jsonObject);
     Requests::APIResult result = Requests::sendRequest(request);
 
     if (result.code == Requests::ResponseCode::SUCCESS) {
       User user = result.data.get<User>();
 
       if (user.password == password) {
-        Auth::username = username; 
         Auth::currentUser = user;
         return;
       }
-      int nextStepInput = 0;
-      Input::getOption<NextStep>("Password is incorrect. Would you like to try again or exit?", vector<string>({"Try again", "Exit"}), nextStepInput);
-      
+        
+      NextStep nextStepInput;
+      Input::getOption<NextStep>("Password is incorrect. Would you like to try again or exit?", vector<string>({"Try again", "Exit"}), nextStepInput); 
+
       if (nextStepInput == NextStep::RETRY)
         continue;
       else if (nextStepInput == NextStep::EXIT)
         return;
     } else if (result.code == Requests::ResponseCode::INTERNAL_SERVER_ERROR) {
-      int nextStepInput = 0;
+      NextStep nextStepInput; 
       Input::getOption<NextStep>("Username not found. Would you like to try again or create an account?", vector<string>({"Try again", "Sign Up"}), nextStepInput);
 
       if (nextStepInput == NextStep::RETRY)
@@ -59,30 +62,40 @@ void login() {
 
 void signUp() {
   while (true) {
-    system("clear");
+    // system("clear");
     string username, password = "";
     Input::getStringInput("New Username: ", username);
     Input::getStringInput("New password: ", password, 8);
 
-    User newUser;
-    newUser.password = password;
-    newUser.friends = vector<string>();
-    newUser.servers = vector<string>();
+    try {
+      User newUser;
+      newUser.password = password;
+      newUser.friends = vector<string>();
+      newUser.servers = vector<string>();
+      newUser.name = username;
 
-    json jsonUser(newUser);
-    jsonUser["username"] = username;
-    Requests::Request request("/addUser", jsonUser);
-    Requests::APIResult result = Requests::sendRequest(request);
+      json jsonUser(newUser);
+      jsonUser["username"] = username;
+      cout << jsonUser.dump(2) << endl;
+      cpr::Response r = cpr::Post(
+        cpr::Url{"http://localhost:8000/addUser"},
+        cpr::Header{{"Content-Type", "application/json"}},
+        cpr::Body{jsonUser.dump()}
+      );
 
-    if (result.code == Requests::ResponseCode::SUCCESS) {
-      Auth::username = username;
-      return;
-    }
-    else if (result.code == Requests::ResponseCode::INTERNAL_SERVER_ERROR) {
-      int nextStepInput = 0;
-      Input::getOption<NextStep>("There was an internal server error. Would you like to try again or exit?", vector<string>({"Try again", "Exit"}), nextStepInput);
-      if (nextStepInput == NextStep::RETRY) continue;
-      else if (nextStepInput == NextStep::EXIT) return;
+      if (r.status_code == Requests::ResponseCode::SUCCESS) {
+        Auth::currentUser = newUser;
+        return;
+      }
+      else if (r.status_code == Requests::ResponseCode::INTERNAL_SERVER_ERROR) {
+        NextStep nextStepInput; 
+        Input::getOption<NextStep>("There was an internal server error. Would you like to try again or exit?", vector<string>({"Try again", "Exit"}), nextStepInput);
+        if (nextStepInput == NextStep::RETRY) continue;
+        else if (nextStepInput == NextStep::EXIT) return;
+      }
+    } catch (const exception& e) {
+      cout << "Couldn't add the user." << endl;
+      cout << e.what() << endl;
     }
   }
 }

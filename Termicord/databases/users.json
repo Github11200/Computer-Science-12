@@ -1,4 +1,12 @@
 {
+  "github11200": {
+    "friends": [],
+    "name": "github11200",
+    "password": "password123",
+    "servers": [
+      "Robotics"
+    ]
+  },
   "nimifish": {
     "friends": [
       "aperson"
@@ -10,4 +18,4 @@
       "Swimming"
     ]
   }
-}}
+}

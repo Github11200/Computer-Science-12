@@ -6,7 +6,7 @@
 #include <iostream>
 #include <spdlog/spdlog.h>
 #include <type_traits>
-#include <magic_enum/magic_enum.hpp>
+// #include <magic_enum/magic_enum.hpp>
 
 using namespace std;
 
@@ -49,13 +49,15 @@ void getBoundedNumericInput(string message, T& input, T lower, T upper) {
 }
 
 template <typename Enum>
-void getOption(string message, vector<string> options, int& input) { 
+void getOption(const string& message, const vector<string>& options, Enum& input) { 
   try {
-    size_t enumLength = magic_enum::enum_count<Enum>(); 
     cout << message << endl;
     for (int i = 1; i <= options.size(); ++i) 
       cout << "  (" << to_string(i) << ") " << options[i - 1] << endl;  
-    Input::getBoundedNumericInput<int>("Input: ", input, 1, enumLength);
+    int numberInput = 0;
+    Input::getBoundedNumericInput<int>("Input: ", numberInput, 1, options.size());
+
+    input = static_cast<Enum>(numberInput);
   } catch (const exception& e) {
     cout << "Error: " << e.what() << endl;
   }

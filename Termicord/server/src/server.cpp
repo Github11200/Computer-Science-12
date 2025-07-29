@@ -3,7 +3,6 @@
 #include <thread>
 #include <chrono>
 #include "servers.h"
-#include "proxy.h"
 #include "types.h"
 #include "utils/requests.h"
 #include <nlohmann/json.hpp>

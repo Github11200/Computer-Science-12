@@ -12,4 +12,4 @@ done
 cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE=/home/user/vcpkg/scripts/buildsystems/vcpkg.cmake 
 cmake --build build --target client
 
-./build/client/client $port
+./build/client/client $port 2>&1

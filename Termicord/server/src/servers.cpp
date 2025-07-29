@@ -4,7 +4,40 @@ using namespace std;
 
 namespace Servers {
 
-std::unordered_map<string, thread*> runningServers;
+unordered_map<string, thread*> runningServers;
+mutex receivingThreadMutex;
+set<int> connectedClientSockets;
+
+void broadcastMessage(string message, int excludedClient) {
+  for (int client : connectedClientSockets) {
+    if (client != excludedClient) {
+      ssize_t sent = send(client, message.data(), message.size(), 0);
+      if (sent < 0)
+        spdlog::error("Could not send.");  
+    }
+  }
+}
+
+void receivingThreadCallback(int clientSocket) {
+  while (true) {
+    char buffer[1024] = { 0 };
+    int bytesRecieved = recv(clientSocket, buffer, sizeof(buffer), 0);
+    if (bytesRecieved <= 0) {
+      spdlog::info("The client disconnected.");
+      connectedClientSockets.erase(clientSocket);
+      break;
+    }
+    buffer[bytesRecieved] = '\0';
+    spdlog::info("Message from the client: {}", buffer);
+
+    receivingThreadMutex.lock();
+
+    string bufferString = string(buffer);
+    broadcastMessage(bufferString, clientSocket);
+
+    receivingThreadMutex.unlock();
+  }
+}
 
 void serverSocket(int PORT) {
   int serverSocket = socket(AF_INET, SOCK_STREAM, 0);
@@ -53,25 +86,35 @@ void serverSocket(int PORT) {
     return;
   }
 
-  sockaddr_in clientAddress;
-  socklen_t clientAddressLen = sizeof(clientAddress);
-  int clientSocket = accept(serverSocket, (sockaddr*)&clientAddress, &clientAddressLen);
-  if (clientSocket == -1) {
-    spdlog::error("Failed to accept the connection.");
-    return; 
-  }
-
-  spdlog::info("Accepted the connection from {} : {}.", inet_ntoa(clientAddress.sin_addr), ntohs(clientAddress.sin_port));
+  vector<thread*> clientThreads;
 
   while (true) { 
-    char buffer[1024] = { 0 };
-    int bytesRecieved = recv(clientSocket, buffer, sizeof(buffer), 0);
-    if (bytesRecieved <= 0) {
-      spdlog::info("The client disconnected.");
-      break;
+    sockaddr_in clientAddress;
+    socklen_t clientAddressLen = sizeof(clientAddress);
+    int clientSocket = accept(serverSocket, (sockaddr*)&clientAddress, &clientAddressLen);
+    if (clientSocket == -1) {
+      spdlog::error("Failed to accept the connection.");
+      return; 
     }
-    buffer[bytesRecieved] = '\0';
-    spdlog::info("Message from the client: {}", buffer);
+
+    thread* clientThread = new thread(receivingThreadCallback, clientSocket);
+    clientThreads.push_back(clientThread);
+    connectedClientSockets.insert(clientSocket);
+    spdlog::info("Accepted the connection from {} : {}.", inet_ntoa(clientAddress.sin_addr), ntohs(clientAddress.sin_port));
+    //
+    // for (auto client : connectedClients) {
+    //   char buffer[1024] = { 0 };
+    //   int bytesRecieved = recv(client, buffer, sizeof(buffer), 0);
+    //   if (bytesRecieved <= 0) {
+    //     spdlog::info("The client disconnected.");
+    //   }
+    //   buffer[bytesRecieved] = '\0';
+    //   spdlog::info("Message from the client: {}", buffer);
+    // }
+
+    // string stringMessage = "";
+    // cout << "Input message: ";
+    // getline(cin, stringMessage);
   }
 
   close(serverSocket);

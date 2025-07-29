@@ -1,4 +1,5 @@
 #include "utils/requests.h"
+#include "types.h"
 
 using namespace std;
 using json = nlohmann::json;
@@ -14,7 +15,7 @@ APIResult sendRequest(Request requestObject) {
     cpr::Body{requestObject.body.dump()}
   );
 
-  return APIResult(json::parse(r.text), static_cast<ResponseCode>(r.status_code)); 
+  return APIResult(json::parse(r.text), static_cast<ResponseCode>(r.status_code));
 }
 
 }

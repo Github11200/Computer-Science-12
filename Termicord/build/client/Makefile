@@ -226,6 +226,30 @@ src/windows/auth.cpp.s:
 	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/windows/auth.cpp.s
 .PHONY : src/windows/auth.cpp.s
 
+src/windows/chat.o: src/windows/chat.cpp.o
+.PHONY : src/windows/chat.o
+
+# target to build an object file
+src/windows/chat.cpp.o:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/windows/chat.cpp.o
+.PHONY : src/windows/chat.cpp.o
+
+src/windows/chat.i: src/windows/chat.cpp.i
+.PHONY : src/windows/chat.i
+
+# target to preprocess a source file
+src/windows/chat.cpp.i:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/windows/chat.cpp.i
+.PHONY : src/windows/chat.cpp.i
+
+src/windows/chat.s: src/windows/chat.cpp.s
+.PHONY : src/windows/chat.s
+
+# target to generate assembly for a file
+src/windows/chat.cpp.s:
+	cd /home/user/code/Computer-Science-12/Termicord/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/src/windows/chat.cpp.s
+.PHONY : src/windows/chat.cpp.s
+
 src/windows/home.o: src/windows/home.cpp.o
 .PHONY : src/windows/home.o
 
@@ -271,6 +295,9 @@ help:
 	@echo "... src/windows/auth.o"
 	@echo "... src/windows/auth.i"
 	@echo "... src/windows/auth.s"
+	@echo "... src/windows/chat.o"
+	@echo "... src/windows/chat.i"
+	@echo "... src/windows/chat.s"
 	@echo "... src/windows/home.o"
 	@echo "... src/windows/home.i"
 	@echo "... src/windows/home.s"

@@ -6,21 +6,21 @@
 #include <nlohmann/json.hpp>
 #include <string>
 #include <vector>
+#include <cpr/cpr.h>
 #include "utils/input.h"
 #include "utils/requests.h"
 #include "types.h"
 
 namespace Auth {
 
-extern std::string username;
 extern User currentUser;
 
-enum AuthType {
+enum class AuthType {
   LOGIN = 1,
   SIGN_UP = 2
 };
 
-enum NextStep {
+enum class NextStep {
   RETRY = 1,
   EXIT = 2
 };

@@ -7,10 +7,10 @@ namespace Home {
 
 void init() {
   while (true) {
-    system("clear");
-    cout << "Welcome " << Auth::username << "!\n\n";
+    // system("clear");
+    cout << "Welcome " << Auth::currentUser.name << "!\n\n";
 
-    int initOption = 0;
+    InitOptions initOption; 
     Input::getOption<InitOptions>("What would you like to do?", vector<string>({"List all servers", "Add a friend", "Exit"}), initOption);
     if (initOption == InitOptions::LIST_SERVERS)
       listServers();
@@ -45,21 +45,23 @@ void listServers() {
 void selectedServer(string serverName) {
   system("clear");
  
-  json j = json::parse("{ \"server_name\": \"" + serverName + "\" }");
+  json j = {
+    {"server_name", serverName}
+  };
   Requests::Request request("/getServer", j);
   Requests::APIResult result = Requests::sendRequest(request);
 
   if (result.code == Requests::ResponseCode::SUCCESS) {
     while (true) {
       Server server = result.data.get<Server>();
-      int serverOperation = 0;
+      ServerOperation serverOperation;
       Input::getOption<ServerOperation>("What would you like to do with the following server: " + serverName, vector<string>({"Join server", "Add user", "Cancel"}), serverOperation);
 
       if (serverOperation == ServerOperation::JOIN_SERVER) {
-        // Join server code here
+        Chat::join(server.port); 
       } else if (serverOperation == ServerOperation::ADD_USER) {
         system("clear");
-        if (server.owner != Auth::username) {
+        if (server.owner != Auth::currentUser.name) {
           cout << "You are not the owner of this server and cannot add users. Please press enter to continue" << endl;
           cin.get();
           continue;
