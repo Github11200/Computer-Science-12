@@ -1,9 +1,7 @@
 #include <spdlog/spdlog.h>
-#include <iostream>
 #include <nlohmann/json.hpp>
 #include <string>
 #include <cpr/cpr.h>
-#include "utils/input.h"
 #include "utils/requests.h"
 #include "windows/auth.h"
 #include "windows/home.h"

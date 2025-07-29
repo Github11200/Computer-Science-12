@@ -10,7 +10,7 @@ User currentUser;
 
 void init() {
   system("clear");
-  AuthType authTypeInput;
+  AuthType authTypeInput; 
   Input::getOption<AuthType>("Would you like to login or sign up?", vector<string>({"Login", "Sign Up"}), authTypeInput);
   if (authTypeInput == AuthType::LOGIN)
     login();

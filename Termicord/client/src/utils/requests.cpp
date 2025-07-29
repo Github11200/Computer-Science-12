@@ -1,5 +1,4 @@
 #include "utils/requests.h"
-#include "types.h"
 
 using namespace std;
 using json = nlohmann::json;

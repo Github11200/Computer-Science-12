@@ -8,7 +8,7 @@ string generateUUID() {
 
   // Generate the uuid id and then convert it to a string
   uuid_generate(uuid);
- 
+
   uuid_unparse_lower(uuid, uuid_str);
   return string(uuid_str);
 }
