@@ -220,25 +220,15 @@ client/CMakeFiles/client.dir/src/client.cpp.o: \
  /home/user/vcpkg/installed/x64-linux/include/spdlog/details/log_msg_buffer.h \
  /home/user/vcpkg/installed/x64-linux/include/spdlog/details/log_msg.h \
  /home/user/vcpkg/installed/x64-linux/include/spdlog/version.h \
- /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
- /usr/include/c++/11/ios /usr/include/c++/11/bits/ios_base.h \
- /usr/include/c++/11/bits/locale_classes.h \
- /usr/include/c++/11/bits/locale_classes.tcc \
- /usr/include/c++/11/streambuf /usr/include/c++/11/bits/streambuf.tcc \
- /usr/include/c++/11/bits/basic_ios.h \
- /usr/include/c++/11/bits/locale_facets.h /usr/include/c++/11/cwctype \
- /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
- /usr/include/c++/11/bits/streambuf_iterator.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
- /usr/include/c++/11/bits/locale_facets.tcc \
- /usr/include/c++/11/bits/basic_ios.tcc \
- /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc \
  /home/user/vcpkg/installed/x64-linux/include/nlohmann/json.hpp \
  /usr/include/c++/11/algorithm \
  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
  /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
+ /usr/include/c++/11/bits/streambuf_iterator.h \
+ /usr/include/c++/11/streambuf /usr/include/c++/11/bits/ios_base.h \
+ /usr/include/c++/11/bits/locale_classes.h \
+ /usr/include/c++/11/bits/locale_classes.tcc \
+ /usr/include/c++/11/bits/streambuf.tcc \
  /home/user/vcpkg/installed/x64-linux/include/nlohmann/adl_serializer.hpp \
  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/abi_macros.hpp \
  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/conversions/from_json.hpp \
@@ -275,6 +265,11 @@ client/CMakeFiles/client.dir/src/client.cpp.o: \
  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/std_fs.hpp \
  /usr/include/c++/11/filesystem /usr/include/c++/11/bits/fs_fwd.h \
  /usr/include/c++/11/bits/fs_path.h /usr/include/c++/11/locale \
+ /usr/include/c++/11/bits/locale_facets.h /usr/include/c++/11/cwctype \
+ /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
+ /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/locale_facets_nonio.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
@@ -282,6 +277,11 @@ client/CMakeFiles/client.dir/src/client.cpp.o: \
  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
  /usr/include/c++/11/bits/locale_conv.h /usr/include/c++/11/iomanip \
  /usr/include/c++/11/bits/quoted_string.h /usr/include/c++/11/sstream \
+ /usr/include/c++/11/istream /usr/include/c++/11/ios \
+ /usr/include/c++/11/bits/basic_ios.h \
+ /usr/include/c++/11/bits/basic_ios.tcc /usr/include/c++/11/ostream \
+ /usr/include/c++/11/bits/ostream.tcc \
+ /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/codecvt \
  /usr/include/c++/11/bits/fs_dir.h /usr/include/c++/11/bits/fs_ops.h \
  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/conversions/to_json.hpp \
@@ -414,9 +414,10 @@ client/CMakeFiles/client.dir/src/client.cpp.o: \
  /home/user/vcpkg/installed/x64-linux/include/cpr/interceptor.h \
  /home/user/vcpkg/installed/x64-linux/include/cpr/ssl_ctx.h \
  /home/user/vcpkg/installed/x64-linux/include/cpr/status_codes.h \
- /home/user/code/Computer-Science-12/Termicord/client/include/utils/input.h \
  /home/user/code/Computer-Science-12/Termicord/client/include/utils/requests.h \
+ /usr/include/c++/11/iostream \
  /home/user/code/Computer-Science-12/Termicord/client/include/windows/auth.h \
+ /home/user/code/Computer-Science-12/Termicord/client/include/utils/input.h \
  /home/user/code/Computer-Science-12/Termicord/client/include/types.h \
  /home/user/code/Computer-Science-12/Termicord/client/include/windows/home.h \
  /home/user/code/Computer-Science-12/Termicord/client/include/windows/chat.h \
@@ -446,4 +447,14 @@ client/CMakeFiles/client.dir/src/client.cpp.o: \
  /home/user/vcpkg/installed/x64-linux/include/ftxui/util/ref.hpp \
  /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/string.hpp \
  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/take_any_args.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/deprecated.hpp
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/deprecated.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/component/screen_interactive.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/component/receiver.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/component/animation.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/component/captured_mouse.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/component/event.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/component/mouse.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/component/task.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/component/component.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/component/component_base.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/component/component_options.hpp

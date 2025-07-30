@@ -64,6 +64,15 @@ bool Database::addEntry(string key, json jsonData) {
   return false;
 }
 
+bool Database::updateEntry(string key, json newData) {
+  // If the key doesn't exist then just return false since we can't update anything
+  optional<string> searchResult = this->searchDatabase(key);
+  if (!searchResult)
+    return false;
+  this->currentJsonData[key] = newData;
+  return true;
+}
+
 Database::~Database() {
   fstream database(this->PATH + this->NAME + ".json");
 

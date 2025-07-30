@@ -15,5 +15,6 @@
 Result getServer(std::string rawJson);
 Result getAllServers(std::string rawJson);
 Result addServer(std::string rawJson);
+Result addUserToServer(std::string rawJson);
 
 #endif

@@ -1,21 +1,21 @@
 {
   "github11200": {
     "friends": [],
-    "name": "github11200",
     "password": "password123",
     "servers": [
       "Robotics"
-    ]
+    ],
+    "username": "github11200"
   },
   "nimifish": {
     "friends": [
       "aperson"
     ],
-    "name": "nimifish",
     "password": "password123",
     "servers": [
       "Robotics",
       "Swimming"
-    ]
+    ],
+    "username": "nimifish"
   }
 }

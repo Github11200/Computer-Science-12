@@ -62,7 +62,7 @@ void login() {
 
 void signUp() {
   while (true) {
-    // system("clear");
+    system("clear");
     string username, password = "";
     Input::getStringInput("New Username: ", username);
     Input::getStringInput("New password: ", password, 8);
@@ -72,11 +72,10 @@ void signUp() {
       newUser.password = password;
       newUser.friends = vector<string>();
       newUser.servers = vector<string>();
-      newUser.name = username;
+      newUser.username = username;
 
       json jsonUser(newUser);
       jsonUser["username"] = username;
-      cout << jsonUser.dump(2) << endl;
       cpr::Response r = cpr::Post(
         cpr::Url{"http://localhost:8000/addUser"},
         cpr::Header{{"Content-Type", "application/json"}},

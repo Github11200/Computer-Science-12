@@ -75,10 +75,12 @@ int main(int argc, char *argv[]) {
   routing.addRoute(Route("/getUser", getUser));
   routing.addRoute(Route("/getAllUsers", getAllUsers));
   routing.addRoute(Route("/addUser", addUser));
+  routing.addRoute(Route("/addFriend", addFriend));
 
   routing.addRoute(Route("/getServer", getServer));
   routing.addRoute(Route("/getAllServers", getAllServers));
   routing.addRoute(Route("/addServer", addServer));
+  routing.addRoute(Route("/addUserToServer", addUserToServer)); 
 
   int serverSocket = startServerSocket(PORT);
 

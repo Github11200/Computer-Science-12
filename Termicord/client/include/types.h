@@ -9,10 +9,10 @@ struct User {
   std::vector<std::string> friends;
   std::vector<std::string> servers;
   std::string password;
-  std::string name;
+  std::string username;
 };
 
-NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(User, friends, servers, password, name);
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(User, friends, servers, password, username);
 
 struct Server {
   std::string owner;

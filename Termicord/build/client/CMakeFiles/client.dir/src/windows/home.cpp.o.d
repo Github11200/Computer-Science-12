@@ -446,4 +446,14 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: \
  /home/user/vcpkg/installed/x64-linux/include/ftxui/util/ref.hpp \
  /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/string.hpp \
  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/take_any_args.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/deprecated.hpp
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/deprecated.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/component/screen_interactive.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/component/receiver.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/component/animation.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/component/captured_mouse.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/component/event.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/component/mouse.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/component/task.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/component/component.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/component/component_base.hpp \
+ /home/user/vcpkg/installed/x64-linux/include/ftxui/component/component_options.hpp

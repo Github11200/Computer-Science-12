@@ -419,5 +419,4 @@ client/CMakeFiles/client.dir/src/utils/requests.cpp.o: \
  /home/user/vcpkg/installed/x64-linux/include/spdlog/details/circular_q.h \
  /home/user/vcpkg/installed/x64-linux/include/spdlog/details/log_msg_buffer.h \
  /home/user/vcpkg/installed/x64-linux/include/spdlog/details/log_msg.h \
- /home/user/vcpkg/installed/x64-linux/include/spdlog/version.h \
- /home/user/code/Computer-Science-12/Termicord/client/include/types.h
+ /home/user/vcpkg/installed/x64-linux/include/spdlog/version.h

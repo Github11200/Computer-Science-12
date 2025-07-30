@@ -29,8 +29,27 @@ Result addUser(string rawJson) {
   string key = httpRequest["username"].get<string>();
 
   // Remove the username key and then pass the rest of the json object
-  httpRequest.erase("username");
   if (database.addEntry(key, httpRequest))
     return Result(200, "{ \"message\": \"Added the user to the database\" }");
   return Result(500, "{ \"message\": \"The user already exists\" }");
+}
+
+Result addFriend(string rawJson) {
+  Database database(NAME);
+  json httpRequest = json::parse(rawJson);
+
+  string username = httpRequest["username"];
+  string friendUsername = httpRequest["friend"];
+
+  optional<string> searchResult = database.searchDatabase(friendUsername);
+  if (!searchResult)
+    return Result(500, "{ \"message\": \"The friend's username does not exist in the database.\" }");
+
+  optional<string> result = database.searchDatabase(username);
+  json currentUserJson = json::parse(*result);
+
+  currentUserJson["friends"].push_back(friendUsername);
+  if (database.updateEntry(username, currentUserJson))
+    return Result(200, "{ \"message\": \"The friend was successfully added to the database.\" }");
+  return Result(500, "{ \"message\": \"The friend could not be added to the database.\" }");
 }

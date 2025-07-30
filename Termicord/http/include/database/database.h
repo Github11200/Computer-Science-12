@@ -24,6 +24,7 @@ public:
   std::optional<std::string> searchDatabase(std::string key);
   std::string getAllJsonData();
   bool addEntry(std::string key, nlohmann::json jsonData);
+  bool updateEntry(std::string key, nlohmann::json newData);
 };
 
 #endif

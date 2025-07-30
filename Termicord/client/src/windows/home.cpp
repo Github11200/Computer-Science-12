@@ -1,4 +1,6 @@
 #include "windows/home.h"
+#include "utils/requests.h"
+#include "windows/auth.h"
 
 using namespace std;
 using json = nlohmann::json;
@@ -7,8 +9,8 @@ namespace Home {
 
 void init() {
   while (true) {
-    // system("clear");
-    cout << "Welcome " << Auth::currentUser.name << "!\n\n";
+    system("clear");
+    cout << "Welcome " << Auth::currentUser.username << "!\n\n";
 
     InitOptions initOption; 
     Input::getOption<InitOptions>("What would you like to do?", vector<string>({"List all servers", "Add a friend", "Exit"}), initOption);
@@ -61,15 +63,32 @@ void selectedServer(string serverName) {
         Chat::join(server.port); 
       } else if (serverOperation == ServerOperation::ADD_USER) {
         system("clear");
-        if (server.owner != Auth::currentUser.name) {
+        if (server.owner != Auth::currentUser.username) {
           cout << "You are not the owner of this server and cannot add users. Please press enter to continue" << endl;
           cin.get();
           continue;
         }
         string username = "";
-        Input::getStringInput("What is the username of the person you'd like to add?", username);
+        Input::getStringInput("What is the username of the person you'd like to add? ", username);
 
-        // TODO: add the user somehow :)
+        json j = {
+          {"server_name", serverName},
+          {"username", username}
+        };
+
+        cpr::Response r = cpr::Post(
+          cpr::Url{"http://localhost:8000/addUserToServer"},
+          cpr::Header{{"Content-Type", "application/json"}},
+          cpr::Body{j.dump()}
+        );
+        system("clear");
+        if (r.status_code == Requests::ResponseCode::SUCCESS)
+          cout << "The user was added successfully! Please press enter to continue";
+        else if (r.status_code == Requests::ResponseCode::INTERNAL_SERVER_ERROR)
+          cout << "There was an error adding the user. Please press enter to continue";
+
+        cin.ignore();
+        cin.get();
       } else if (serverOperation == ServerOperation::CANCEL) {
         return;
       }
@@ -80,7 +99,24 @@ void selectedServer(string serverName) {
 }
 
 void addFriend() {
+  system("clear");
+  string friendUsername = "";
+  Input::getStringInput("What is the username of the friend? ", friendUsername);
+ 
+  json j = {
+    {"username", Auth::currentUser.username},
+    {"friend", friendUsername}
+  };
+  Requests::Request request("/addFriend", j);
+  Requests::APIResult result = Requests::sendRequest(request);
 
+  system("clear");
+  if (result.code == Requests::ResponseCode::SUCCESS)
+    cout << "Your new friend is ready to chat with :). Please press enter to continue.";
+  else if (result.code == Requests::ResponseCode::INTERNAL_SERVER_ERROR)
+    cout << "There was an error adding this friend. It's okay though, you can still talk in real life :). Please press enter to continue.";
+  cin.ignore();
+  cin.get();
 }
 
 }

@@ -32,4 +32,22 @@ Result addServer(string rawJson) {
   if (database.addEntry(key, httpRequest))
     return Result(200, "{ \"message\": \"Added the server to the database\" }");
   return Result(500, "{ \"message\": \"The server already exists\" }");  
-} 
+}
+
+Result addUserToServer(std::string rawJson) {
+  Database database(NAME);
+  json httpRequest = json::parse(rawJson);
+
+  string username = httpRequest["username"];
+  string serverName = httpRequest["server_name"];
+
+  optional<string> searchResult = database.searchDatabase(serverName);
+  if (!searchResult)
+    return Result(500, "{ \"message\": \"The server does not exist in the database, so the user could not be added.\" }");
+  json serverJson = json::parse(*searchResult);
+  serverJson["users"].push_back(username);
+  
+  if (database.updateEntry(serverName, serverJson))
+    return Result(200, "{ \"message\": \"Added the user to the server\" }");
+  return Result(500, "{ \"message\": \"Could not add the user to the server.\" }");
+}
