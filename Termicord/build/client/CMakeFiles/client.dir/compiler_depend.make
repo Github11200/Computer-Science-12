@@ -497,8 +497,34 @@ client/CMakeFiles/client.dir/src/client.cpp.o: ../client/src/client.cpp \
   ../client/include/types.h \
   ../client/include/windows/home.h \
   ../client/include/windows/chat.h \
+  /usr/include/arpa/inet.h \
   /usr/include/netinet/in.h \
   /usr/include/x86_64-linux-gnu/bits/in.h \
+  /usr/include/curses.h \
+  /usr/include/ncurses_dll.h \
+  /usr/include/unctrl.h \
+  /usr/include/curses.h \
+  /usr/include/x86_64-linux-gnu/sys/ioctl.h \
+  /usr/include/x86_64-linux-gnu/bits/ioctls.h \
+  /usr/include/x86_64-linux-gnu/asm/ioctls.h \
+  /usr/include/asm-generic/ioctls.h \
+  /usr/include/linux/ioctl.h \
+  /usr/include/x86_64-linux-gnu/asm/ioctl.h \
+  /usr/include/asm-generic/ioctl.h \
+  /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
+  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
+  /usr/include/term.h \
+  /usr/include/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
   /usr/include/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/environments.h \
@@ -506,37 +532,7 @@ client/CMakeFiles/client.dir/src/client.cpp.o: ../client/src/client.cpp \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/arpa/inet.h \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/elements.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/canvas.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/color.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/image.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/box.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/pixel.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/direction.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/flexbox_config.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/linear_gradient.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/node.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/requirement.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/screen.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/terminal.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/util/autoreset.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/selection.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/util/ref.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/string.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/take_any_args.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/deprecated.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/component/screen_interactive.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/component/receiver.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/component/animation.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/component/captured_mouse.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/component/event.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/component/mouse.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/component/task.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/component/component.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/component/component_base.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/component/component_options.hpp
+  /usr/include/linux/close_range.h
 
 client/CMakeFiles/client.dir/src/utils/input.cpp.o: ../client/src/utils/input.cpp \
   /usr/include/stdc-predef.h \
@@ -1820,7 +1816,10 @@ client/CMakeFiles/client.dir/src/windows/auth.cpp.o: ../client/src/windows/auth.
 
 client/CMakeFiles/client.dir/src/windows/chat.cpp.o: ../client/src/windows/chat.cpp \
   /usr/include/stdc-predef.h \
-  /usr/include/c++/11/iostream \
+  ../client/include/windows/chat.h \
+  ../client/include/types.h \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
   /usr/include/features.h \
@@ -1833,11 +1832,42 @@ client/CMakeFiles/client.dir/src/windows/chat.cpp.o: ../client/src/windows/chat.
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
   /usr/include/c++/11/pstl/pstl_config.h \
-  /usr/include/c++/11/ostream \
-  /usr/include/c++/11/ios \
-  /usr/include/c++/11/iosfwd \
-  /usr/include/c++/11/bits/stringfwd.h \
+  /usr/include/c++/11/bits/functexcept.h \
+  /usr/include/c++/11/bits/exception_defines.h \
+  /usr/include/c++/11/bits/cpp_type_traits.h \
+  /usr/include/c++/11/ext/type_traits.h \
+  /usr/include/c++/11/ext/numeric_traits.h \
+  /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/move.h \
+  /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/bits/stl_iterator_base_types.h \
+  /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/11/bits/concept_check.h \
+  /usr/include/c++/11/debug/assertions.h \
+  /usr/include/c++/11/bits/stl_iterator.h \
+  /usr/include/c++/11/bits/ptr_traits.h \
+  /usr/include/c++/11/debug/debug.h \
+  /usr/include/c++/11/bits/predefined_ops.h \
+  /usr/include/c++/11/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
+  /usr/include/c++/11/ext/new_allocator.h \
+  /usr/include/c++/11/new \
+  /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/memoryfwd.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/ext/alloc_traits.h \
+  /usr/include/c++/11/bits/alloc_traits.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/initializer_list \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/functional_hash.h \
+  /usr/include/c++/11/bits/hash_bytes.h \
+  /usr/include/c++/11/bits/range_access.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/string \
+  /usr/include/c++/11/bits/stringfwd.h \
+  /usr/include/c++/11/bits/char_traits.h \
   /usr/include/c++/11/bits/postypes.h \
   /usr/include/c++/11/cwchar \
   /usr/include/wchar.h \
@@ -1854,32 +1884,6 @@ client/CMakeFiles/client.dir/src/windows/chat.cpp.o: ../client/src/windows/chat.
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/c++/11/exception \
-  /usr/include/c++/11/bits/exception.h \
-  /usr/include/c++/11/bits/exception_ptr.h \
-  /usr/include/c++/11/bits/exception_defines.h \
-  /usr/include/c++/11/bits/cxxabi_init_exception.h \
-  /usr/include/c++/11/typeinfo \
-  /usr/include/c++/11/bits/hash_bytes.h \
-  /usr/include/c++/11/new \
-  /usr/include/c++/11/bits/move.h \
-  /usr/include/c++/11/type_traits \
-  /usr/include/c++/11/bits/nested_exception.h \
-  /usr/include/c++/11/bits/char_traits.h \
-  /usr/include/c++/11/bits/stl_algobase.h \
-  /usr/include/c++/11/bits/functexcept.h \
-  /usr/include/c++/11/bits/cpp_type_traits.h \
-  /usr/include/c++/11/ext/type_traits.h \
-  /usr/include/c++/11/ext/numeric_traits.h \
-  /usr/include/c++/11/bits/stl_pair.h \
-  /usr/include/c++/11/bits/stl_iterator_base_types.h \
-  /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/11/bits/concept_check.h \
-  /usr/include/c++/11/debug/assertions.h \
-  /usr/include/c++/11/bits/stl_iterator.h \
-  /usr/include/c++/11/bits/ptr_traits.h \
-  /usr/include/c++/11/debug/debug.h \
-  /usr/include/c++/11/bits/predefined_ops.h \
   /usr/include/c++/11/cstdint \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
   /usr/include/stdint.h \
@@ -1893,11 +1897,16 @@ client/CMakeFiles/client.dir/src/windows/chat.cpp.o: ../client/src/windows/chat.
   /usr/include/c++/11/clocale \
   /usr/include/locale.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/11/iosfwd \
   /usr/include/c++/11/cctype \
   /usr/include/ctype.h \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/c++/11/bits/ios_base.h \
+  /usr/include/c++/11/bits/ostream_insert.h \
+  /usr/include/c++/11/bits/cxxabi_forced.h \
+  /usr/include/c++/11/bits/stl_function.h \
+  /usr/include/c++/11/backward/binders.h \
+  /usr/include/c++/11/bits/basic_string.h \
   /usr/include/c++/11/ext/atomicity.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h \
@@ -1929,23 +1938,7 @@ client/CMakeFiles/client.dir/src/windows/chat.cpp.o: ../client/src/windows/chat.
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
-  /usr/include/c++/11/bits/locale_classes.h \
-  /usr/include/c++/11/string \
-  /usr/include/c++/11/bits/allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
-  /usr/include/c++/11/ext/new_allocator.h \
-  /usr/include/c++/11/bits/ostream_insert.h \
-  /usr/include/c++/11/bits/cxxabi_forced.h \
-  /usr/include/c++/11/bits/stl_function.h \
-  /usr/include/c++/11/backward/binders.h \
-  /usr/include/c++/11/bits/range_access.h \
-  /usr/include/c++/11/initializer_list \
-  /usr/include/c++/11/bits/basic_string.h \
-  /usr/include/c++/11/ext/alloc_traits.h \
-  /usr/include/c++/11/bits/alloc_traits.h \
-  /usr/include/c++/11/bits/stl_construct.h \
   /usr/include/c++/11/string_view \
-  /usr/include/c++/11/bits/functional_hash.h \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/ext/string_conversions.h \
   /usr/include/c++/11/cstdlib \
@@ -1979,58 +1972,262 @@ client/CMakeFiles/client.dir/src/windows/chat.cpp.o: ../client/src/windows/chat.
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
   /usr/include/c++/11/bits/charconv.h \
   /usr/include/c++/11/bits/basic_string.tcc \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/json.hpp \
+  /usr/include/c++/11/algorithm \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/bits/stl_algo.h \
+  /usr/include/c++/11/bits/algorithmfwd.h \
+  /usr/include/c++/11/bits/stl_heap.h \
+  /usr/include/c++/11/bits/stl_tempbuf.h \
+  /usr/include/c++/11/bits/uniform_int_dist.h \
+  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/11/functional \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/array \
+  /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/bits/refwrap.h \
+  /usr/include/c++/11/bits/std_function.h \
+  /usr/include/c++/11/typeinfo \
+  /usr/include/c++/11/unordered_map \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/hashtable.h \
+  /usr/include/c++/11/bits/hashtable_policy.h \
+  /usr/include/c++/11/bits/enable_special_members.h \
+  /usr/include/c++/11/bits/node_handle.h \
+  /usr/include/c++/11/bits/unordered_map.h \
+  /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/c++/11/pstl/execution_defs.h \
+  /usr/include/c++/11/cstddef \
+  /usr/include/c++/11/iterator \
+  /usr/include/c++/11/bits/stream_iterator.h \
+  /usr/include/c++/11/bits/streambuf_iterator.h \
+  /usr/include/c++/11/streambuf \
+  /usr/include/c++/11/bits/ios_base.h \
+  /usr/include/c++/11/bits/locale_classes.h \
   /usr/include/c++/11/bits/locale_classes.tcc \
   /usr/include/c++/11/system_error \
   /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
   /usr/include/c++/11/stdexcept \
-  /usr/include/c++/11/streambuf \
+  /usr/include/c++/11/exception \
+  /usr/include/c++/11/bits/exception_ptr.h \
+  /usr/include/c++/11/bits/cxxabi_init_exception.h \
+  /usr/include/c++/11/bits/nested_exception.h \
   /usr/include/c++/11/bits/streambuf.tcc \
-  /usr/include/c++/11/bits/basic_ios.h \
+  /usr/include/c++/11/memory \
+  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/11/bits/align.h \
+  /usr/include/c++/11/bit \
+  /usr/include/c++/11/bits/unique_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr_base.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/ext/concurrence.h \
+  /usr/include/c++/11/bits/shared_ptr_atomic.h \
+  /usr/include/c++/11/bits/atomic_base.h \
+  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/11/backward/auto_ptr.h \
+  /usr/include/c++/11/pstl/glue_memory_defs.h \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/adl_serializer.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/abi_macros.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/conversions/from_json.hpp \
+  /usr/include/c++/11/forward_list \
+  /usr/include/c++/11/bits/forward_list.h \
+  /usr/include/c++/11/bits/forward_list.tcc \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/valarray \
+  /usr/include/c++/11/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/11/bits/specfun.h \
+  /usr/include/c++/11/limits \
+  /usr/include/c++/11/tr1/gamma.tcc \
+  /usr/include/c++/11/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/bessel_function.tcc \
+  /usr/include/c++/11/tr1/beta_function.tcc \
+  /usr/include/c++/11/tr1/ell_integral.tcc \
+  /usr/include/c++/11/tr1/exp_integral.tcc \
+  /usr/include/c++/11/tr1/hypergeometric.tcc \
+  /usr/include/c++/11/tr1/legendre_function.tcc \
+  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/11/tr1/poly_hermite.tcc \
+  /usr/include/c++/11/tr1/poly_laguerre.tcc \
+  /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  /usr/include/c++/11/bits/valarray_array.h \
+  /usr/include/c++/11/bits/valarray_array.tcc \
+  /usr/include/c++/11/bits/valarray_before.h \
+  /usr/include/c++/11/bits/slice_array.h \
+  /usr/include/c++/11/bits/valarray_after.h \
+  /usr/include/c++/11/bits/gslice.h \
+  /usr/include/c++/11/bits/gslice_array.h \
+  /usr/include/c++/11/bits/mask_array.h \
+  /usr/include/c++/11/bits/indirect_array.h \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/exceptions.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/value_t.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/macro_scope.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/detected.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/void_t.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/thirdparty/hedley/hedley.hpp \
+  /usr/include/c++/11/version \
+  /usr/include/c++/11/cassert \
+  /usr/include/assert.h \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/string_escape.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/position_t.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/cpp_future.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/type_traits.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/iterator_traits.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/call_std/begin.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/call_std/end.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/json_fwd.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/string_concat.hpp \
+  /usr/include/c++/11/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/identity_tag.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/std_fs.hpp \
+  /usr/include/c++/11/filesystem \
+  /usr/include/c++/11/bits/fs_fwd.h \
+  /usr/include/c++/11/chrono \
+  /usr/include/c++/11/ratio \
+  /usr/include/c++/11/ctime \
+  /usr/include/c++/11/bits/parse_numbers.h \
+  /usr/include/c++/11/bits/fs_path.h \
+  /usr/include/c++/11/locale \
   /usr/include/c++/11/bits/locale_facets.h \
   /usr/include/c++/11/cwctype \
   /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
-  /usr/include/c++/11/bits/streambuf_iterator.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
   /usr/include/c++/11/bits/locale_facets.tcc \
-  /usr/include/c++/11/bits/basic_ios.tcc \
-  /usr/include/c++/11/bits/ostream.tcc \
+  /usr/include/c++/11/bits/locale_facets_nonio.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/11/bits/locale_conv.h \
+  /usr/include/c++/11/iomanip \
+  /usr/include/c++/11/bits/quoted_string.h \
+  /usr/include/c++/11/sstream \
   /usr/include/c++/11/istream \
+  /usr/include/c++/11/ios \
+  /usr/include/c++/11/bits/basic_ios.h \
+  /usr/include/c++/11/bits/basic_ios.tcc \
+  /usr/include/c++/11/ostream \
+  /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/bits/istream.tcc \
-  /usr/include/c++/11/vector \
-  /usr/include/c++/11/bits/stl_uninitialized.h \
-  /usr/include/c++/11/bits/stl_vector.h \
-  /usr/include/c++/11/bits/stl_bvector.h \
-  /usr/include/c++/11/bits/vector.tcc \
-  /usr/include/c++/11/thread \
-  /usr/include/c++/11/bits/std_thread.h \
-  /usr/include/c++/11/tuple \
-  /usr/include/c++/11/utility \
-  /usr/include/c++/11/bits/stl_relops.h \
-  /usr/include/c++/11/array \
-  /usr/include/c++/11/bits/uses_allocator.h \
-  /usr/include/c++/11/bits/invoke.h \
-  /usr/include/c++/11/bits/refwrap.h \
-  /usr/include/c++/11/bits/unique_ptr.h \
-  /usr/include/c++/11/bits/this_thread_sleep.h \
-  /usr/include/c++/11/chrono \
-  /usr/include/c++/11/ratio \
-  /usr/include/c++/11/limits \
-  /usr/include/c++/11/ctime \
-  /usr/include/c++/11/bits/parse_numbers.h \
-  /usr/include/c++/11/mutex \
+  /usr/include/c++/11/bits/sstream.tcc \
+  /usr/include/c++/11/codecvt \
+  /usr/include/c++/11/bits/fs_dir.h \
+  /usr/include/c++/11/bits/fs_ops.h \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/conversions/to_json.hpp \
+  /usr/include/c++/11/optional \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/string_utils.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/byte_container_with_subtype.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/hash.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/binary_reader.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/input_adapters.hpp \
+  /usr/include/c++/11/numeric \
+  /usr/include/c++/11/bits/stl_numeric.h \
+  /usr/include/c++/11/pstl/glue_numeric_defs.h \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/json_sax.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/lexer.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/is_sax.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/parser.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/internal_iterator.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/iter_impl.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/json_custom_base_class.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/json_pointer.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/json_ref.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/output/binary_writer.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/output/output_adapters.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/output/serializer.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/conversions/to_chars.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/ordered_map.hpp \
+  /usr/include/c++/11/any \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/macro_unscope.hpp \
+  /home/user/vcpkg/installed/x64-linux/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  ../client/include/utils/input.h \
+  /usr/include/c++/11/iostream \
+  /home/user/vcpkg/installed/x64-linux/include/spdlog/spdlog.h \
+  /home/user/vcpkg/installed/x64-linux/include/spdlog/common.h \
+  /home/user/vcpkg/installed/x64-linux/include/spdlog/details/null_mutex.h \
+  /usr/include/c++/11/atomic \
+  /home/user/vcpkg/installed/x64-linux/include/spdlog/tweakme.h \
+  /home/user/vcpkg/installed/x64-linux/include/spdlog/fmt/fmt.h \
+  /home/user/vcpkg/installed/x64-linux/include/fmt/base.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /home/user/vcpkg/installed/x64-linux/include/fmt/format.h \
+  /home/user/vcpkg/installed/x64-linux/include/fmt/base.h \
+  /home/user/vcpkg/installed/x64-linux/include/spdlog/details/registry.h \
+  /home/user/vcpkg/installed/x64-linux/include/spdlog/details/periodic_worker.h \
+  /usr/include/c++/11/condition_variable \
   /usr/include/c++/11/bits/std_mutex.h \
   /usr/include/c++/11/bits/unique_lock.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/netinet/in.h \
+  /usr/include/c++/11/mutex \
+  /usr/include/c++/11/thread \
+  /usr/include/c++/11/bits/std_thread.h \
+  /usr/include/c++/11/bits/this_thread_sleep.h \
+  /home/user/vcpkg/installed/x64-linux/include/spdlog/details/synchronous_factory.h \
+  /home/user/vcpkg/installed/x64-linux/include/spdlog/logger.h \
+  /home/user/vcpkg/installed/x64-linux/include/spdlog/details/backtracer.h \
+  /home/user/vcpkg/installed/x64-linux/include/spdlog/details/circular_q.h \
+  /home/user/vcpkg/installed/x64-linux/include/spdlog/details/log_msg_buffer.h \
+  /home/user/vcpkg/installed/x64-linux/include/spdlog/details/log_msg.h \
+  /home/user/vcpkg/installed/x64-linux/include/spdlog/version.h \
+  ../client/include/utils/requests.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/cpr.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/api.h \
+  /usr/include/c++/11/fstream \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
+  /usr/include/c++/11/future \
+  /usr/include/c++/11/bits/atomic_futex.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/async.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/async_wrapper.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/singleton.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/threadpool.h \
+  /usr/include/c++/11/list \
+  /usr/include/c++/11/bits/stl_list.h \
+  /usr/include/c++/11/bits/list.tcc \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/bits/stl_queue.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/async_wrapper.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/auth.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/util.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/callback.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/cprtypes.h \
+  /home/user/vcpkg/installed/x64-linux/include/curl/curl.h \
+  /home/user/vcpkg/installed/x64-linux/include/curl/curlver.h \
+  /home/user/vcpkg/installed/x64-linux/include/curl/system.h \
   /usr/include/x86_64-linux-gnu/sys/socket.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
   /usr/include/x86_64-linux-gnu/bits/socket.h \
@@ -2048,8 +2245,106 @@ client/CMakeFiles/client.dir/src/windows/chat.cpp.o: ../client/src/windows/chat.
   /usr/include/x86_64-linux-gnu/asm/sockios.h \
   /usr/include/asm-generic/sockios.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
+  /usr/include/x86_64-linux-gnu/sys/time.h \
+  /home/user/vcpkg/installed/x64-linux/include/curl/easy.h \
+  /home/user/vcpkg/installed/x64-linux/include/curl/multi.h \
+  /home/user/vcpkg/installed/x64-linux/include/curl/curl.h \
+  /home/user/vcpkg/installed/x64-linux/include/curl/urlapi.h \
+  /home/user/vcpkg/installed/x64-linux/include/curl/options.h \
+  /home/user/vcpkg/installed/x64-linux/include/curl/header.h \
+  /home/user/vcpkg/installed/x64-linux/include/curl/websockets.h \
+  /home/user/vcpkg/installed/x64-linux/include/curl/mprintf.h \
+  /home/user/vcpkg/installed/x64-linux/include/curl/system.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/cookies.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/curlholder.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/secure_string.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/cprtypes.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/bearer.h \
+  /home/user/vcpkg/installed/x64-linux/include/curl/curlver.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/filesystem.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/multipart.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/buffer.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/file.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/multiperform.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/curlmultiholder.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/response.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/cert_info.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/error.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/ssl_options.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/util.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/session.h \
+  /usr/include/c++/11/variant \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/accept_encoding.h \
+  /usr/include/c++/11/unordered_set \
+  /usr/include/c++/11/bits/unordered_set.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/body.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/buffer.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/file.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/body_view.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/connect_timeout.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/timeout.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/http_version.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/interface.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/limit_rate.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/local_port.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/local_port_range.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/low_speed.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/parameters.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/curl_container.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/payload.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/proxies.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/proxyauth.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/range.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/redirect.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/reserve_size.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/resolve.h \
+  /usr/include/c++/11/set \
+  /usr/include/c++/11/bits/stl_set.h \
+  /usr/include/c++/11/bits/stl_multiset.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/unix_socket.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/user_agent.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/verbose.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/cprver.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/interceptor.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/ssl_ctx.h \
+  /home/user/vcpkg/installed/x64-linux/include/cpr/status_codes.h \
+  ../client/include/windows/auth.h \
+  /usr/include/arpa/inet.h \
+  /usr/include/netinet/in.h \
   /usr/include/x86_64-linux-gnu/bits/in.h \
-  /usr/include/arpa/inet.h
+  /usr/include/curses.h \
+  /usr/include/ncurses_dll.h \
+  /usr/include/unctrl.h \
+  /usr/include/curses.h \
+  /usr/include/x86_64-linux-gnu/sys/ioctl.h \
+  /usr/include/x86_64-linux-gnu/bits/ioctls.h \
+  /usr/include/x86_64-linux-gnu/asm/ioctls.h \
+  /usr/include/asm-generic/ioctls.h \
+  /usr/include/linux/ioctl.h \
+  /usr/include/x86_64-linux-gnu/asm/ioctl.h \
+  /usr/include/asm-generic/ioctl.h \
+  /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
+  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
+  /usr/include/term.h \
+  /usr/include/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h
 
 client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.cpp \
   /usr/include/stdc-predef.h \
@@ -2547,8 +2842,34 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
   ../client/include/utils/requests.h \
   ../client/include/types.h \
   ../client/include/windows/chat.h \
+  /usr/include/arpa/inet.h \
   /usr/include/netinet/in.h \
   /usr/include/x86_64-linux-gnu/bits/in.h \
+  /usr/include/curses.h \
+  /usr/include/ncurses_dll.h \
+  /usr/include/unctrl.h \
+  /usr/include/curses.h \
+  /usr/include/x86_64-linux-gnu/sys/ioctl.h \
+  /usr/include/x86_64-linux-gnu/bits/ioctls.h \
+  /usr/include/x86_64-linux-gnu/asm/ioctls.h \
+  /usr/include/asm-generic/ioctls.h \
+  /usr/include/linux/ioctl.h \
+  /usr/include/x86_64-linux-gnu/asm/ioctl.h \
+  /usr/include/asm-generic/ioctl.h \
+  /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
+  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
+  /usr/include/term.h \
+  /usr/include/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
   /usr/include/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/environments.h \
@@ -2556,66 +2877,36 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/arpa/inet.h \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/elements.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/canvas.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/color.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/image.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/box.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/pixel.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/direction.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/flexbox_config.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/linear_gradient.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/node.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/requirement.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/screen.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/terminal.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/util/autoreset.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/selection.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/util/ref.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/string.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/take_any_args.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/deprecated.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/component/screen_interactive.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/component/receiver.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/component/animation.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/component/captured_mouse.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/component/event.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/component/mouse.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/component/task.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/component/component.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/component/component_base.hpp \
-  /home/user/vcpkg/installed/x64-linux/include/ftxui/component/component_options.hpp
+  /usr/include/linux/close_range.h
 
-
-../client/src/utils/input.cpp:
-
-/home/user/vcpkg/installed/x64-linux/include/ftxui/component/task.hpp:
-
-/home/user/vcpkg/installed/x64-linux/include/ftxui/component/mouse.hpp:
-
-/home/user/vcpkg/installed/x64-linux/include/ftxui/component/animation.hpp:
-
-/home/user/vcpkg/installed/x64-linux/include/ftxui/dom/deprecated.hpp:
-
-/home/user/vcpkg/installed/x64-linux/include/ftxui/dom/take_any_args.hpp:
-
-/home/user/vcpkg/installed/x64-linux/include/ftxui/dom/selection.hpp:
 
 ../client/src/windows/auth.cpp:
 
-/home/user/vcpkg/installed/x64-linux/include/ftxui/screen/terminal.hpp:
-
-/home/user/vcpkg/installed/x64-linux/include/ftxui/dom/linear_gradient.hpp:
-
-/usr/include/arpa/inet.h:
+../client/src/utils/input.cpp:
 
 /usr/include/linux/close_range.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
+/usr/include/x86_64-linux-gnu/bits/termios-misc.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-baud.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h:
+
+/usr/include/x86_64-linux-gnu/bits/ioctl-types.h:
+
+/usr/include/ncurses_dll.h:
+
 /usr/include/netinet/in.h:
+
+/usr/include/arpa/inet.h:
 
 ../client/include/utils/input.h:
 
@@ -2657,8 +2948,6 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 
 /home/user/vcpkg/installed/x64-linux/include/cpr/curlmultiholder.h:
 
-/home/user/vcpkg/installed/x64-linux/include/ftxui/dom/requirement.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/confname.h:
 
 /home/user/vcpkg/installed/x64-linux/include/cpr/buffer.h:
@@ -2669,9 +2958,13 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 
 /home/user/vcpkg/installed/x64-linux/include/cpr/secure_string.h:
 
+/usr/include/asm-generic/ioctl.h:
+
 /home/user/vcpkg/installed/x64-linux/include/cpr/limit_rate.h:
 
 /home/user/vcpkg/installed/x64-linux/include/cpr/curlholder.h:
+
+/usr/include/term.h:
 
 /home/user/vcpkg/installed/x64-linux/include/curl/mprintf.h:
 
@@ -2686,8 +2979,6 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h:
 
 /usr/include/asm-generic/sockios.h:
-
-/home/user/vcpkg/installed/x64-linux/include/ftxui/screen/image.hpp:
 
 /usr/include/x86_64-linux-gnu/asm/posix_types.h:
 
@@ -2713,8 +3004,6 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 
 /usr/include/c++/11/deque:
 
-/home/user/vcpkg/installed/x64-linux/include/ftxui/dom/elements.hpp:
-
 /usr/include/c++/11/bits/list.tcc:
 
 /usr/include/c++/11/list:
@@ -2735,11 +3024,9 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 
 /usr/include/c++/11/fstream:
 
-/home/user/vcpkg/installed/x64-linux/include/ftxui/component/component.hpp:
-
 /home/user/vcpkg/installed/x64-linux/include/cpr/cpr.h:
 
-/home/user/vcpkg/installed/x64-linux/include/ftxui/util/autoreset.hpp:
+/usr/include/termios.h:
 
 /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/macro_unscope.hpp:
 
@@ -2749,13 +3036,13 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 
 /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/output/output_adapters.hpp:
 
+/usr/include/asm-generic/ioctls.h:
+
 /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/json_custom_base_class.hpp:
 
 /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/internal_iterator.hpp:
 
 /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/parser.hpp:
-
-/home/user/vcpkg/installed/x64-linux/include/ftxui/dom/canvas.hpp:
 
 /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/input/json_sax.hpp:
 
@@ -2784,8 +3071,6 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 /usr/include/c++/11/bits/istream.tcc:
 
 /usr/include/c++/11/bits/ostream.tcc:
-
-/home/user/vcpkg/installed/x64-linux/include/ftxui/screen/string.hpp:
 
 /home/user/vcpkg/installed/x64-linux/include/cpr/user_agent.h:
 
@@ -2867,6 +3152,8 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 
 /usr/include/c++/11/bits/stl_map.h:
 
+/usr/include/x86_64-linux-gnu/sys/ioctl.h:
+
 /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/json_ref.hpp:
 
 /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/json_pointer.hpp:
@@ -2885,6 +3172,8 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 
 /usr/include/c++/11/bits/locale_classes.h:
 
+/usr/include/x86_64-linux-gnu/bits/ioctls.h:
+
 /usr/include/c++/11/bits/ios_base.h:
 
 /usr/include/c++/11/streambuf:
@@ -2901,8 +3190,6 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 
 /usr/include/assert.h:
 
-/home/user/vcpkg/installed/x64-linux/include/ftxui/component/screen_interactive.hpp:
-
 /usr/include/c++/11/cassert:
 
 /home/user/vcpkg/installed/x64-linux/include/spdlog/details/circular_q.h:
@@ -2917,6 +3204,8 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 
 /usr/include/c++/11/cstdlib:
 
+/usr/include/curses.h:
+
 /home/user/vcpkg/installed/x64-linux/include/nlohmann/thirdparty/hedley/hedley_undef.hpp:
 
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
@@ -2928,6 +3217,8 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 /usr/include/c++/11/bits/hashtable_policy.h:
 
 /usr/include/c++/11/bits/hashtable.h:
+
+/usr/include/x86_64-linux-gnu/asm/ioctls.h:
 
 /usr/include/c++/11/tr1/exp_integral.tcc:
 
@@ -2957,13 +3248,13 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 
 /usr/include/c++/11/bits/functional_hash.h:
 
-/home/user/vcpkg/installed/x64-linux/include/ftxui/component/captured_mouse.hpp:
-
 /usr/include/asm-generic/socket.h:
 
 /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/is_sax.hpp:
 
 /usr/include/c++/11/bits/invoke.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-tcflow.h:
 
 /usr/include/c++/11/bits/sstream.tcc:
 
@@ -2973,13 +3264,13 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 
 /usr/include/c++/11/backward/auto_ptr.h:
 
-/home/user/vcpkg/installed/x64-linux/include/ftxui/component/event.hpp:
-
 /usr/include/c++/11/ext/new_allocator.h:
 
 /home/user/vcpkg/installed/x64-linux/include/cpr/multipart.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+/usr/include/x86_64-linux-gnu/asm/ioctl.h:
 
 /usr/include/c++/11/bits/functexcept.h:
 
@@ -3031,8 +3322,6 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
-/home/user/vcpkg/installed/x64-linux/include/ftxui/component/component_options.hpp:
-
 /usr/include/c++/11/cstdio:
 
 /usr/include/x86_64-linux-gnu/asm/socket.h:
@@ -3079,11 +3368,11 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 
 /usr/include/c++/11/bits/vector.tcc:
 
-/home/user/vcpkg/installed/x64-linux/include/ftxui/screen/screen.hpp:
-
 /usr/include/c++/11/bits/stl_deque.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_cc.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
@@ -3109,6 +3398,8 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 
 /usr/include/c++/11/pstl/glue_memory_defs.h:
 
+/usr/include/linux/ioctl.h:
+
 /home/user/vcpkg/installed/x64-linux/include/cpr/http_version.h:
 
 /usr/include/c++/11/bits/std_function.h:
@@ -3118,8 +3409,6 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 /usr/include/c++/11/bits/forward_list.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
-
-/home/user/vcpkg/installed/x64-linux/include/ftxui/screen/box.hpp:
 
 /usr/include/unistd.h:
 
@@ -3152,8 +3441,6 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/primitive_iterator.hpp:
 
 /usr/include/pthread.h:
-
-/home/user/vcpkg/installed/x64-linux/include/ftxui/screen/pixel.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
@@ -3207,8 +3494,6 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 
 /usr/include/c++/11/bits/range_access.h:
 
-/home/user/vcpkg/installed/x64-linux/include/ftxui/dom/flexbox_config.hpp:
-
 /usr/include/c++/11/bits/stl_vector.h:
 
 /usr/include/c++/11/cstddef:
@@ -3245,6 +3530,8 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 
 /home/user/vcpkg/installed/x64-linux/include/spdlog/details/null_mutex.h:
 
+/usr/include/x86_64-linux-gnu/bits/termios-struct.h:
+
 /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/string_concat.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
@@ -3278,8 +3565,6 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 /home/user/vcpkg/installed/x64-linux/include/fmt/base.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
-
-/home/user/vcpkg/installed/x64-linux/include/ftxui/component/receiver.hpp:
 
 /usr/include/c++/11/bits/hash_bytes.h:
 
@@ -3328,8 +3613,6 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
-/home/user/vcpkg/installed/x64-linux/include/ftxui/component/component_base.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
@@ -3398,8 +3681,6 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/c++/11/bits/allocated_ptr.h:
-
-/home/user/vcpkg/installed/x64-linux/include/ftxui/dom/direction.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
@@ -3477,6 +3758,8 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
+/usr/include/x86_64-linux-gnu/bits/termios.h:
+
 ../client/include/types.h:
 
 /usr/include/c++/11/mutex:
@@ -3539,13 +3822,9 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
-/home/user/vcpkg/installed/x64-linux/include/ftxui/dom/node.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
 /usr/include/c++/11/bits/charconv.h:
-
-/home/user/vcpkg/installed/x64-linux/include/ftxui/screen/color.hpp:
 
 /home/user/vcpkg/installed/x64-linux/include/curl/header.h:
 
@@ -3587,6 +3866,8 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 
 /usr/include/string.h:
 
+/usr/include/x86_64-linux-gnu/sys/ttydefaults.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
@@ -3611,8 +3892,6 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
-/home/user/vcpkg/installed/x64-linux/include/ftxui/util/ref.hpp:
-
 /home/user/vcpkg/installed/x64-linux/include/cpr/proxyauth.h:
 
 /home/user/vcpkg/installed/x64-linux/include/nlohmann/detail/string_escape.hpp:
@@ -3626,6 +3905,8 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.
 /usr/include/c++/11/array:
 
 /usr/include/c++/11/tr1/beta_function.tcc:
+
+/usr/include/unctrl.h:
 
 /usr/include/c++/11/bits/uses_allocator.h:
 

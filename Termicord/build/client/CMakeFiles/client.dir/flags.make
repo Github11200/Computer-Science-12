@@ -6,5 +6,5 @@ CXX_DEFINES = -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL
 
 CXX_INCLUDES = -I/home/user/code/Computer-Science-12/Termicord/client/include -isystem /home/user/vcpkg/installed/x64-linux/include
 
-CXX_FLAGS = 
+CXX_FLAGS = -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600
 

@@ -16,32 +16,32 @@
 },
 {
   "directory": "/home/user/code/Computer-Science-12/Termicord/build/client",
-  "command": "/usr/bin/c++ -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/user/code/Computer-Science-12/Termicord/client/include -isystem /home/user/vcpkg/installed/x64-linux/include  -o CMakeFiles/client.dir/src/client.cpp.o -c /home/user/code/Computer-Science-12/Termicord/client/src/client.cpp",
+  "command": "/usr/bin/c++ -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/user/code/Computer-Science-12/Termicord/client/include -isystem /home/user/vcpkg/installed/x64-linux/include -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -o CMakeFiles/client.dir/src/client.cpp.o -c /home/user/code/Computer-Science-12/Termicord/client/src/client.cpp",
   "file": "/home/user/code/Computer-Science-12/Termicord/client/src/client.cpp"
 },
 {
   "directory": "/home/user/code/Computer-Science-12/Termicord/build/client",
-  "command": "/usr/bin/c++ -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/user/code/Computer-Science-12/Termicord/client/include -isystem /home/user/vcpkg/installed/x64-linux/include  -o CMakeFiles/client.dir/src/utils/input.cpp.o -c /home/user/code/Computer-Science-12/Termicord/client/src/utils/input.cpp",
+  "command": "/usr/bin/c++ -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/user/code/Computer-Science-12/Termicord/client/include -isystem /home/user/vcpkg/installed/x64-linux/include -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -o CMakeFiles/client.dir/src/utils/input.cpp.o -c /home/user/code/Computer-Science-12/Termicord/client/src/utils/input.cpp",
   "file": "/home/user/code/Computer-Science-12/Termicord/client/src/utils/input.cpp"
 },
 {
   "directory": "/home/user/code/Computer-Science-12/Termicord/build/client",
-  "command": "/usr/bin/c++ -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/user/code/Computer-Science-12/Termicord/client/include -isystem /home/user/vcpkg/installed/x64-linux/include  -o CMakeFiles/client.dir/src/utils/requests.cpp.o -c /home/user/code/Computer-Science-12/Termicord/client/src/utils/requests.cpp",
+  "command": "/usr/bin/c++ -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/user/code/Computer-Science-12/Termicord/client/include -isystem /home/user/vcpkg/installed/x64-linux/include -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -o CMakeFiles/client.dir/src/utils/requests.cpp.o -c /home/user/code/Computer-Science-12/Termicord/client/src/utils/requests.cpp",
   "file": "/home/user/code/Computer-Science-12/Termicord/client/src/utils/requests.cpp"
 },
 {
   "directory": "/home/user/code/Computer-Science-12/Termicord/build/client",
-  "command": "/usr/bin/c++ -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/user/code/Computer-Science-12/Termicord/client/include -isystem /home/user/vcpkg/installed/x64-linux/include  -o CMakeFiles/client.dir/src/windows/auth.cpp.o -c /home/user/code/Computer-Science-12/Termicord/client/src/windows/auth.cpp",
+  "command": "/usr/bin/c++ -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/user/code/Computer-Science-12/Termicord/client/include -isystem /home/user/vcpkg/installed/x64-linux/include -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -o CMakeFiles/client.dir/src/windows/auth.cpp.o -c /home/user/code/Computer-Science-12/Termicord/client/src/windows/auth.cpp",
   "file": "/home/user/code/Computer-Science-12/Termicord/client/src/windows/auth.cpp"
 },
 {
   "directory": "/home/user/code/Computer-Science-12/Termicord/build/client",
-  "command": "/usr/bin/c++ -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/user/code/Computer-Science-12/Termicord/client/include -isystem /home/user/vcpkg/installed/x64-linux/include  -o CMakeFiles/client.dir/src/windows/home.cpp.o -c /home/user/code/Computer-Science-12/Termicord/client/src/windows/home.cpp",
+  "command": "/usr/bin/c++ -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/user/code/Computer-Science-12/Termicord/client/include -isystem /home/user/vcpkg/installed/x64-linux/include -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -o CMakeFiles/client.dir/src/windows/home.cpp.o -c /home/user/code/Computer-Science-12/Termicord/client/src/windows/home.cpp",
   "file": "/home/user/code/Computer-Science-12/Termicord/client/src/windows/home.cpp"
 },
 {
   "directory": "/home/user/code/Computer-Science-12/Termicord/build/client",
-  "command": "/usr/bin/c++ -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/user/code/Computer-Science-12/Termicord/client/include -isystem /home/user/vcpkg/installed/x64-linux/include  -o CMakeFiles/client.dir/src/windows/chat.cpp.o -c /home/user/code/Computer-Science-12/Termicord/client/src/windows/chat.cpp",
+  "command": "/usr/bin/c++ -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/user/code/Computer-Science-12/Termicord/client/include -isystem /home/user/vcpkg/installed/x64-linux/include -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -o CMakeFiles/client.dir/src/windows/chat.cpp.o -c /home/user/code/Computer-Science-12/Termicord/client/src/windows/chat.cpp",
   "file": "/home/user/code/Computer-Science-12/Termicord/client/src/windows/chat.cpp"
 },
 {

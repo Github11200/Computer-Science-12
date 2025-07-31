@@ -420,40 +420,31 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: \
  /home/user/code/Computer-Science-12/Termicord/client/include/utils/requests.h \
  /home/user/code/Computer-Science-12/Termicord/client/include/types.h \
  /home/user/code/Computer-Science-12/Termicord/client/include/windows/chat.h \
- /usr/include/netinet/in.h /usr/include/x86_64-linux-gnu/bits/in.h \
- /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/arpa/inet.h /usr/include/netinet/in.h \
+ /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/curses.h \
+ /usr/include/ncurses_dll.h /usr/include/unctrl.h /usr/include/curses.h \
+ /usr/include/x86_64-linux-gnu/sys/ioctl.h \
+ /usr/include/x86_64-linux-gnu/bits/ioctls.h \
+ /usr/include/x86_64-linux-gnu/asm/ioctls.h \
+ /usr/include/asm-generic/ioctls.h /usr/include/linux/ioctl.h \
+ /usr/include/x86_64-linux-gnu/asm/ioctl.h \
+ /usr/include/asm-generic/ioctl.h \
+ /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
+ /usr/include/x86_64-linux-gnu/sys/ttydefaults.h /usr/include/term.h \
+ /usr/include/termios.h /usr/include/x86_64-linux-gnu/bits/termios.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-misc.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/include/linux/close_range.h /usr/include/arpa/inet.h \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/elements.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/canvas.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/color.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/image.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/box.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/pixel.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/direction.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/flexbox_config.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/linear_gradient.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/node.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/requirement.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/screen.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/terminal.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/util/autoreset.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/selection.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/util/ref.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/screen/string.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/take_any_args.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/dom/deprecated.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/component/screen_interactive.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/component/receiver.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/component/animation.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/component/captured_mouse.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/component/event.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/component/mouse.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/component/task.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/component/component.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/component/component_base.hpp \
- /home/user/vcpkg/installed/x64-linux/include/ftxui/component/component_options.hpp
+ /usr/include/linux/close_range.h
