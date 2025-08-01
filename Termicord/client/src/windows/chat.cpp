@@ -3,6 +3,14 @@
 // TODO:
 
 #include "windows/chat.h"
+#include "windows/auth.h"
+#include <asm-generic/ioctls.h>
+#include <curses.h>
+#include <sys/ioctl.h>
+#include <unistd.h>
+
+#define SHOW_CURSOR "\033[?25h"
+#define HIDE_CURSOR "\033[?25l"
 
 using namespace std;
 using json = nlohmann::json;
@@ -11,7 +19,7 @@ termios orig_termios;
 
 void disableRawMode() {
   tcsetattr(STDIN_FILENO, TCSAFLUSH, &orig_termios);
-  cout << "\033[?25h"; // Show the cursor
+  cout << SHOW_CURSOR;
 }
 
 void enableRawMode() {
@@ -23,7 +31,7 @@ void enableRawMode() {
   raw.c_iflag &= ~(IXON);
   tcsetattr(STDIN_FILENO, TCSAFLUSH, &raw);
 
-  cout << "\033[?25l"; // Hide the cursor
+  cout << HIDE_CURSOR;
 }
 
 void moveCursor(int x, int y) { cout << "\033[" << y << ";" << x << "H"; }
@@ -35,17 +43,20 @@ mutex mtx;
 bool running = true;
 
 void redraw(string &input) {
+  struct winsize w;
+  ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
+  int row = w.ws_row - 1;
+
   mtx.lock();
   system("clear");
 
-  int row = 1;
-  for (const auto &message : messages) {
-    moveCursor(1, row++);
-    cout << message;
+  for (int i = messages.size() - 1; row > 0 && i >= 0; --i) {
+    moveCursor(1, row--);
+    cout << messages[i];
   }
-  moveCursor(1, row + 1);
+  moveCursor(1, w.ws_row);
   cout << "> " << input << flush;
-  moveCursor(3 + input.size(), row + 1);
+  moveCursor(3 + input.size(), w.ws_row);
   mtx.unlock();
 }
 
@@ -58,7 +69,6 @@ void receive(int socket, string &input) {
       mtx.lock();
       messages.push_back(string(buffer));
       mtx.unlock();
-      // cout << "I RECEIVED" << endl;
       redraw(input);
     }
   }
@@ -80,6 +90,7 @@ void join(int PORT) {
     spdlog::error("Could not connect to the client.");
     return;
   }
+  ssize_t sent = send(clientSocket, Auth::currentUser.username.data(), Auth::currentUser.username.size(), 0);
 
   enableRawMode();
 
@@ -100,7 +111,7 @@ void join(int PORT) {
       }
 
       mtx.lock();
-      messages.push_back(input);
+      messages.push_back("[You] " + input);
       mtx.unlock();
       input = "";
       redraw(input);

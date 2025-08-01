@@ -21,6 +21,7 @@ namespace Servers {
 extern std::unordered_map<std::string, std::thread*> runningServers;
 extern std::set<int> connectedClientSockets; 
 extern std::mutex receivingThreadMutex;
+extern std::vector<std::string> messages;
 
 void broadcastMessage(std::string message, int excludedClient); 
 void receivingThreadCallback(int clientSocket);
