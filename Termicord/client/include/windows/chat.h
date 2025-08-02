@@ -27,6 +27,7 @@
 #include <thread>
 #include <unistd.h>
 #include <vector>
+#include <atomic>
 
 void disableRawMode();
 void enableRawMode();
@@ -36,7 +37,7 @@ namespace Chat {
 
 extern std::vector<std::string> messages;
 extern std::mutex mtx;
-extern bool running;
+extern std::atomic<bool> running;
 
 void receive(int socket, string &input);
 void redraw();

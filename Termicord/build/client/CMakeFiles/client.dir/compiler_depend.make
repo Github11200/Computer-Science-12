@@ -2535,7 +2535,8 @@ client/CMakeFiles/client.dir/src/windows/chat.cpp.o: ../client/src/windows/chat.
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h
+  /usr/include/linux/close_range.h \
+  ../client/include/windows/home.h
 
 client/CMakeFiles/client.dir/src/windows/home.cpp.o: ../client/src/windows/home.cpp \
   /usr/include/stdc-predef.h \

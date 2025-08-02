@@ -4,9 +4,11 @@
 
 #include "windows/chat.h"
 #include "windows/auth.h"
+#include "windows/home.h"
 #include <asm-generic/ioctls.h>
 #include <curses.h>
 #include <sys/ioctl.h>
+#include <sys/socket.h>
 #include <unistd.h>
 
 #define SHOW_CURSOR "\033[?25h"
@@ -40,7 +42,7 @@ namespace Chat {
 
 vector<string> messages;
 mutex mtx;
-bool running = true;
+atomic<bool> running(true);
 
 void redraw(string &input) {
   struct winsize w;
@@ -61,7 +63,7 @@ void redraw(string &input) {
 }
 
 void receive(int socket, string &input) {
-  while (true) {
+  while (Chat::running) {
     char buffer[1024] = {0};
     int bytesRecieved = recv(socket, buffer, sizeof(buffer), 0);
     if (bytesRecieved > 0) {
@@ -110,13 +112,19 @@ void join(int PORT) {
   string input = "";
   redraw(input);
 
+  Chat::running = true;
   thread receivingThread(receive, clientSocket, ref(input));
-  while (true) {
+  while (Chat::running) {
     char c;
     if (read(STDIN_FILENO, &c, 1) <= 0)
       break;
 
     if (c == '\n' && !input.empty()) {
+      if (input == "/exit") {
+        Chat::running = false; 
+        shutdown(clientSocket, SHUT_RDWR);
+        break;
+      }
       string inputToBeSent = "[" + Auth::currentUser.username + "] " + input;
       ssize_t sent = send(clientSocket, inputToBeSent.data(), inputToBeSent.size(), 0);
       if (sent < 0) {
@@ -139,10 +147,11 @@ void join(int PORT) {
     }
   }
 
+  disableRawMode();
   if (receivingThread.joinable())
     receivingThread.join();
   close(clientSocket);
-  disableRawMode();
+  Home::init();
 }
 
 } // namespace Chat
