@@ -53,3 +53,19 @@ Result addFriend(string rawJson) {
     return Result(200, "{ \"message\": \"The friend was successfully added to the database.\" }");
   return Result(500, "{ \"message\": \"The friend could not be added to the database.\" }");
 }
+
+Result addServerToUser(string rawJson) {
+  Database database(NAME);
+  json httpRequest = json::parse(rawJson);
+
+  string username = httpRequest["username"];
+  string serverName = httpRequest["server_name"];
+
+  optional<string> result = database.searchDatabase(username);
+  json currentUserJson = json::parse(*result);
+
+  currentUserJson["servers"].push_back(serverName);
+  if (database.updateEntry(username, currentUserJson))
+    return Result(200, "{ \"message\": \"The server was successfully added to the user's list of servers.\" }");
+  return Result(500, "{ \"message\": \"The server could not be added to the user's list of servers.\" }");
+}

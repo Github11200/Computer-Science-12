@@ -3,7 +3,9 @@
     "owner": "nimifish",
     "port": 7000,
     "users": [
-      "nimifish"
+      "nimifish",
+      "github11200",
+      "existential"
     ]
   },
   "Swimming": {
@@ -11,9 +13,6 @@
     "port": 9000,
     "users": [
       "nimifish"
-    ]
-  }
-}
     ]
   }
 }

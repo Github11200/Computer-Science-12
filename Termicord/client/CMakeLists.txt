@@ -9,6 +9,7 @@ add_executable(client
   src/client.cpp
   src/utils/input.cpp
   src/utils/requests.cpp
+  src/utils/utils.cpp
   src/windows/auth.cpp
   src/windows/home.cpp
   src/windows/chat.cpp

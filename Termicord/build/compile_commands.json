@@ -31,6 +31,11 @@
 },
 {
   "directory": "/home/user/code/Computer-Science-12/Termicord/build/client",
+  "command": "/usr/bin/c++ -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/user/code/Computer-Science-12/Termicord/client/include -isystem /home/user/vcpkg/installed/x64-linux/include -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -o CMakeFiles/client.dir/src/utils/utils.cpp.o -c /home/user/code/Computer-Science-12/Termicord/client/src/utils/utils.cpp",
+  "file": "/home/user/code/Computer-Science-12/Termicord/client/src/utils/utils.cpp"
+},
+{
+  "directory": "/home/user/code/Computer-Science-12/Termicord/build/client",
   "command": "/usr/bin/c++ -DCURL_STATICLIB -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/user/code/Computer-Science-12/Termicord/client/include -isystem /home/user/vcpkg/installed/x64-linux/include -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -o CMakeFiles/client.dir/src/windows/auth.cpp.o -c /home/user/code/Computer-Science-12/Termicord/client/src/windows/auth.cpp",
   "file": "/home/user/code/Computer-Science-12/Termicord/client/src/windows/auth.cpp"
 },

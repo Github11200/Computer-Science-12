@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/user/code/Computer-Science-12/Termicord/client/src/client.cpp" "client/CMakeFiles/client.dir/src/client.cpp.o" "gcc" "client/CMakeFiles/client.dir/src/client.cpp.o.d"
   "/home/user/code/Computer-Science-12/Termicord/client/src/utils/input.cpp" "client/CMakeFiles/client.dir/src/utils/input.cpp.o" "gcc" "client/CMakeFiles/client.dir/src/utils/input.cpp.o.d"
   "/home/user/code/Computer-Science-12/Termicord/client/src/utils/requests.cpp" "client/CMakeFiles/client.dir/src/utils/requests.cpp.o" "gcc" "client/CMakeFiles/client.dir/src/utils/requests.cpp.o.d"
+  "/home/user/code/Computer-Science-12/Termicord/client/src/utils/utils.cpp" "client/CMakeFiles/client.dir/src/utils/utils.cpp.o" "gcc" "client/CMakeFiles/client.dir/src/utils/utils.cpp.o.d"
   "/home/user/code/Computer-Science-12/Termicord/client/src/windows/auth.cpp" "client/CMakeFiles/client.dir/src/windows/auth.cpp.o" "gcc" "client/CMakeFiles/client.dir/src/windows/auth.cpp.o.d"
   "/home/user/code/Computer-Science-12/Termicord/client/src/windows/chat.cpp" "client/CMakeFiles/client.dir/src/windows/chat.cpp.o" "gcc" "client/CMakeFiles/client.dir/src/windows/chat.cpp.o.d"
   "/home/user/code/Computer-Science-12/Termicord/client/src/windows/home.cpp" "client/CMakeFiles/client.dir/src/windows/home.cpp.o" "gcc" "client/CMakeFiles/client.dir/src/windows/home.cpp.o.d"

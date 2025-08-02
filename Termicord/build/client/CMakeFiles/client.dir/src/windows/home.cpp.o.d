@@ -420,6 +420,7 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: \
  /home/user/code/Computer-Science-12/Termicord/client/include/utils/requests.h \
  /home/user/code/Computer-Science-12/Termicord/client/include/types.h \
  /home/user/code/Computer-Science-12/Termicord/client/include/windows/chat.h \
+ /home/user/code/Computer-Science-12/Termicord/client/include/utils/utils.h \
  /usr/include/arpa/inet.h /usr/include/netinet/in.h \
  /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/curses.h \
  /usr/include/ncurses_dll.h /usr/include/unctrl.h /usr/include/curses.h \

@@ -66,10 +66,24 @@ void receive(int socket, string &input) {
     int bytesRecieved = recv(socket, buffer, sizeof(buffer), 0);
     if (bytesRecieved > 0) {
       buffer[bytesRecieved] = '\0';
-      mtx.lock();
-      messages.push_back(string(buffer));
-      mtx.unlock();
-      redraw(input);
+      vector<string> seperatedMessageStrings = splitString(string(buffer), '\n');
+      for (int i = 0; i < seperatedMessageStrings.size(); ++i) {
+        string messageString = seperatedMessageStrings[i];
+
+        // If the username sent is the same as the current user's then just change it to [You]
+        // ex. "[Github11200] Hello" --> "[You] Hello", assuming the current username is Github11200
+        string messageUsername = ""; 
+        int j = 1;
+        for (; messageString[j] != ']'; ++j)
+          messageUsername.push_back(messageString[j]);
+        if (messageUsername == Auth::currentUser.username)
+          messageString = "[You] " + messageString.substr(j + 2, messageString.size() - (j + 2));
+
+        mtx.lock();
+        messages.push_back(messageString);
+        mtx.unlock();
+        redraw(input);
+      }
     }
   }
 }
@@ -90,7 +104,6 @@ void join(int PORT) {
     spdlog::error("Could not connect to the client.");
     return;
   }
-  ssize_t sent = send(clientSocket, Auth::currentUser.username.data(), Auth::currentUser.username.size(), 0);
 
   enableRawMode();
 
@@ -104,7 +117,8 @@ void join(int PORT) {
       break;
 
     if (c == '\n' && !input.empty()) {
-      ssize_t sent = send(clientSocket, input.data(), input.size(), 0);
+      string inputToBeSent = "[" + Auth::currentUser.username + "] " + input;
+      ssize_t sent = send(clientSocket, inputToBeSent.data(), inputToBeSent.size(), 0);
       if (sent < 0) {
         spdlog::error("Could not send.");
         break;

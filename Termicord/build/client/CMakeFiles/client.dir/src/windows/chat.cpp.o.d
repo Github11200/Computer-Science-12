@@ -426,6 +426,7 @@ client/CMakeFiles/client.dir/src/windows/chat.cpp.o: \
  /home/user/vcpkg/installed/x64-linux/include/cpr/interceptor.h \
  /home/user/vcpkg/installed/x64-linux/include/cpr/ssl_ctx.h \
  /home/user/vcpkg/installed/x64-linux/include/cpr/status_codes.h \
+ /home/user/code/Computer-Science-12/Termicord/client/include/utils/utils.h \
  /home/user/code/Computer-Science-12/Termicord/client/include/windows/auth.h \
  /usr/include/arpa/inet.h /usr/include/netinet/in.h \
  /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/curses.h \

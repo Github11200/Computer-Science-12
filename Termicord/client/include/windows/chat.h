@@ -4,6 +4,7 @@
 #include "types.h"
 #include "utils/input.h"
 #include "utils/requests.h"
+#include "utils/utils.h"
 #include "windows/auth.h"
 #include <arpa/inet.h>
 #include <cctype>

@@ -17,5 +17,6 @@ Result getUser(std::string rawJson);
 Result getAllUsers(std::string rawJson);
 Result addUser(std::string rawJson);
 Result addFriend(std::string rawJson);
+Result addServerToUser(std::string rawJson);
 
 #endif

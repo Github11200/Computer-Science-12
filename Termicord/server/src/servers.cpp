@@ -22,8 +22,16 @@ void broadcastMessage(string message, int excludedClient) {
 
 void receivingThreadCallback(int clientSocket) {
   char buffer[1024] = { 0 };
-  bool firstLoop = true;
   string username = "";
+
+  for (const string& message : messages) {
+    spdlog::info("Sending the following message to the client, {}", message);
+    string messageToBeSent = message + "\n";
+    size_t sent = send(clientSocket, messageToBeSent.data(), messageToBeSent.size(), 0);
+    if (sent < 0)
+      spdlog::error("Could not send the initial messages");
+  }
+
   while (true) {
     int bytesRecieved = recv(clientSocket, buffer, sizeof(buffer), 0);
     if (bytesRecieved <= 0) {
@@ -32,36 +40,10 @@ void receivingThreadCallback(int clientSocket) {
       break;
     }
     buffer[bytesRecieved] = '\0';
-
-    // The very first message the client sends will always be the username
-    // Also send the chat history so far to the user
-    if (firstLoop) {
-      username = string(buffer);
-      firstLoop = false;
-      for (const string& message : messages) {
-        string messageUsername = "";
-        int i = 1;
-        for (; message[i] != ']'; ++i)
-          messageUsername += message[i];
-        ssize_t sent;
-        if (messageUsername == username) {
-          string newMessage = "[You] " + message.substr(i, 2);
-          sent = send(clientSocket, newMessage.data(), newMessage.size(), 0);
-        }
-        sent = send(clientSocket, message.data(), message.size(), 0);
-        if (sent < 0)
-          spdlog::error("Could not send the initial messages");
-      }
-      continue;
-    }
-
-    spdlog::info("Message from {}: {}", username, buffer);
+    spdlog::info("Message from the client: {}", buffer);
 
     receivingThreadMutex.lock();
-
-    string bufferString = "[" + username + "] " + string(buffer);
-    broadcastMessage(bufferString, clientSocket);
-
+    broadcastMessage(string(buffer), clientSocket);
     receivingThreadMutex.unlock();
   }
 }
