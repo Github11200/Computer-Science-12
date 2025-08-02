@@ -35,6 +35,7 @@ void init() {
 }
 
 void createServer() {
+  // Get all the ports that are in use so far
   cpr::Response getAllServersResponse =
       cpr::Post(cpr::Url{"http://localhost:8000/getAllServers"},
                 cpr::Header{{"Content-Type", "application/json"}},
@@ -54,6 +55,8 @@ void createServer() {
     string serverName = "";
     Input::getStringInput("What would you like the name of the server to be? ",
                           serverName);
+
+    // Continue choosing a port number until it finds one that isn't in use
     int port = 0;
     while (true) {
       port = randomInteger(1024, 65535);
@@ -61,6 +64,7 @@ void createServer() {
         break;
     }
 
+    // Add the server to the database
     json addServerJson = {
         {"server_name", serverName},
         {"owner", Auth::currentUser.username},
@@ -73,6 +77,8 @@ void createServer() {
     Requests::APIResult addServerResult =
         Requests::sendRequest(addServerRequest);
 
+    // Add the server to the user's list of servers so they can actually access
+    // it
     Requests::Request updateUserServerListRequest("/addServerToUser",
                                                   updateUserServerListJson);
     Requests::APIResult updateUserServerListResponse =
@@ -84,6 +90,8 @@ void createServer() {
       Requests::Request getUserRequest("/getUser", getUserJson);
       Requests::APIResult getUserResult = Requests::sendRequest(getUserRequest);
 
+      // Update the user again to get a refreshed list of servers that they're a
+      // part of
       Auth::currentUser = getUserResult.data.get<User>();
 
       cout << "The server was added successfully. Please press enter to "
@@ -108,6 +116,7 @@ void listServers() {
   while (true) {
     system("clear");
 
+    // Display all the servers
     vector<string> servers;
     for (int i = 0; i < Auth::currentUser.servers.size(); ++i) {
       string currentServer = Auth::currentUser.servers[i];
@@ -129,6 +138,7 @@ void listServers() {
 void selectedServer(string serverName) {
   system("clear");
 
+  // Get the specific server's information
   json j = {{"server_name", serverName}};
   Requests::Request request("/getServer", j);
   Requests::APIResult result = Requests::sendRequest(request);
@@ -146,6 +156,8 @@ void selectedServer(string serverName) {
         Chat::join(server.port);
       } else if (serverOperation == ServerOperation::ADD_USER) {
         system("clear");
+
+        // The username can only add users to the server if they are the owner
         if (server.owner != Auth::currentUser.username) {
           cout << "You are not the owner of this server and cannot add users. "
                   "Please press enter to continue"
@@ -160,6 +172,7 @@ void selectedServer(string serverName) {
         json addUserJson = {{"server_name", serverName},
                             {"username", username}};
 
+        // Update the servers and users database with the new information
         cpr::Response addUserToServerResponse =
             cpr::Post(cpr::Url{"http://localhost:8000/addUserToServer"},
                       cpr::Header{{"Content-Type", "application/json"}},
@@ -193,9 +206,12 @@ void selectedServer(string serverName) {
 
 void addFriend() {
   system("clear");
+
+  // Get the username
   string friendUsername = "";
   Input::getStringInput("What is the username of the friend? ", friendUsername);
 
+  // Update the database
   json j = {{"username", Auth::currentUser.username},
             {"friend", friendUsername}};
   Requests::Request request("/addFriend", j);

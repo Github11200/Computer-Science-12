@@ -1,9 +1,9 @@
 #ifndef TYPES_H
 #define TYPES_H
 
-#include <vector>
-#include <string>
 #include <nlohmann/json.hpp>
+#include <string>
+#include <vector>
 
 struct User {
   std::vector<std::string> friends;

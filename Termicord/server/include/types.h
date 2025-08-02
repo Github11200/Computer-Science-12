@@ -1,9 +1,9 @@
 #ifndef TYPES_H
 #define TYPES_H
 
+#include <nlohmann/json.hpp>
 #include <string>
 #include <vector>
-#include <nlohmann/json.hpp>
 
 struct Server {
   std::string owner;

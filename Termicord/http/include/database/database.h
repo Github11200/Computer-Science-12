@@ -1,12 +1,12 @@
 #ifndef DATABASE_H
 #define DATABASE_H
 
-#include <nlohmann/json.hpp>
-#include <spdlog/spdlog.h>
-#include <iostream>
-#include <fstream>
-#include <optional>
 #include <filesystem>
+#include <fstream>
+#include <iostream>
+#include <nlohmann/json.hpp>
+#include <optional>
+#include <spdlog/spdlog.h>
 
 class Database {
 private:

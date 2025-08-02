@@ -12,18 +12,19 @@ Database::Database(string name) {
 }
 
 void Database::createDatabase() {
-  fstream database(this->PATH + this->NAME + ".json", ios::out | ios::in | ios::trunc);
+  fstream database(this->PATH + this->NAME + ".json",
+                   ios::out | ios::in | ios::trunc);
 
   if (!database.is_open()) {
     spdlog::error("Could not create a new database");
     return;
   }
 
-  database << "{}"; 
-  this->currentJsonData = json::parse("{}"); 
+  database << "{}";
+  this->currentJsonData = json::parse("{}");
   database.close();
 
-  spdlog::info("Successfully created the database \"{}\"", this->NAME); 
+  spdlog::info("Successfully created the database \"{}\"", this->NAME);
 }
 
 bool Database::openDatabase() {
@@ -41,19 +42,19 @@ bool Database::openDatabase() {
 
 bool Database::databaseExists() {
   ifstream file(this->PATH + this->NAME + ".json");
-  if (file) return true;
-  else return false;
+  if (file)
+    return true;
+  else
+    return false;
 }
 
-optional<string> Database::searchDatabase(string key) { 
+optional<string> Database::searchDatabase(string key) {
   if (this->currentJsonData.contains(key))
     return this->currentJsonData[key].dump();
   return nullopt;
 }
 
-string Database::getAllJsonData() {
-  return this->currentJsonData.dump();
-}
+string Database::getAllJsonData() { return this->currentJsonData.dump(); }
 
 bool Database::addEntry(string key, json jsonData) {
   // Only add the entry if it doesn't already exist
@@ -65,7 +66,8 @@ bool Database::addEntry(string key, json jsonData) {
 }
 
 bool Database::updateEntry(string key, json newData) {
-  // If the key doesn't exist then just return false since we can't update anything
+  // If the key doesn't exist then just return false since we can't update
+  // anything
   optional<string> searchResult = this->searchDatabase(key);
   if (!searchResult)
     return false;
@@ -77,7 +79,8 @@ Database::~Database() {
   fstream database(this->PATH + this->NAME + ".json");
 
   if (!database.is_open()) {
-    spdlog::error("Could not open the database so the latest data has not been written to it");
+    spdlog::error("Could not open the database so the latest data has not been "
+                  "written to it");
     return;
   }
 

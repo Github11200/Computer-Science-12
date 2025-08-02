@@ -6,7 +6,10 @@
 #include "utils/requests.h"
 #include "utils/utils.h"
 #include "windows/auth.h"
+#include "windows/home.h"
 #include <arpa/inet.h>
+#include <asm-generic/ioctls.h>
+#include <atomic>
 #include <cctype>
 #include <cstdlib>
 #include <cstring>
@@ -27,7 +30,6 @@
 #include <thread>
 #include <unistd.h>
 #include <vector>
-#include <atomic>
 
 void disableRawMode();
 void enableRawMode();

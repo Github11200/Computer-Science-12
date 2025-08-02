@@ -430,14 +430,14 @@ client/CMakeFiles/client.dir/src/windows/home.cpp.o: \
  /home/user/code/Computer-Science-12/Termicord/client/include/windows/chat.h \
  /home/user/code/Computer-Science-12/Termicord/client/include/utils/utils.h \
  /usr/include/arpa/inet.h /usr/include/netinet/in.h \
- /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/curses.h \
+ /usr/include/x86_64-linux-gnu/bits/in.h \
+ /usr/include/asm-generic/ioctls.h /usr/include/linux/ioctl.h \
+ /usr/include/x86_64-linux-gnu/asm/ioctl.h \
+ /usr/include/asm-generic/ioctl.h /usr/include/curses.h \
  /usr/include/ncurses_dll.h /usr/include/unctrl.h /usr/include/curses.h \
  /usr/include/x86_64-linux-gnu/sys/ioctl.h \
  /usr/include/x86_64-linux-gnu/bits/ioctls.h \
  /usr/include/x86_64-linux-gnu/asm/ioctls.h \
- /usr/include/asm-generic/ioctls.h /usr/include/linux/ioctl.h \
- /usr/include/x86_64-linux-gnu/asm/ioctl.h \
- /usr/include/asm-generic/ioctl.h \
  /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h /usr/include/term.h \
  /usr/include/termios.h /usr/include/x86_64-linux-gnu/bits/termios.h \

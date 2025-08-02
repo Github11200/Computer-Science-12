@@ -30,8 +30,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/user/vcpkg/installed/x64-linux/share/fmt/fmt-targets-debug.cmake"
   "/home/user/vcpkg/installed/x64-linux/share/fmt/fmt-targets-release.cmake"
   "/home/user/vcpkg/installed/x64-linux/share/fmt/fmt-targets.cmake"
-  "/home/user/vcpkg/installed/x64-linux/share/magic_enum/magic_enumConfig.cmake"
-  "/home/user/vcpkg/installed/x64-linux/share/magic_enum/magic_enumConfigVersion.cmake"
   "/home/user/vcpkg/installed/x64-linux/share/nlohmann_json/nlohmann_jsonConfig.cmake"
   "/home/user/vcpkg/installed/x64-linux/share/nlohmann_json/nlohmann_jsonConfigVersion.cmake"
   "/home/user/vcpkg/installed/x64-linux/share/nlohmann_json/nlohmann_jsonTargets.cmake"

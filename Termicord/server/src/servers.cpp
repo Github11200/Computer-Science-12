@@ -12,6 +12,8 @@ set<int> connectedServerSockets;
 vector<string> messages;
 atomic<bool> running(true);
 
+// This will take a message and send it to all the connected clients excluding
+// the one that initially sent it
 void broadcastMessage(string message, int excludedClient) {
   messages.push_back(message);
   for (int client : connectedClientSockets) {
@@ -27,6 +29,9 @@ void receivingThreadCallback(int clientSocket) {
   char buffer[1024] = {0};
   string username = "";
 
+  // The moment the client connects send them the latest messages so far, so if
+  // 2 clients were talking and a third joins then send it all the messages from
+  // the first 2 clients
   for (const string &message : messages) {
     spdlog::info("Sending the following message to the client, {}", message);
     string messageToBeSent = message + "\n";
@@ -36,6 +41,7 @@ void receivingThreadCallback(int clientSocket) {
       spdlog::error("Could not send the initial messages");
   }
 
+  // Just receive messages and continously broadcast them
   while (Servers::running) {
     int bytesRecieved = recv(clientSocket, buffer, sizeof(buffer), 0);
     if (bytesRecieved <= 0) {
@@ -102,6 +108,7 @@ void serverSocket(int PORT) {
     return;
   }
 
+  // Add this server socket to the list of the connected ones
   connectedServerSockets.insert(serverSocket);
   vector<thread *> clientThreads;
 
@@ -116,6 +123,7 @@ void serverSocket(int PORT) {
       return;
     }
 
+    // Create a seperate thread for each new client that joins
     thread *clientThread = new thread(receivingThreadCallback, clientSocket);
     clientThreads.push_back(clientThread);
     connectedClientSockets.insert(clientSocket);
@@ -128,6 +136,7 @@ void serverSocket(int PORT) {
 }
 
 void create(string threadName, int PORT) {
+  // Create a seperate thread for each running server
   thread *serverSocketThread = new thread(serverSocket, PORT);
   runningServers[threadName] = serverSocketThread;
 }
@@ -135,11 +144,16 @@ void create(string threadName, int PORT) {
 void stop() {
   Servers::running = false;
 
+  // Shutdown all the client sockets
   for (const auto &runningSocket : connectedClientSockets)
     shutdown(runningSocket, SHUT_RDWR);
+
+  // Shutdown all the server sockets
   for (const auto &runningSocket : connectedServerSockets)
     shutdown(runningSocket, SHUT_RDWR);
 
+  // Now that all the sockets are shutdown the threads can be stopped and joined
+  // back into the main thread
   for (const auto &server : runningServers) {
     spdlog::info("Shutting down {}", server.first);
     server.second->join();

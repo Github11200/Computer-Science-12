@@ -5,7 +5,6 @@ find_package(unofficial-libuuid CONFIG REQUIRED)
 add_executable(http
   src/http.cpp
   src/routing.cpp
-  src/utils.cpp
   src/database/database.cpp
   src/routes/users.cpp
   src/routes/servers.cpp

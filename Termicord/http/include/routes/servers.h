@@ -1,16 +1,16 @@
 #ifndef GET_SERVER_H
 #define GET_SERVER_H
 
-#include <iostream>
-#include <vector>
-#include <string>
-#include <uuid/uuid.h>
-#include <any>
-#include <spdlog/spdlog.h>
-#include <optional>
-#include <nlohmann/json.hpp>
 #include "database/database.h"
 #include "types.h"
+#include <any>
+#include <iostream>
+#include <nlohmann/json.hpp>
+#include <optional>
+#include <spdlog/spdlog.h>
+#include <string>
+#include <uuid/uuid.h>
+#include <vector>
 
 Result getServer(std::string rawJson);
 Result getAllServers(std::string rawJson);

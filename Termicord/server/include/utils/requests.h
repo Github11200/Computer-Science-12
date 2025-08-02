@@ -1,9 +1,9 @@
 #ifndef REQUESTS_H
 #define REQUESTS_H
 
+#include <cpr/cpr.h>
 #include <iostream>
 #include <nlohmann/json.hpp>
-#include <cpr/cpr.h>
 #include <spdlog/spdlog.h>
 #include <string>
 
@@ -19,7 +19,7 @@ enum ResponseCode {
 
 struct APIResult {
   nlohmann::json data;
-  ResponseCode code; 
+  ResponseCode code;
 
   APIResult() = default;
   APIResult(nlohmann::json data, ResponseCode code) : data(data), code(code) {}
@@ -31,13 +31,14 @@ struct Request {
   nlohmann::json body;
 
   Request() = default;
-  Request(std::string route, nlohmann::json body) : url(url), route(route), body(body) {
+  Request(std::string route, nlohmann::json body)
+      : url(url), route(route), body(body) {
     this->url = Requests::defaultUrl;
   }
 };
 
-APIResult sendRequest(Request requestObject); 
+APIResult sendRequest(Request requestObject);
 
-}
+} // namespace Requests
 
 #endif
