@@ -9,12 +9,15 @@ Result getServer(string rawJson) {
   Database database(NAME);
   json httpRequest = json::parse(rawJson);
 
-  optional<string> searchResult = database.searchDatabase(httpRequest["server_name"].get<string>());
+  optional<string> searchResult =
+      database.searchDatabase(httpRequest["server_name"].get<string>());
   if (searchResult)
     return Result(200, *searchResult);
 
   spdlog::error("Could not find the requested server in the database");
-  return Result(500, "{ \"message\": \"Error, could not find the server in the database.\" }");
+  return Result(
+      500,
+      "{ \"message\": \"Error, could not find the server in the database.\" }");
 }
 
 Result getAllServers(string rawJson) {
@@ -31,7 +34,7 @@ Result addServer(string rawJson) {
   httpRequest.erase("server_name");
   if (database.addEntry(key, httpRequest))
     return Result(200, "{ \"message\": \"Added the server to the database\" }");
-  return Result(500, "{ \"message\": \"The server already exists\" }");  
+  return Result(500, "{ \"message\": \"The server already exists\" }");
 }
 
 Result addUserToServer(std::string rawJson) {
@@ -43,11 +46,13 @@ Result addUserToServer(std::string rawJson) {
 
   optional<string> searchResult = database.searchDatabase(serverName);
   if (!searchResult)
-    return Result(500, "{ \"message\": \"The server does not exist in the database, so the user could not be added.\" }");
+    return Result(500, "{ \"message\": \"The server does not exist in the "
+                       "database, so the user could not be added.\" }");
   json serverJson = json::parse(*searchResult);
   serverJson["users"].push_back(username);
-  
+
   if (database.updateEntry(serverName, serverJson))
     return Result(200, "{ \"message\": \"Added the user to the server\" }");
-  return Result(500, "{ \"message\": \"Could not add the user to the server.\" }");
+  return Result(500,
+                "{ \"message\": \"Could not add the user to the server.\" }");
 }

@@ -1,6 +1,9 @@
 #include "windows/home.h"
+#include "utils/input.h"
 #include "utils/requests.h"
+#include "utils/utils.h"
 #include "windows/auth.h"
+#include <unistd.h>
 
 using namespace std;
 using json = nlohmann::json;
@@ -15,15 +18,88 @@ void init() {
     InitOptions initOption;
     Input::getOption<InitOptions>(
         "What would you like to do?",
-        vector<string>({"List all servers", "Add a friend", "Exit"}),
+        vector<string>(
+            {"List all servers", "Add a friend", "Create a server", "Exit"}),
         initOption);
     if (initOption == InitOptions::LIST_SERVERS)
       listServers();
     else if (initOption == InitOptions::ADD_FRIEND)
       addFriend();
+    else if (initOption == InitOptions::CREATE_SERVER)
+      createServer();
     else if (initOption == InitOptions::EXIT) {
       cout << "Goodbye!" << endl;
       return;
+    }
+  }
+}
+
+void createServer() {
+  cpr::Response getAllServersResponse =
+      cpr::Post(cpr::Url{"http://localhost:8000/getAllServers"},
+                cpr::Header{{"Content-Type", "application/json"}},
+                cpr::Body{json::parse("{}").dump()});
+  json allServersJson = json::parse(getAllServersResponse.text);
+
+  set<int> ports;
+  for (auto &[key, value] : allServersJson.items()) {
+    Server server;
+    server = value.get<Server>();
+    ports.insert(server.port);
+  }
+
+  while (true) {
+    system("clear");
+
+    string serverName = "";
+    Input::getStringInput("What would you like the name of the server to be? ",
+                          serverName);
+    int port = 0;
+    while (true) {
+      port = randomInteger(1024, 65535);
+      if (ports.count(port) == 0)
+        break;
+    }
+
+    json addServerJson = {
+        {"server_name", serverName},
+        {"owner", Auth::currentUser.username},
+        {"port", port},
+        {"users", vector<string>{Auth::currentUser.username}}};
+    json updateUserServerListJson = {{"server_name", serverName},
+                                     {"username", Auth::currentUser.username}};
+
+    Requests::Request addServerRequest("/addServer", addServerJson);
+    Requests::APIResult addServerResult =
+        Requests::sendRequest(addServerRequest);
+
+    Requests::Request updateUserServerListRequest("/addServerToUser",
+                                                  updateUserServerListJson);
+    Requests::APIResult updateUserServerListResponse =
+        Requests::sendRequest(updateUserServerListRequest);
+
+    if (addServerResult.code == Requests::ResponseCode::SUCCESS &&
+        updateUserServerListResponse.code == Requests::ResponseCode::SUCCESS) {
+      json getUserJson = {{"username", Auth::currentUser.username}};
+      Requests::Request getUserRequest("/getUser", getUserJson);
+      Requests::APIResult getUserResult = Requests::sendRequest(getUserRequest);
+
+      Auth::currentUser = getUserResult.data.get<User>();
+
+      cout << "The server was added successfully. Please press enter to "
+              "continue";
+      cin.ignore();
+      cin.get();
+      return;
+    } else {
+      NextStep nextStep;
+      Input::getOption<NextStep>(
+          "Could not add the server. What would you like to do?",
+          vector<string>{"Try again", "Exit"}, nextStep);
+      if (nextStep == NextStep::RETRY)
+        continue;
+      else if (nextStep == NextStep::EXIT)
+        return;
     }
   }
 }

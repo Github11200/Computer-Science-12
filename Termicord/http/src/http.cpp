@@ -81,7 +81,7 @@ int main(int argc, char *argv[]) {
   routing.addRoute(Route("/getServer", getServer));
   routing.addRoute(Route("/getAllServers", getAllServers));
   routing.addRoute(Route("/addServer", addServer));
-  routing.addRoute(Route("/addUserToServer", addUserToServer)); 
+  routing.addRoute(Route("/addUserToServer", addUserToServer));
 
   int serverSocket = startServerSocket(PORT);
 
@@ -102,13 +102,8 @@ int main(int argc, char *argv[]) {
     string method = clientMessage.substr(0, clientMessage.find(' '));
     string json =
         clientMessage.substr(clientMessage.find('{') - 1, clientMessage.size());
-    // spdlog::info("Method: {}", method);
-    // spdlog::info("Route: {}", routing.getRouteNameFromHeader(header));
-    // spdlog::info("JSON: {}", json);
 
-    // spdlog::info("Accepted the connection from {} : {}.",
-    // inet_ntoa(clientAddress.sin_addr), ntohs(clientAddress.sin_port));
-
+    spdlog::info("Request for {}", header);
     Result callbackResult =
         routing.getRoute(routing.getRouteNameFromHeader(header)).callback(json);
     string httpHeader = "";

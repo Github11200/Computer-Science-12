@@ -1,13 +1,16 @@
 #include "servers.h"
+#include <sys/socket.h>
 
 using namespace std;
 
 namespace Servers {
 
-unordered_map<string, thread*> runningServers;
+unordered_map<string, thread *> runningServers;
 mutex receivingThreadMutex;
 set<int> connectedClientSockets;
+set<int> connectedServerSockets;
 vector<string> messages;
+atomic<bool> running(true);
 
 void broadcastMessage(string message, int excludedClient) {
   messages.push_back(message);
@@ -15,24 +18,25 @@ void broadcastMessage(string message, int excludedClient) {
     if (client != excludedClient) {
       ssize_t sent = send(client, message.data(), message.size(), 0);
       if (sent < 0)
-        spdlog::error("Could not send.");  
+        spdlog::error("Could not send.");
     }
   }
 }
 
 void receivingThreadCallback(int clientSocket) {
-  char buffer[1024] = { 0 };
+  char buffer[1024] = {0};
   string username = "";
 
-  for (const string& message : messages) {
+  for (const string &message : messages) {
     spdlog::info("Sending the following message to the client, {}", message);
     string messageToBeSent = message + "\n";
-    size_t sent = send(clientSocket, messageToBeSent.data(), messageToBeSent.size(), 0);
+    size_t sent =
+        send(clientSocket, messageToBeSent.data(), messageToBeSent.size(), 0);
     if (sent < 0)
       spdlog::error("Could not send the initial messages");
   }
 
-  while (true) {
+  while (Servers::running) {
     int bytesRecieved = recv(clientSocket, buffer, sizeof(buffer), 0);
     if (bytesRecieved <= 0) {
       spdlog::info("The client disconnected.");
@@ -64,21 +68,24 @@ void serverSocket(int PORT) {
   serverAddress.sin_addr.s_addr = INADDR_ANY;
   serverAddress.sin_port = htons(PORT);
 
-  // Make the port reusable so you don't have to change it every time you run the server
+  // Make the port reusable so you don't have to change it every time you run
+  // the server
   int yes = 1;
   setsockopt(serverSocket, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(yes));
 
   // Bind the socket to this address
-  if (bind(serverSocket, (sockaddr*)&serverAddress, sizeof(serverAddress)) == -1) {
+  if (bind(serverSocket, (sockaddr *)&serverAddress, sizeof(serverAddress)) ==
+      -1) {
     spdlog::error("Failed to bind the server to the server address.");
     return;
   }
-  
+
   spdlog::info("Binded the socket to the server address.");
- 
+
   socklen_t addressLength = sizeof(serverAddress);
 
-  if (getsockname(serverSocket, (struct sockaddr*)&serverAddress, &addressLength) == -1) {
+  if (getsockname(serverSocket, (struct sockaddr *)&serverAddress,
+                  &addressLength) == -1) {
     spdlog::error("whoops...");
   } else {
     char ip[INET_ADDRSTRLEN];
@@ -95,36 +102,49 @@ void serverSocket(int PORT) {
     return;
   }
 
-  vector<thread*> clientThreads;
+  connectedServerSockets.insert(serverSocket);
+  vector<thread *> clientThreads;
 
-  while (true) { 
+  while (Servers::running) {
     sockaddr_in clientAddress;
     socklen_t clientAddressLen = sizeof(clientAddress);
-    int clientSocket = accept(serverSocket, (sockaddr*)&clientAddress, &clientAddressLen);
+    int clientSocket =
+        accept(serverSocket, (sockaddr *)&clientAddress, &clientAddressLen);
     if (clientSocket == -1) {
-      spdlog::error("Failed to accept the connection.");
-      return; 
+      if (Servers::running)
+        spdlog::error("Failed to accept the connection.");
+      return;
     }
 
-    thread* clientThread = new thread(receivingThreadCallback, clientSocket);
+    thread *clientThread = new thread(receivingThreadCallback, clientSocket);
     clientThreads.push_back(clientThread);
     connectedClientSockets.insert(clientSocket);
-    spdlog::info("Accepted the connection from {} : {}.", inet_ntoa(clientAddress.sin_addr), ntohs(clientAddress.sin_port));
+    spdlog::info("Accepted the connection from {} : {}.",
+                 inet_ntoa(clientAddress.sin_addr),
+                 ntohs(clientAddress.sin_port));
   }
 
   close(serverSocket);
 }
 
 void create(string threadName, int PORT) {
-  thread* serverSocketThread = new thread(serverSocket, PORT);
-  runningServers[threadName] =  serverSocketThread;
+  thread *serverSocketThread = new thread(serverSocket, PORT);
+  runningServers[threadName] = serverSocketThread;
 }
 
 void stop() {
-  for (const auto& server : runningServers) {
+  Servers::running = false;
+
+  for (const auto &runningSocket : connectedClientSockets)
+    shutdown(runningSocket, SHUT_RDWR);
+  for (const auto &runningSocket : connectedServerSockets)
+    shutdown(runningSocket, SHUT_RDWR);
+
+  for (const auto &server : runningServers) {
+    spdlog::info("Shutting down {}", server.first);
     server.second->join();
     delete server.second;
   }
 }
 
-}
+} // namespace Servers

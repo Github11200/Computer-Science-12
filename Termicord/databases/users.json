@@ -22,7 +22,8 @@
     "password": "password123",
     "servers": [
       "Robotics",
-      "Swimming"
+      "Swimming",
+      "coolies"
     ],
     "username": "nimifish"
   }
