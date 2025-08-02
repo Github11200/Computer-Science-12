@@ -24,7 +24,7 @@ There's 3 main components:
   - It sends requests to the HTTP server for getting this like user and server information
   - It allows users to perform operations such as creating servers, adding friends, and joining servers
 
-Here's an [Excalidraw](https://excalidraw.com/#json=4vYh7FyxhNO6h5K_KUYKG,i9Ptyvx-rYL-ibgKAG8Vvw) document that has flowcharts for each of the components:
+Here's an [Excalidraw](https://excalidraw.com/#json=MWIcWPlZGN-EEXpAuesvz,c8Wu6_lDCktxkx7Pkgiuhg) document that has flowcharts for each of the components:
 <img width="1660" height="1059" alt="image" src="https://github.com/user-attachments/assets/36952f69-ab7e-4a86-9f43-a49d4ed28eb2" />
 
 ## Libraries/Technologies used
